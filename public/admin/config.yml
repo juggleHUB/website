@@ -104,6 +104,8 @@ collections:
       - name: team
         label: Team
         file: src/content/team/index.json
+        media_folder: /public/images/team
+        public_folder: /images/team
         i18n: true
         fields:
           - { label: Headline, name: headline, widget: string, i18n: true }
