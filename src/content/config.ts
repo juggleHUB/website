@@ -52,10 +52,16 @@ export const collections = {
     type: 'data',
     schema: i18n(z.object({
       headline: z.string(),
+      location_title: z.string(),
+      name: z.string(),
       address: z.string(),
-      email: z.string(),
+      tram: z.string(),
+      hours: z.string(),
+      hours_note: z.string(),
+      email_general: z.string(),
+      email_childcare: z.string(),
+      email_space: z.string(),
       phone: z.string(),
-      map_embed_url: z.string().optional(),
     })),
   }),
 
