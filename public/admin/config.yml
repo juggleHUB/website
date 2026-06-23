@@ -16,7 +16,7 @@ collections:
     files:
       - name: home
         label: Home Page
-        file: src/content/home/{{locale}}.json
+        file: src/content/home/index.json
         i18n: true
         fields:
           - { label: Hero Headline, name: hero_headline, widget: string, i18n: true }
@@ -40,7 +40,7 @@ collections:
     files:
       - name: about
         label: About Overview
-        file: src/content/about/{{locale}}.json
+        file: src/content/about/index.json
         i18n: true
         fields:
           - { label: Headline, name: headline, widget: string, i18n: true }
@@ -48,7 +48,7 @@ collections:
 
       - name: our_story
         label: Our Story / Unsere Geschichte
-        file: src/content/ourstory/{{locale}}.json
+        file: src/content/ourstory/index.json
         i18n: true
         fields:
           - { label: Headline, name: headline, widget: string, i18n: true }
@@ -56,7 +56,7 @@ collections:
 
       - name: faq
         label: FAQ
-        file: src/content/faq/{{locale}}.json
+        file: src/content/faq/index.json
         i18n: true
         fields:
           - { label: Headline, name: headline, widget: string, i18n: true }
@@ -70,18 +70,24 @@ collections:
 
       - name: contact
         label: Contact / Kontakt
-        file: src/content/contact/{{locale}}.json
+        file: src/content/contact/index.json
         i18n: true
         fields:
           - { label: Headline, name: headline, widget: string, i18n: true }
-          - { label: Address, name: address, widget: text, i18n: true }
-          - { label: Email, name: email, widget: string, i18n: duplicate }
+          - { label: Location Title, name: location_title, widget: string, i18n: true }
+          - { label: Name, name: name, widget: string, i18n: true }
+          - { label: Address, name: address, widget: string, i18n: duplicate }
+          - { label: Tram Stop, name: tram, widget: string, i18n: duplicate }
+          - { label: Opening Hours, name: hours, widget: string, i18n: true }
+          - { label: Hours Note, name: hours_note, widget: text, i18n: true }
+          - { label: Email (General), name: email_general, widget: string, i18n: duplicate }
+          - { label: Email (Childcare), name: email_childcare, widget: string, i18n: duplicate }
+          - { label: Email (Space Bookings), name: email_space, widget: string, i18n: duplicate }
           - { label: Phone, name: phone, widget: string, i18n: duplicate }
-          - { label: Map Embed URL, name: map_embed_url, widget: string, required: false, i18n: duplicate }
 
       - name: press
         label: Press / Presse
-        file: src/content/press/{{locale}}.json
+        file: src/content/press/index.json
         i18n: true
         fields:
           - { label: Headline, name: headline, widget: string, i18n: true }
@@ -92,11 +98,12 @@ collections:
             fields:
               - { label: Date, name: date, widget: string }
               - { label: Title, name: title, widget: string }
-              - { label: File URL, name: file_url, widget: string, required: false }
+              - { label: Button Text, name: button_text, widget: string, required: false }
+              - { label: URL, name: url, widget: string, required: false }
 
       - name: team
         label: Team
-        file: src/content/team/{{locale}}.json
+        file: src/content/team/index.json
         i18n: true
         fields:
           - { label: Headline, name: headline, widget: string, i18n: true }
@@ -116,7 +123,7 @@ collections:
     files:
       - name: coworking
         label: Coworking Page
-        file: src/content/coworking/{{locale}}.json
+        file: src/content/coworking/index.json
         i18n: true
         fields:
           - { label: Headline, name: headline, widget: string, i18n: true }
@@ -137,7 +144,7 @@ collections:
     files:
       - name: event_space
         label: Event Space Page
-        file: src/content/eventspace/{{locale}}.json
+        file: src/content/eventspace/index.json
         i18n: true
         fields:
           - { label: Headline, name: headline, widget: string, i18n: true }
@@ -158,7 +165,7 @@ collections:
     files:
       - name: flexible_childcare
         label: Childcare Page
-        file: src/content/childcare/{{locale}}.json
+        file: src/content/childcare/index.json
         i18n: true
         fields:
           - { label: Headline, name: headline, widget: string, i18n: true }
@@ -179,7 +186,7 @@ collections:
     files:
       - name: virtual_office
         label: Virtual Office Page
-        file: src/content/virtualoffice/{{locale}}.json
+        file: src/content/virtualoffice/index.json
         i18n: true
         fields:
           - { label: Headline, name: headline, widget: string, i18n: true }
