@@ -1,0 +1,32 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seite nicht gefunden | JuggleHUB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Nunito+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="bg-brand-cream text-brand-dark font-sans antialiased min-h-screen flex flex-col">
+    <Header lang="de" />
+    <main class="flex-1 flex items-center justify-center pt-16">
+      <div class="text-center px-8 py-20 max-w-lg mx-auto w-full">
+        <p class="text-8xl font-black text-brand-teal mb-6">404</p>
+        <h1 class="text-3xl lg:text-4xl font-black mb-4">Seite nicht gefunden</h1>
+        <p class="text-gray-400 text-sm mb-10 max-w-sm mx-auto">Die gesuchte Seite existiert leider nicht. Vielleicht hilft dir einer der folgenden Links weiter.</p>
+        <a href="/de/" class="inline-flex bg-brand-dark text-white font-bold px-6 py-3 rounded-full hover:bg-gray-800 transition-colors mr-2">Startseite</a>
+        <a href="/de/coworking/" class="inline-flex bg-white border border-gray-200 text-brand-dark font-semibold px-6 py-3 rounded-full hover:shadow transition-shadow mr-2">Coworking</a>
+        <a href="/de/about/contact/" class="inline-flex bg-white border border-gray-200 text-brand-dark font-semibold px-6 py-3 rounded-full hover:shadow transition-shadow">Kontakt</a>
+      </div>
+    </main>
+    <Footer lang="de" />
+  </body>
+</html>
