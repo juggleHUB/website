@@ -1,21 +1,21 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { getCollection, getEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 import { marked } from 'marked';
 
 export async function getStaticPaths() {
   const entries = await getCollection('pages');
-  const slugs = entries.map(e => e.id.replace(/\.json$/, ''));
   return ['de', 'en'].flatMap(lang =>
-    slugs.map(slug => ({ params: { lang, slug } }))
+    entries.map(entry => ({
+      params: { lang, slug: entry.id.replace(/\.json$/, '') },
+      props: { data: entry.data[lang as 'de' | 'en'] },
+    }))
   );
 }
 
 const { lang, slug } = Astro.params as { lang: 'de' | 'en'; slug: string };
-const entry = await getEntry('pages', slug);
-if (!entry) return Astro.redirect('/404');
-
-const { title, body } = entry.data[lang];
+const { data } = Astro.props;
+const { title, body } = data;
 const htmlBody = marked(body);
 ---
 
