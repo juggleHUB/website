@@ -69,7 +69,7 @@ export const collections = {
     type: 'data',
     schema: i18n(z.object({
       headline: z.string(),
-      press_releases: z.array(z.object({ date: z.string(), title: z.string(), file_url: z.string().optional() })),
+      press_releases: z.array(z.object({ date: z.string(), title: z.string(), button_text: z.string().optional(), url: z.string().optional() })),
     })),
   }),
 

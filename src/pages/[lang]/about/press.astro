@@ -15,15 +15,15 @@ const { headline, press_releases } = content.data[lang];
   <div class="max-w-3xl mx-auto px-8 sm:px-14 lg:px-20 py-20">
     <h1 class="text-4xl lg:text-5xl font-black mb-12">{headline}</h1>
     <div class="space-y-4">
-      {press_releases.map((pr: { date: string; title: string; file_url?: string }) => (
-        <div class="bg-white rounded-2xl border border-gray-100 p-6 flex items-center justify-between gap-4">
+      {press_releases.map((pr: { date: string; title: string; button_text?: string; url?: string }) => (
+        <div class="bg-white rounded-2xl border border-gray-100 p-6 flex flex-col navbreak:flex-row navbreak:items-center navbreak:justify-between gap-3">
           <div>
             <p class="text-sm text-gray-400 mb-1">{pr.date}</p>
             <p class="font-semibold text-lg">{pr.title}</p>
           </div>
-          {pr.file_url && (
-            <a href={pr.file_url} class="shrink-0 bg-brand-yellow text-brand-dark text-sm font-bold px-4 py-2 rounded-lg hover:bg-yellow-300 transition-colors">
-              {lang === 'de' ? 'Download' : 'Download'}
+          {pr.url && (
+            <a href={pr.url} target="_blank" rel="noopener noreferrer" class="self-start navbreak:self-center shrink-0 bg-brand-yellow text-brand-dark text-sm font-bold px-4 py-2 rounded-lg hover:bg-yellow-300 transition-colors">
+              {pr.button_text || (lang === 'de' ? 'Mehr lesen' : 'Read more')}
             </a>
           )}
         </div>
