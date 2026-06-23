@@ -12,7 +12,7 @@ const { headline, address, email, phone } = content.data[lang];
 ---
 
 <Layout title={headline} lang={lang} currentPath={`/${lang}/about/contact/`}>
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+  <div class="max-w-3xl mx-auto px-8 sm:px-14 lg:px-20 py-20">
     <a href={`/${lang}/about/`} class="text-sm text-gray-400 hover:text-gray-600 mb-8 block">← {lang === 'de' ? 'Zurück' : 'Back'}</a>
     <h1 class="text-4xl lg:text-5xl font-black mb-12">{headline}</h1>
     <div class="bg-white rounded-2xl border border-gray-100 p-8 space-y-6">

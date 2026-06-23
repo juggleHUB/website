@@ -8,9 +8,10 @@ export interface Props {
   description?: string;
   lang: 'de' | 'en';
   currentPath?: string;
+  headerPad?: boolean;
 }
 
-const { title, description = 'JuggleHUB – Coworking mit integrierter Kinderbetreuung in Berlin', lang, currentPath } = Astro.props;
+const { title, description = 'JuggleHUB – Coworking mit integrierter Kinderbetreuung in Berlin', lang, currentPath, headerPad = true } = Astro.props;
 ---
 
 <!doctype html>
@@ -27,7 +28,7 @@ const { title, description = 'JuggleHUB – Coworking mit integrierter Kinderbet
   </head>
   <body class="bg-brand-cream text-brand-dark font-sans antialiased min-h-screen flex flex-col">
     <Header lang={lang} currentPath={currentPath} />
-    <main class="flex-1">
+    <main class={`flex-1${headerPad ? ' pt-16' : ''}`}>
       <slot />
     </main>
     <Footer lang={lang} />

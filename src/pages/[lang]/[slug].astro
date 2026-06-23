@@ -20,7 +20,7 @@ const htmlBody = marked(body);
 ---
 
 <Layout title={title} lang={lang} currentPath={`/${lang}/${slug}/`}>
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+  <div class="max-w-3xl mx-auto px-8 sm:px-14 lg:px-20 py-20">
     <h1 class="text-4xl lg:text-5xl font-black mb-10">{title}</h1>
     <div class="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-brand-dark bg-white rounded-2xl p-8 border border-gray-100" set:html={htmlBody} />
   </div>
