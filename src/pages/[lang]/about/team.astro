@@ -14,14 +14,16 @@ const { headline, members } = content.data[lang];
 <Layout title={headline} lang={lang} currentPath={`/${lang}/about/team/`}>
   <div class="max-w-7xl mx-auto px-8 sm:px-14 lg:px-20 py-20">
     <h1 class="text-4xl lg:text-5xl font-black mb-12">{headline}</h1>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 navbreak:grid-cols-3 gap-8">
       {members.map((m: { name: string; role: string; bio: string; image?: string }, i: number) => (
         <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden">
-          <img src={m.image || `https://picsum.photos/seed/team-${i}/400/300`} alt={m.name} class="w-full h-56 object-cover" />
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src={m.image || `https://picsum.photos/seed/team-${i}/400/300`} alt={m.name} class="w-full h-full object-cover" />
+          </div>
           <div class="p-6">
             <h2 class="text-xl font-bold">{m.name}</h2>
-            <p class="text-brand-dark/60 text-sm mb-3">{m.role}</p>
-            <p class="text-gray-600 text-sm leading-relaxed">{m.bio}</p>
+            <p class="text-brand-dark/60 text-sm mb-1">{m.role}</p>
+            {m.bio && <p class="text-gray-600 text-sm leading-relaxed">{m.bio}</p>}
           </div>
         </div>
       ))}
