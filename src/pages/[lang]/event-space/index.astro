@@ -1,0 +1,39 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'de' } }, { params: { lang: 'en' } }];
+}
+
+const { lang } = Astro.params as { lang: 'de' | 'en' };
+const content = await getEntry('eventspace', 'index');
+const { headline, intro, features, pricing_note } = content.data[lang];
+---
+
+<Layout title={headline} lang={lang} currentPath={`/${lang}/event-space/`}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="max-w-3xl mb-16">
+      <h1 class="text-5xl font-black mb-6">{headline}</h1>
+      <p class="text-xl text-gray-600 leading-relaxed">{intro}</p>
+    </div>
+    <div class="space-y-20">
+      {features.map((f: { title: string; text: string; image?: string }, i: number) => (
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class={i % 2 === 1 ? 'lg:order-2' : ''}>
+            <h2 class="text-3xl font-bold mb-4">{f.title}</h2>
+            <p class="text-gray-600 leading-relaxed">{f.text}</p>
+          </div>
+          <div class={`rounded-2xl overflow-hidden shadow-lg ${i % 2 === 1 ? 'lg:order-1' : ''}`}>
+            <img src={f.image || `https://picsum.photos/seed/es-${i}/700/450`} alt={f.title} class="w-full h-64 object-cover" />
+          </div>
+        </div>
+      ))}
+    </div>
+    {pricing_note && (
+      <div class="mt-20 bg-brand-yellow rounded-2xl p-8 text-center">
+        <p class="text-xl font-bold text-brand-dark">{pricing_note}</p>
+      </div>
+    )}
+  </div>
+</Layout>

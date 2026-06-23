@@ -1,0 +1,20 @@
+{
+  "de": {
+    "headline": "Presse",
+    "press_releases": [
+      { "date": "2024-03-15", "title": "JuggleHUB eröffnet zweiten Standort in Berlin-Prenzlauer Berg", "file_url": "" },
+      { "date": "2023-11-08", "title": "JuggleHUB gewinnt Berliner Gründerpreis für familienfreundliche Innovation", "file_url": "" },
+      { "date": "2023-06-22", "title": "200 Mitglieder in 12 Monaten: JuggleHUB zieht Bilanz", "file_url": "" },
+      { "date": "2022-09-01", "title": "Eröffnung: JuggleHUB startet als Berlins erster familienfreundlicher Coworking-Space", "file_url": "" }
+    ]
+  },
+  "en": {
+    "headline": "Press",
+    "press_releases": [
+      { "date": "2024-03-15", "title": "JuggleHUB opens second location in Berlin-Prenzlauer Berg", "file_url": "" },
+      { "date": "2023-11-08", "title": "JuggleHUB wins Berlin Founders Award for family-friendly innovation", "file_url": "" },
+      { "date": "2023-06-22", "title": "200 members in 12 months: JuggleHUB takes stock", "file_url": "" },
+      { "date": "2022-09-01", "title": "Opening: JuggleHUB launches as Berlin's first family-friendly coworking space", "file_url": "" }
+    ]
+  }
+}

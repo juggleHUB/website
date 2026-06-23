@@ -1,0 +1,30 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'de' } }, { params: { lang: 'en' } }];
+}
+
+const { lang } = Astro.params as { lang: 'de' | 'en' };
+const content = await getEntry('faq', 'index');
+const { headline, items } = content.data[lang];
+---
+
+<Layout title={headline} lang={lang} currentPath={`/${lang}/about/faq/`}>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <a href={`/${lang}/about/`} class="text-sm text-gray-400 hover:text-gray-600 mb-8 block">← {lang === 'de' ? 'Zurück' : 'Back'}</a>
+    <h1 class="text-4xl lg:text-5xl font-black mb-12">{headline}</h1>
+    <div class="space-y-4">
+      {items.map((item: { question: string; answer: string }) => (
+        <details class="bg-white rounded-2xl border border-gray-100 overflow-hidden group">
+          <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-lg list-none">
+            {item.question}
+            <span class="text-brand-yellow text-2xl font-black group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 leading-relaxed">{item.answer}</div>
+        </details>
+      ))}
+    </div>
+  </div>
+</Layout>

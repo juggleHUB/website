@@ -1,0 +1,44 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'de' } }, { params: { lang: 'en' } }];
+}
+
+const { lang } = Astro.params as { lang: 'de' | 'en' };
+const content = await getEntry('about', 'index');
+const { headline, intro_text } = content.data[lang];
+
+const subpages = {
+  de: [
+    { href: 'our-story', label: 'Unsere Geschichte' },
+    { href: 'faq', label: 'FAQ' },
+    { href: 'contact', label: 'Kontakt' },
+    { href: 'press', label: 'Presse' },
+    { href: 'team', label: 'Team' },
+  ],
+  en: [
+    { href: 'our-story', label: 'Our Story' },
+    { href: 'faq', label: 'FAQ' },
+    { href: 'contact', label: 'Contact' },
+    { href: 'press', label: 'Press' },
+    { href: 'team', label: 'Team' },
+  ],
+}[lang];
+---
+
+<Layout title={headline} lang={lang} currentPath={`/${lang}/about/`}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <h1 class="text-5xl font-black mb-6">{headline}</h1>
+    <p class="text-xl text-gray-600 max-w-2xl mb-16">{intro_text}</p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {subpages.map(page => (
+        <a href={`/${lang}/about/${page.href}/`} class="group bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+          <h2 class="text-2xl font-bold mb-2 group-hover:text-brand-dark">{page.label}</h2>
+          <span class="text-gray-400 text-sm">→</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</Layout>

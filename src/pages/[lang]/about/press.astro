@@ -1,0 +1,34 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'de' } }, { params: { lang: 'en' } }];
+}
+
+const { lang } = Astro.params as { lang: 'de' | 'en' };
+const content = await getEntry('press', 'index');
+const { headline, press_releases } = content.data[lang];
+---
+
+<Layout title={headline} lang={lang} currentPath={`/${lang}/about/press/`}>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <a href={`/${lang}/about/`} class="text-sm text-gray-400 hover:text-gray-600 mb-8 block">← {lang === 'de' ? 'Zurück' : 'Back'}</a>
+    <h1 class="text-4xl lg:text-5xl font-black mb-12">{headline}</h1>
+    <div class="space-y-4">
+      {press_releases.map((pr: { date: string; title: string; file_url?: string }) => (
+        <div class="bg-white rounded-2xl border border-gray-100 p-6 flex items-center justify-between gap-4">
+          <div>
+            <p class="text-sm text-gray-400 mb-1">{pr.date}</p>
+            <p class="font-semibold text-lg">{pr.title}</p>
+          </div>
+          {pr.file_url && (
+            <a href={pr.file_url} class="shrink-0 bg-brand-yellow text-brand-dark text-sm font-bold px-4 py-2 rounded-lg hover:bg-yellow-300 transition-colors">
+              {lang === 'de' ? 'Download' : 'Download'}
+            </a>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</Layout>

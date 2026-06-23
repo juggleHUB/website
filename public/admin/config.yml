@@ -1,0 +1,206 @@
+backend:
+  name: test-repo
+
+media_folder: public/images
+public_folder: /images
+
+i18n:
+  structure: single_file
+  locales: [de, en]
+  default_locale: de
+
+collections:
+  - name: home
+    label: Startseite / Home
+    i18n: true
+    files:
+      - name: home
+        label: Home Page
+        file: src/content/home/{{locale}}.json
+        i18n: true
+        fields:
+          - { label: Hero Headline, name: hero_headline, widget: string, i18n: true }
+          - { label: Hero Subtext, name: hero_subtext, widget: text, i18n: true }
+          - { label: Hero CTA Label, name: hero_cta_label, widget: string, i18n: true }
+          - { label: Hero CTA URL, name: hero_cta_url, widget: string, i18n: duplicate }
+          - { label: Welcome Title, name: welcome_title, widget: string, i18n: true }
+          - { label: Welcome Text, name: welcome_text, widget: text, i18n: true }
+          - label: Feature Cards
+            name: feature_cards
+            widget: list
+            i18n: true
+            fields:
+              - { label: Icon, name: icon, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Text, name: text, widget: text }
+
+  - name: about
+    label: Über uns / About
+    i18n: true
+    files:
+      - name: about
+        label: About Overview
+        file: src/content/about/{{locale}}.json
+        i18n: true
+        fields:
+          - { label: Headline, name: headline, widget: string, i18n: true }
+          - { label: Intro Text, name: intro_text, widget: text, i18n: true }
+
+      - name: our_story
+        label: Our Story / Unsere Geschichte
+        file: src/content/ourstory/{{locale}}.json
+        i18n: true
+        fields:
+          - { label: Headline, name: headline, widget: string, i18n: true }
+          - { label: Body, name: body, widget: markdown, i18n: true }
+
+      - name: faq
+        label: FAQ
+        file: src/content/faq/{{locale}}.json
+        i18n: true
+        fields:
+          - { label: Headline, name: headline, widget: string, i18n: true }
+          - label: Items
+            name: items
+            widget: list
+            i18n: true
+            fields:
+              - { label: Question, name: question, widget: string }
+              - { label: Answer, name: answer, widget: text }
+
+      - name: contact
+        label: Contact / Kontakt
+        file: src/content/contact/{{locale}}.json
+        i18n: true
+        fields:
+          - { label: Headline, name: headline, widget: string, i18n: true }
+          - { label: Address, name: address, widget: text, i18n: true }
+          - { label: Email, name: email, widget: string, i18n: duplicate }
+          - { label: Phone, name: phone, widget: string, i18n: duplicate }
+          - { label: Map Embed URL, name: map_embed_url, widget: string, required: false, i18n: duplicate }
+
+      - name: press
+        label: Press / Presse
+        file: src/content/press/{{locale}}.json
+        i18n: true
+        fields:
+          - { label: Headline, name: headline, widget: string, i18n: true }
+          - label: Press Releases
+            name: press_releases
+            widget: list
+            i18n: true
+            fields:
+              - { label: Date, name: date, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: File URL, name: file_url, widget: string, required: false }
+
+      - name: team
+        label: Team
+        file: src/content/team/{{locale}}.json
+        i18n: true
+        fields:
+          - { label: Headline, name: headline, widget: string, i18n: true }
+          - label: Members
+            name: members
+            widget: list
+            i18n: true
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Role, name: role, widget: string }
+              - { label: Bio, name: bio, widget: text }
+              - { label: Image URL, name: image, widget: string, required: false }
+
+  - name: coworking
+    label: Coworking
+    i18n: true
+    files:
+      - name: coworking
+        label: Coworking Page
+        file: src/content/coworking/{{locale}}.json
+        i18n: true
+        fields:
+          - { label: Headline, name: headline, widget: string, i18n: true }
+          - { label: Intro, name: intro, widget: text, i18n: true }
+          - label: Features
+            name: features
+            widget: list
+            i18n: true
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Text, name: text, widget: text }
+              - { label: Image URL, name: image, widget: string, required: false }
+          - { label: Pricing Note, name: pricing_note, widget: string, required: false, i18n: true }
+
+  - name: event_space
+    label: Event Space
+    i18n: true
+    files:
+      - name: event_space
+        label: Event Space Page
+        file: src/content/eventspace/{{locale}}.json
+        i18n: true
+        fields:
+          - { label: Headline, name: headline, widget: string, i18n: true }
+          - { label: Intro, name: intro, widget: text, i18n: true }
+          - label: Features
+            name: features
+            widget: list
+            i18n: true
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Text, name: text, widget: text }
+              - { label: Image URL, name: image, widget: string, required: false }
+          - { label: Pricing Note, name: pricing_note, widget: string, required: false, i18n: true }
+
+  - name: flexible_childcare
+    label: Flexible Childcare / Kinderbetreuung
+    i18n: true
+    files:
+      - name: flexible_childcare
+        label: Childcare Page
+        file: src/content/childcare/{{locale}}.json
+        i18n: true
+        fields:
+          - { label: Headline, name: headline, widget: string, i18n: true }
+          - { label: Intro, name: intro, widget: text, i18n: true }
+          - label: Features
+            name: features
+            widget: list
+            i18n: true
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Text, name: text, widget: text }
+              - { label: Image URL, name: image, widget: string, required: false }
+          - { label: Pricing Note, name: pricing_note, widget: string, required: false, i18n: true }
+
+  - name: virtual_office
+    label: Virtual Office
+    i18n: true
+    files:
+      - name: virtual_office
+        label: Virtual Office Page
+        file: src/content/virtualoffice/{{locale}}.json
+        i18n: true
+        fields:
+          - { label: Headline, name: headline, widget: string, i18n: true }
+          - { label: Intro, name: intro, widget: text, i18n: true }
+          - label: Features
+            name: features
+            widget: list
+            i18n: true
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Text, name: text, widget: text }
+              - { label: Image URL, name: image, widget: string, required: false }
+          - { label: Pricing Note, name: pricing_note, widget: string, required: false, i18n: true }
+
+  - name: pages
+    label: Content Pages
+    label_singular: Content Page
+    i18n: true
+    folder: src/content/pages
+    create: true
+    identifier_field: title
+    fields:
+      - { label: Title, name: title, widget: string, i18n: true }
+      - { label: Body, name: body, widget: markdown, i18n: true }

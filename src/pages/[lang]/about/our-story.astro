@@ -1,0 +1,22 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+import { marked } from 'marked';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'de' } }, { params: { lang: 'en' } }];
+}
+
+const { lang } = Astro.params as { lang: 'de' | 'en' };
+const content = await getEntry('ourstory', 'index');
+const { headline, body } = content.data[lang];
+const htmlBody = marked(body);
+---
+
+<Layout title={headline} lang={lang} currentPath={`/${lang}/about/our-story/`}>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <a href={`/${lang}/about/`} class="text-sm text-gray-400 hover:text-gray-600 mb-8 block">← {lang === 'de' ? 'Zurück' : 'Back'}</a>
+    <h1 class="text-4xl lg:text-5xl font-black mb-10">{headline}</h1>
+    <div class="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-brand-dark bg-white rounded-2xl p-8 border border-gray-100" set:html={htmlBody} />
+  </div>
+</Layout>

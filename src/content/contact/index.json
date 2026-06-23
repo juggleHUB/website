@@ -1,0 +1,16 @@
+{
+  "de": {
+    "headline": "Kontakt",
+    "address": "JuggleHUB GmbH\nRosenthaler Straße 42\n10178 Berlin-Mitte",
+    "email": "hallo@jugglehub.de",
+    "phone": "+49 30 1234 5678",
+    "map_embed_url": ""
+  },
+  "en": {
+    "headline": "Contact",
+    "address": "JuggleHUB GmbH\nRosenthaler Straße 42\n10178 Berlin-Mitte",
+    "email": "hello@jugglehub.de",
+    "phone": "+49 30 1234 5678",
+    "map_embed_url": ""
+  }
+}

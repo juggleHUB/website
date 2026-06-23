@@ -1,0 +1,36 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'de' } }, { params: { lang: 'en' } }];
+}
+
+const { lang } = Astro.params as { lang: 'de' | 'en' };
+const content = await getEntry('contact', 'index');
+const { headline, address, email, phone } = content.data[lang];
+---
+
+<Layout title={headline} lang={lang} currentPath={`/${lang}/about/contact/`}>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <a href={`/${lang}/about/`} class="text-sm text-gray-400 hover:text-gray-600 mb-8 block">← {lang === 'de' ? 'Zurück' : 'Back'}</a>
+    <h1 class="text-4xl lg:text-5xl font-black mb-12">{headline}</h1>
+    <div class="bg-white rounded-2xl border border-gray-100 p-8 space-y-6">
+      <div>
+        <h2 class="font-bold text-sm uppercase tracking-widest text-gray-400 mb-2">{lang === 'de' ? 'Adresse' : 'Address'}</h2>
+        <p class="text-lg whitespace-pre-line">{address}</p>
+      </div>
+      <div>
+        <h2 class="font-bold text-sm uppercase tracking-widest text-gray-400 mb-2">E-Mail</h2>
+        <a href={`mailto:${email}`} class="text-lg text-brand-dark underline hover:text-gray-600">{email}</a>
+      </div>
+      <div>
+        <h2 class="font-bold text-sm uppercase tracking-widest text-gray-400 mb-2">{lang === 'de' ? 'Telefon' : 'Phone'}</h2>
+        <a href={`tel:${phone}`} class="text-lg text-brand-dark underline hover:text-gray-600">{phone}</a>
+      </div>
+    </div>
+    <div class="mt-8 bg-gray-200 rounded-2xl h-72 flex items-center justify-center text-gray-500">
+      <img src="https://picsum.photos/seed/map-jh/700/300" alt="Map placeholder" class="w-full h-full object-cover rounded-2xl" />
+    </div>
+  </div>
+</Layout>

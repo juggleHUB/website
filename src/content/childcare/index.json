@@ -1,0 +1,24 @@
+{
+  "de": {
+    "headline": "Flexible Kinderbetreuung",
+    "intro": "Unsere Kinderbetreuung ist das Herzstück von JuggleHUB. Bring deine Kinder einfach mit und arbeite im Wissen, dass sie in besten Händen sind – direkt nebenan, sicher und gut betreut.",
+    "features": [
+      { "title": "Qualifiziertes Team", "text": "Alle unsere Betreuer sind staatlich anerkannt, haben Erste-Hilfe-Zertifikate und werden regelmäßig fortgebildet. Dein Kind ist bei uns in guten Händen.", "image": "https://picsum.photos/seed/kids1/800/500" },
+      { "title": "Altersgerechtes Programm", "text": "Kreatives Spielen, Basteln, Vorlesen und Bewegungsangebote – unser Tagesablauf ist abwechslungsreich und auf die Bedürfnisse verschiedener Altersgruppen abgestimmt.", "image": "https://picsum.photos/seed/kids2/800/500" },
+      { "title": "Flexibel buchbar", "text": "Betreuung stundenweise, halbtags oder ganztags – ganz wie du es brauchst. Buchung per App oder telefonisch, auch kurzfristig.", "image": "https://picsum.photos/seed/kids3/800/500" },
+      { "title": "Sicherheit & Transparenz", "text": "Abgeschlossene, kindersichere Räume, regelmäßige Updates über unser digitales Elternportal und offene Türen für alle Fragen – wir kommunizieren transparent.", "image": "https://picsum.photos/seed/kids4/800/500" }
+    ],
+    "pricing_note": "Stundenweise ab €8/Std · Halbtagespaket €35 · Ganztagespaket €60 · Mitglieder-Rabatt 20%. Alle Preise inkl. MwSt."
+  },
+  "en": {
+    "headline": "Flexible Childcare",
+    "intro": "Our childcare is the heart of JuggleHUB. Simply bring your children along and work knowing they are in the best hands – right next door, safe and well cared for.",
+    "features": [
+      { "title": "Qualified Team", "text": "All our caregivers are state-certified, hold first aid certificates and are regularly trained. Your child is in good hands with us.", "image": "https://picsum.photos/seed/kids1/800/500" },
+      { "title": "Age-Appropriate Programme", "text": "Creative play, crafts, reading and movement activities – our daily routine is varied and tailored to the needs of different age groups.", "image": "https://picsum.photos/seed/kids2/800/500" },
+      { "title": "Flexibly Bookable", "text": "Care by the hour, half-day or full-day – whatever you need. Book via app or by phone, also at short notice.", "image": "https://picsum.photos/seed/kids3/800/500" },
+      { "title": "Safety & Transparency", "text": "Enclosed, child-safe rooms, regular updates via our digital parent portal and open doors for all questions – we communicate transparently.", "image": "https://picsum.photos/seed/kids4/800/500" }
+    ],
+    "pricing_note": "Hourly from €8/hr · Half-day package €35 · Full-day package €60 · Member discount 20%. All prices incl. VAT."
+  }
+}

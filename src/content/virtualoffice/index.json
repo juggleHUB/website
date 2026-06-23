@@ -1,0 +1,24 @@
+{
+  "de": {
+    "headline": "Virtual Office",
+    "intro": "Du arbeitest remote, brauchst aber eine professionelle Berliner Geschäftsadresse? Mit unserem Virtual-Office-Paket bekommst du alles Wichtige – ohne täglich vor Ort sein zu müssen.",
+    "features": [
+      { "title": "Geschäftsadresse", "text": "Nutze die JuggleHUB-Adresse in Berlin-Mitte als offizielle Geschäftsadresse für Gewerbeanmeldung, Visitenkarten und Briefköpfe.", "image": "https://picsum.photos/seed/virtual1/800/500" },
+      { "title": "Postservice", "text": "Wir empfangen, sortieren und leiten deine Post weiter – digital per Scan oder physisch an deine Privatadresse, ganz wie du möchtest.", "image": "https://picsum.photos/seed/virtual2/800/500" },
+      { "title": "Telefonservice", "text": "Berliner Festnetznummer, professionelle Anrufannahme in deinem Firmennamen und Weiterleitung auf dein Mobiltelefon.", "image": "https://picsum.photos/seed/virtual3/800/500" },
+      { "title": "Meeting-Stunden inklusive", "text": "Jedes Virtual-Office-Paket beinhaltet monatliche Meeting-Raum-Stunden, damit du deine Kunden professionell empfangen kannst.", "image": "https://picsum.photos/seed/virtual4/800/500" }
+    ],
+    "pricing_note": "Basic ab €49/Monat · Plus (inkl. Telefonservice) ab €89/Monat · Premium ab €149/Monat · Alle Preise zzgl. MwSt."
+  },
+  "en": {
+    "headline": "Virtual Office",
+    "intro": "You work remotely but need a professional Berlin business address? With our Virtual Office package you get everything important – without needing to be on site every day.",
+    "features": [
+      { "title": "Business Address", "text": "Use the JuggleHUB address in Berlin-Mitte as your official business address for business registration, business cards and letterhead.", "image": "https://picsum.photos/seed/virtual1/800/500" },
+      { "title": "Postal Service", "text": "We receive, sort and forward your mail – digitally by scan or physically to your private address, as you prefer.", "image": "https://picsum.photos/seed/virtual2/800/500" },
+      { "title": "Telephone Service", "text": "Berlin landline number, professional call answering in your company name and forwarding to your mobile phone.", "image": "https://picsum.photos/seed/virtual3/800/500" },
+      { "title": "Meeting Hours Included", "text": "Every Virtual Office package includes monthly meeting room hours so you can receive your clients professionally.", "image": "https://picsum.photos/seed/virtual4/800/500" }
+    ],
+    "pricing_note": "Basic from €49/month · Plus (incl. telephone service) from €89/month · Premium from €149/month · All prices excl. VAT."
+  }
+}

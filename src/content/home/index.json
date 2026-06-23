@@ -1,0 +1,62 @@
+{
+	"de": {
+		"hero_headline": "Platz zum Arbeiten. Raum zum Leben.",
+		"hero_subtext": "JuggleHUB ist dein flexibler Coworking-Space in Berlin – mit integrierter Kinderbetreuung, inspirierenden Events und einer lebendigen Community.",
+		"hero_cta_label": "Jetzt entdecken",
+		"hero_cta_url": "/de/coworking",
+		"welcome_title": "Willkommen im JuggleHUB",
+		"welcome_text": "Im JuggleHUB glauben wir, dass Arbeit und Familie kein Widerspruch sein müssen. Unser moderner Coworking-Space bietet dir alles, was du brauchst: einen professionellen Arbeitsplatz, flexible Kinderbetreuung, inspirierende Events und eine Community, die dich trägt.",
+		"feature_cards": [
+			{
+				"icon": "💼",
+				"title": "Coworking",
+				"text": "Flexible Schreibtische, dedizierte Büros und Meeting-Räume – alles ausgestattet mit Highspeed-WLAN und Kaffeeflatrate."
+			},
+			{
+				"icon": "🎉",
+				"title": "Event Space",
+				"text": "Unser multifunktionaler Veranstaltungsraum ist ideal für Workshops, Präsentationen, Networking-Events und private Feiern."
+			},
+			{
+				"icon": "👶",
+				"title": "Flexible Kinderbetreuung",
+				"text": "Bring deine Kinder einfach mit! Unsere zertifizierten Betreuer kümmern sich liebevoll um deinen Nachwuchs, während du konzentriert arbeitest."
+			},
+			{
+				"icon": "🏢",
+				"title": "Virtual Office",
+				"text": "Professionelle Geschäftsadresse, Postservice und Telefonanlage – alles was du für dein Unternehmen brauchst, ohne physisch anwesend zu sein."
+			}
+		]
+	},
+	"en": {
+		"hero_headline": "Space for Work. Room for Life.",
+		"hero_subtext": "JuggleHUB is your flexible coworking space in Berlin – with integrated childcare, inspiring events and a vibrant community.",
+		"hero_cta_label": "Discover now",
+		"hero_cta_url": "/en/coworking",
+		"welcome_title": "Welcome to JuggleHUB",
+		"welcome_text": "At JuggleHUB, we believe work and family don't have to be at odds. Our modern coworking space offers everything you need: a professional workspace, flexible childcare, inspiring events and a community that supports you.",
+		"feature_cards": [
+			{
+				"icon": "💼",
+				"title": "Coworking",
+				"text": "Flexible desks, dedicated offices and meeting rooms – all equipped with high-speed WiFi and unlimited coffee."
+			},
+			{
+				"icon": "🎉",
+				"title": "Event Space",
+				"text": "Our multifunctional event space is ideal for workshops, presentations, networking events and private celebrations."
+			},
+			{
+				"icon": "👶",
+				"title": "Flexible Childcare",
+				"text": "Just bring your kids along! Our certified caregivers lovingly look after your children while you work with focus."
+			},
+			{
+				"icon": "🏢",
+				"title": "Virtual Office",
+				"text": "Professional business address, postal service and phone system – everything your company needs without being physically present."
+			}
+		]
+	}
+}

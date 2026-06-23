@@ -1,0 +1,24 @@
+{
+  "de": {
+    "headline": "Coworking",
+    "intro": "Dein professioneller Arbeitsplatz in Berlin – flexibel, inspirierend und mit allem ausgestattet, was du brauchst. Von einem ruhigen Schreibtisch bis zum voll ausgestatteten Privatbüro findest du bei uns das passende Modell.",
+    "features": [
+      { "title": "Flexible Schreibtische", "text": "Buche einen Schreibtisch für einen Tag, eine Woche oder den ganzen Monat. Highspeed-WLAN, Drucker und natürlich Kaffee inklusive.", "image": "https://picsum.photos/seed/desk1/800/500" },
+      { "title": "Dedizierte Büros", "text": "Du brauchst mehr Privatsphäre? Unsere abschließbaren Einzelbüros und Teambüros (2–8 Personen) stehen dir zur Verfügung.", "image": "https://picsum.photos/seed/office1/800/500" },
+      { "title": "Meeting-Räume", "text": "Drei moderne Meeting-Räume für 4–12 Personen, ausgestattet mit Videokonferenztechnik, Whiteboard und Präsentationsmöglichkeiten.", "image": "https://picsum.photos/seed/meeting1/800/500" },
+      { "title": "Community & Küche", "text": "Unser großzügiger Gemeinschaftsbereich mit vollausgestatteter Küche, Lounge-Ecken und Telefonkabinen lädt zum Austausch und Entspannen ein.", "image": "https://picsum.photos/seed/lounge1/800/500" }
+    ],
+    "pricing_note": "Tagespass ab €25 · Monatspass ab €299 · Alle Preise inkl. MwSt. Kostenloser Schnuppertag auf Anfrage."
+  },
+  "en": {
+    "headline": "Coworking",
+    "intro": "Your professional workspace in Berlin – flexible, inspiring and equipped with everything you need. From a quiet desk to a fully equipped private office, you'll find the right model with us.",
+    "features": [
+      { "title": "Flexible Desks", "text": "Book a desk for a day, a week or the whole month. High-speed WiFi, printer and of course coffee included.", "image": "https://picsum.photos/seed/desk1/800/500" },
+      { "title": "Dedicated Offices", "text": "Need more privacy? Our lockable individual offices and team offices (2–8 people) are available for you.", "image": "https://picsum.photos/seed/office1/800/500" },
+      { "title": "Meeting Rooms", "text": "Three modern meeting rooms for 4–12 people, equipped with video conferencing technology, whiteboard and presentation facilities.", "image": "https://picsum.photos/seed/meeting1/800/500" },
+      { "title": "Community & Kitchen", "text": "Our generous communal area with fully equipped kitchen, lounge corners and phone booths invites you to connect and relax.", "image": "https://picsum.photos/seed/lounge1/800/500" }
+    ],
+    "pricing_note": "Day pass from €25 · Monthly pass from €299 · All prices incl. VAT. Free trial day on request."
+  }
+}

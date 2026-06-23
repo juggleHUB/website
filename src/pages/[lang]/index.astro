@@ -1,0 +1,113 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'de' } }, { params: { lang: 'en' } }];
+}
+
+const { lang } = Astro.params as { lang: 'de' | 'en' };
+const content = await getEntry('home', 'index');
+const { hero_headline, hero_subtext, hero_cta_label, hero_cta_url, welcome_title, welcome_text, feature_cards } = content.data[lang];
+
+const t = {
+  de: { about: 'Mehr über uns →', cta_title: 'Bereit, dein Arbeiten neu zu denken?', cta_sub: 'Komm zu einem kostenlosen Schnuppertag und erlebe JuggleHUB selbst.', cta_btn: 'Schnuppertag vereinbaren' },
+  en: { about: 'More about us →', cta_title: 'Ready to rethink the way you work?', cta_sub: 'Join us for a free trial day and experience JuggleHUB for yourself.', cta_btn: 'Book a trial day' },
+}[lang];
+---
+
+<Layout title={lang === 'de' ? 'Startseite' : 'Home'} lang={lang} currentPath={`/${lang}/`}>
+  <!-- MOBILE hero -->
+  <section class="navbreak:hidden bg-[#FFFDD7]">
+    <!-- Text -->
+    <div class="px-6 pt-28 pb-20">
+      <h1 class="text-3xl font-black tracking-tight mb-4 leading-tight text-brand-dark">{hero_headline}</h1>
+      <p class="text-base text-brand-dark/70 mb-7 leading-relaxed">{hero_subtext}</p>
+      <a href={hero_cta_url} class="inline-flex items-center bg-brand-teal text-white font-bold text-base px-6 py-3 rounded-full hover:opacity-90 transition-colors shadow-md">
+        {hero_cta_label}
+      </a>
+    </div>
+    <!-- Image with woosh on top — image pulled up so woosh overlaps visible photo -->
+    <div class="relative h-64 -mt-[62px]">
+      <img
+        src="https://picsum.photos/seed/hero-juggle/1600/700"
+        alt="JuggleHUB workspace"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <img
+        src="/woosh/hero-mob.svg"
+        alt=""
+        aria-hidden="true"
+        class="absolute top-0 left-0 w-full z-10 pointer-events-none select-none"
+      />
+    </div>
+  </section>
+
+  <!-- DESKTOP hero -->
+  <section class="hidden navbreak:block relative overflow-hidden max-h-[760px]">
+    <!-- Invisible height sizer -->
+    <img src="/woosh/hero.svg" aria-hidden="true" class="w-full opacity-0 pointer-events-none select-none" />
+    <!-- Photo — full background -->
+    <img
+      src="https://picsum.photos/seed/hero-juggle/1600/700"
+      alt="JuggleHUB workspace"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <!-- Solid left panel -->
+    <div class="absolute inset-y-0 left-0 w-[40%] bg-[#FFFDD7]"></div>
+    <!-- Woosh SVG — starts at 40%, full height -->
+    <img
+      src="/woosh/hero.svg"
+      alt=""
+      aria-hidden="true"
+      class="absolute top-0 left-[40%] h-full w-auto pointer-events-none select-none"
+    />
+    <!-- Text — sits on the solid left panel -->
+    <div class="absolute inset-0 z-10 flex items-center">
+      <div class="w-[40%] flex justify-end pr-10 lg:pr-16">
+      <div class="w-full max-w-sm pt-16">
+        <h1 class="text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-tight text-brand-dark">{hero_headline}</h1>
+        <p class="text-lg lg:text-xl text-brand-dark/70 mb-10 leading-relaxed">{hero_subtext}</p>
+        <a href={hero_cta_url} class="inline-flex items-center bg-brand-teal text-white font-bold text-lg px-8 py-4 rounded-full hover:opacity-90 transition-colors shadow-lg">
+          {hero_cta_label}
+        </a>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-4xl font-black mb-6">{welcome_title}</h2>
+        <p class="text-lg text-gray-600 leading-relaxed">{welcome_text}</p>
+        <a href={`/${lang}/about/`} class="inline-flex items-center mt-6 text-brand-dark font-semibold underline underline-offset-4 hover:text-gray-600 transition-colors">{t.about}</a>
+      </div>
+      <div class="rounded-2xl overflow-hidden shadow-xl">
+        <img src="https://picsum.photos/seed/welcome-jh/700/450" alt="JuggleHUB Community" class="w-full h-full object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {feature_cards.map((card: { icon: string; title: string; text: string }) => (
+          <div class="bg-brand-cream rounded-2xl p-6 border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+            <div class="text-4xl mb-4">{card.icon}</div>
+            <h3 class="text-xl font-bold mb-3">{card.title}</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">{card.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-brand-yellow py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl lg:text-4xl font-black text-brand-dark mb-4">{t.cta_title}</h2>
+      <p class="text-brand-dark/70 text-lg mb-8">{t.cta_sub}</p>
+      <a href={`/${lang}/about/contact/`} class="inline-flex items-center bg-brand-dark text-white font-bold text-lg px-8 py-4 rounded-xl hover:bg-gray-800 transition-colors">{t.cta_btn}</a>
+    </div>
+  </section>
+</Layout>
