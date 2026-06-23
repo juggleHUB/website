@@ -2,19 +2,29 @@
   "de": {
     "headline": "Unser Team",
     "members": [
-      { "name": "Maria Hoffmann", "role": "Gründerin & CEO", "bio": "Maria ist Mutter von zwei Kindern und hat JuggleHUB aus persönlicher Notwendigkeit gegründet. Mit einem Hintergrund in Stadtplanung und Community Building bringt sie einen menschlichen Fokus in alles, was wir tun.", "image": "https://picsum.photos/seed/maria/400/400" },
-      { "name": "Jonas Weber", "role": "Operations Manager", "bio": "Jonas sorgt dafür, dass bei JuggleHUB alles reibungslos läuft – von der Kaffeemaschine bis zum Mietvertrag. Er ist erster Ansprechpartner für alle Mitglieder und kennt jeden beim Namen.", "image": "https://picsum.photos/seed/jonas/400/400" },
-      { "name": "Leila Farsi", "role": "Head of Childcare", "bio": "Leila ist staatlich anerkannte Erzieherin mit 10 Jahren Erfahrung und leitet unser Betreuungsteam. Für sie ist jedes Kind ein Individuum mit eigenen Bedürfnissen und Stärken.", "image": "https://picsum.photos/seed/leila/400/400" },
-      { "name": "Tom Brinkmann", "role": "Community & Events", "bio": "Tom ist der kreative Kopf hinter unserem Eventprogramm. Er bringt regelmäßig spannende Speaker, Workshops und Networking-Abende zu JuggleHUB.", "image": "https://picsum.photos/seed/tom/400/400" }
+      { "name": "Silvia Steude", "role": "Co-Gründerin", "bio": "", "image": "/images/team/silvia.jpg" },
+      { "name": "Simone", "role": "Empfang", "bio": "", "image": "/images/team/simone.jpg" },
+      { "name": "Ana Paula", "role": "Empfang", "bio": "", "image": "/images/team/ana-paula.jpeg" },
+      { "name": "Ana", "role": "Empfang", "bio": "", "image": "/images/team/ana.jpeg" },
+      { "name": "Carmen", "role": "Kinderbetreuung", "bio": "", "image": "/images/team/carmen.jpeg" },
+      { "name": "Andreia", "role": "Kinderbetreuung", "bio": "", "image": "/images/team/andreia.jpeg" },
+      { "name": "Ariadne", "role": "Kinderbetreuung", "bio": "", "image": "/images/team/ariadne.jpeg" },
+      { "name": "Martinha", "role": "Kinderbetreuung", "bio": "", "image": "/images/team/martinha.jpeg" },
+      { "name": "Andreia C.", "role": "Kinderbetreuung", "bio": "", "image": "/images/team/andreia-c.jpeg" }
     ]
   },
   "en": {
     "headline": "Our Team",
     "members": [
-      { "name": "Maria Hoffmann", "role": "Founder & CEO", "bio": "Maria is a mother of two and founded JuggleHUB out of personal necessity. With a background in urban planning and community building, she brings a human focus to everything we do.", "image": "https://picsum.photos/seed/maria/400/400" },
-      { "name": "Jonas Weber", "role": "Operations Manager", "bio": "Jonas makes sure everything runs smoothly at JuggleHUB – from the coffee machine to the lease. He is the first point of contact for all members and knows everyone by name.", "image": "https://picsum.photos/seed/jonas/400/400" },
-      { "name": "Leila Farsi", "role": "Head of Childcare", "bio": "Leila is a state-certified educator with 10 years of experience leading our childcare team. For her, every child is an individual with their own needs and strengths.", "image": "https://picsum.photos/seed/leila/400/400" },
-      { "name": "Tom Brinkmann", "role": "Community & Events", "bio": "Tom is the creative mind behind our events programme. He regularly brings exciting speakers, workshops and networking evenings to JuggleHUB.", "image": "https://picsum.photos/seed/tom/400/400" }
+      { "name": "Silvia Steude", "role": "Co-Founder", "bio": "", "image": "/images/team/silvia.jpg" },
+      { "name": "Simone", "role": "Front Desk", "bio": "", "image": "/images/team/simone.jpg" },
+      { "name": "Ana Paula", "role": "Front Desk", "bio": "", "image": "/images/team/ana-paula.jpeg" },
+      { "name": "Ana", "role": "Front Desk", "bio": "", "image": "/images/team/ana.jpeg" },
+      { "name": "Carmen", "role": "Childcare", "bio": "", "image": "/images/team/carmen.jpeg" },
+      { "name": "Andreia", "role": "Childcare", "bio": "", "image": "/images/team/andreia.jpeg" },
+      { "name": "Ariadne", "role": "Childcare", "bio": "", "image": "/images/team/ariadne.jpeg" },
+      { "name": "Martinha", "role": "Childcare", "bio": "", "image": "/images/team/martinha.jpeg" },
+      { "name": "Andreia C.", "role": "Childcare", "bio": "", "image": "/images/team/andreia-c.jpeg" }
     ]
   }
 }
