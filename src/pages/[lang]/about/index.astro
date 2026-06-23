@@ -32,11 +32,11 @@ const subpages = {
   <div class="max-w-7xl mx-auto px-8 sm:px-14 lg:px-20 py-20">
     <h1 class="text-5xl font-black mb-6">{headline}</h1>
     <p class="text-xl text-gray-600 max-w-2xl mb-16">{intro_text}</p>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
       {subpages.map(page => (
-        <a href={`/${lang}/about/${page.href}/`} class="group bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
-          <h2 class="text-2xl font-bold mb-2 group-hover:text-brand-dark">{page.label}</h2>
-          <span class="text-gray-400 text-sm">→</span>
+        <a href={`/${lang}/about/${page.href}/`} class="group bg-white rounded-2xl p-4 sm:p-8 border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-200 flex items-center justify-between">
+          <h2 class="text-base sm:text-2xl font-bold group-hover:text-brand-dark">{page.label}</h2>
+          <span class="text-gray-400 text-lg">→</span>
         </a>
       ))}
     </div>
