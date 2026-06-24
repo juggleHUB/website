@@ -1,0 +1,75 @@
+---
+interface PricingCard {
+  title: string;
+  price: number;
+  currency?: string;
+  period?: string;
+  vat_note?: string;
+  features: string[];
+}
+
+interface Props {
+  title: string;
+  description?: string;
+  notes?: string[];
+  cards: PricingCard[];
+}
+
+const { title, description, notes, cards } = Astro.props;
+---
+
+<section class="pt-4 pb-20 px-8 sm:px-14 lg:px-20 max-w-7xl mx-auto">
+  <div class="text-center mb-6">
+    <div class="w-12 h-0.5 bg-brand-teal mx-auto mb-4"></div>
+    <h2 class="text-3xl font-black text-brand-dark">{title}</h2>
+  </div>
+
+  {(description || notes) && (
+    <div class="mb-10 text-center">
+      {description && <p class="text-gray-600 leading-relaxed mb-2">{description}</p>}
+      {notes && notes.map((note) => (
+        <p class="text-gray-600 leading-relaxed">{note}</p>
+      ))}
+    </div>
+  )}
+
+  <div class="pricing-grid gap-px bg-gray-200 border border-gray-200 rounded-2xl overflow-hidden">
+    {cards.map((card) => (
+      <div class="bg-white flex flex-col">
+        <div class="px-6 py-4 text-center" style="background-color: #C8E9E5;">
+          <p class="text-xs font-bold tracking-widest uppercase text-brand-dark">{card.title}</p>
+        </div>
+        <div class="px-6 py-6 text-center border-b border-gray-100">
+          <div class="flex items-end justify-center gap-1">
+            <span class="text-5xl font-black text-brand-dark leading-none">{card.price}</span>
+            <span class="text-xl font-semibold text-brand-dark mb-1">{card.currency ?? '€'}</span>
+          </div>
+          {card.period && <p class="text-sm text-gray-400 mt-1">{card.period}</p>}
+          {card.vat_note && <p class="text-sm text-gray-400">{card.vat_note}</p>}
+        </div>
+        <div class="flex flex-col divide-y divide-gray-100">
+          {card.features.map((feature) => (
+            <p class="px-6 py-3 text-sm text-gray-600 text-center">{feature}</p>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 640px) {
+    .pricing-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 1100px) {
+    .pricing-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

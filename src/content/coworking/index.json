@@ -2,23 +2,133 @@
   "de": {
     "headline": "Coworking",
     "intro": "Dein professioneller Arbeitsplatz in Berlin – flexibel, inspirierend und mit allem ausgestattet, was du brauchst. Von einem ruhigen Schreibtisch bis zum voll ausgestatteten Privatbüro findest du bei uns das passende Modell.",
-    "features": [
-      { "title": "Flexible Schreibtische", "text": "Buche einen Schreibtisch für einen Tag, eine Woche oder den ganzen Monat. Highspeed-WLAN, Drucker und natürlich Kaffee inklusive.", "image": "https://picsum.photos/seed/desk1/800/500" },
-      { "title": "Dedizierte Büros", "text": "Du brauchst mehr Privatsphäre? Unsere abschließbaren Einzelbüros und Teambüros (2–8 Personen) stehen dir zur Verfügung.", "image": "https://picsum.photos/seed/office1/800/500" },
-      { "title": "Meeting-Räume", "text": "Drei moderne Meeting-Räume für 4–12 Personen, ausgestattet mit Videokonferenztechnik, Whiteboard und Präsentationsmöglichkeiten.", "image": "https://picsum.photos/seed/meeting1/800/500" },
-      { "title": "Community & Küche", "text": "Unser großzügiger Gemeinschaftsbereich mit vollausgestatteter Küche, Lounge-Ecken und Telefonkabinen lädt zum Austausch und Entspannen ein.", "image": "https://picsum.photos/seed/lounge1/800/500" }
+    "hero_cta_label": "Jetzt buchen",
+    "hero_cta_url": "/de/about/contact/",
+    "welcome_title": "Dein Arbeitsplatz im JuggleHUB",
+    "welcome_text": "Ob du ein ruhiges Plätzchen zum Konzentrieren suchst, ein Büro für dein Team oder einfach einen Ort, an dem Arbeit und Alltag zusammenpassen – bei uns findest du genau das. Unser Coworking-Space in Berlin ist mehr als nur ein Schreibtisch: Er ist eine lebendige Community aus Selbstständigen, Eltern und Kreativen, die gemeinsam wachsen.",
+    "cards": [
+      { "title": "Vorteile", "text": "Highspeed-WLAN, Kaffeeflatrate, Drucker, Schließfächer und eine vollausgestattete Küche – alles inklusive, damit du dich voll auf deine Arbeit konzentrieren kannst." },
+      { "title": "Services", "text": "Rezeptionsservice, Postannahme, Reinigung und technischer Support. Wir kümmern uns um den Rest, damit du es nicht musst." },
+      { "title": "Zugang", "text": "24/7-Zugang mit Chipkarte, flexible Tages- und Monatspässe sowie die Möglichkeit, spontan zu buchen – Coworking nach deinem Rhythmus." }
     ],
-    "pricing_note": "Tagespass ab €25 · Monatspass ab €299 · Alle Preise inkl. MwSt. Kostenloser Schnuppertag auf Anfrage."
+    "features": [],
+    "pricing": {
+      "title": "Coworking Preise",
+      "notes": [
+        "Alle Preise verstehen sich zzgl. MwSt.",
+        "Unsere Mitgliedschaften sind unbefristet und monatlich kündbar.",
+        "Studierende zahlen weniger. Sprich uns gerne an."
+      ],
+      "cards": [
+        {
+          "title": "Tagespass",
+          "price": 23,
+          "period": "pro Tag",
+          "vat_note": "+ 19% MwSt.",
+          "features": ["8 bis 18 Uhr", "Nur gültig Mo–Fr"]
+        },
+        {
+          "title": "4 kaufen, 5 nutzen",
+          "price": 90,
+          "period": "pro Pack",
+          "vat_note": "+ 19% MwSt.",
+          "features": ["Innerhalb 1 Monat nutzbar", "Nur gültig Mo–Fr"]
+        },
+        {
+          "title": "Flex 50 / Limited",
+          "price": 129,
+          "period": "pro Monat",
+          "vat_note": "+ 19% MwSt.",
+          "features": ["Flexibler Schreibtisch mit WLAN", "Halbe Stundenzahl von Flex 100", "Inkl. 2 Std. Meeting-Raum", "40% Rabatt auf Raumbuchungen"]
+        },
+        {
+          "title": "Flex 100 Unlimited 8–18",
+          "price": 159,
+          "period": "pro Monat",
+          "vat_note": "+ 19% MwSt.",
+          "features": ["Flexibler Schreibtisch mit WLAN", "Coworking Mo–Fr 8–18 Uhr", "Inkl. 4 Std. Meeting-Raum", "40% Rabatt auf Raumbuchungen"]
+        },
+        {
+          "title": "Flex 24/7 Unlimited",
+          "price": 199,
+          "period": "pro Monat",
+          "vat_note": "+ 19% MwSt.",
+          "features": ["Flexibler Schreibtisch mit WLAN", "24/7-Zugang per Air Key App", "Inkl. 8 Std. Meeting-Raum", "40% Rabatt auf Raumbuchungen", "Schließfach"]
+        },
+        {
+          "title": "Fix Desk Unlimited",
+          "price": 299,
+          "period": "pro Monat",
+          "vat_note": "+ 19% MwSt.",
+          "features": ["Fester Schreibtisch mit WLAN", "24/7-Zugang per Air Key App", "Inkl. 8 Std. Meeting-Raum", "40% Rabatt auf Raumbuchungen", "Schließfach"]
+        }
+      ]
+    }
   },
   "en": {
     "headline": "Coworking",
     "intro": "Your professional workspace in Berlin – flexible, inspiring and equipped with everything you need. From a quiet desk to a fully equipped private office, you'll find the right model with us.",
-    "features": [
-      { "title": "Flexible Desks", "text": "Book a desk for a day, a week or the whole month. High-speed WiFi, printer and of course coffee included.", "image": "https://picsum.photos/seed/desk1/800/500" },
-      { "title": "Dedicated Offices", "text": "Need more privacy? Our lockable individual offices and team offices (2–8 people) are available for you.", "image": "https://picsum.photos/seed/office1/800/500" },
-      { "title": "Meeting Rooms", "text": "Three modern meeting rooms for 4–12 people, equipped with video conferencing technology, whiteboard and presentation facilities.", "image": "https://picsum.photos/seed/meeting1/800/500" },
-      { "title": "Community & Kitchen", "text": "Our generous communal area with fully equipped kitchen, lounge corners and phone booths invites you to connect and relax.", "image": "https://picsum.photos/seed/lounge1/800/500" }
+    "hero_cta_label": "Book now",
+    "hero_cta_url": "/en/about/contact/",
+    "welcome_title": "Your workspace at JuggleHUB",
+    "welcome_text": "Whether you're looking for a quiet spot to focus, an office for your team, or simply a place where work and everyday life fit together – you'll find exactly that here. Our coworking space in Berlin is more than just a desk: it's a vibrant community of freelancers, parents and creatives growing together.",
+    "cards": [
+      { "title": "Benefits", "text": "High-speed WiFi, unlimited coffee, printer, lockers and a fully equipped kitchen – all included so you can focus entirely on your work." },
+      { "title": "Services", "text": "Reception service, mail handling, cleaning and technical support. We take care of the rest so you don't have to." },
+      { "title": "Access", "text": "24/7 access with a key card, flexible day and monthly passes and the ability to book on the fly – coworking on your schedule." }
     ],
-    "pricing_note": "Day pass from €25 · Monthly pass from €299 · All prices incl. VAT. Free trial day on request."
+    "features": [],
+    "pricing": {
+      "title": "Coworking Prices",
+      "notes": [
+        "All prices exclude VAT.",
+        "Our memberships are open-ended and can be terminated monthly.",
+        "Students pay less. Please talk to us for further details."
+      ],
+      "cards": [
+        {
+          "title": "Day Pass",
+          "price": 23,
+          "period": "per day",
+          "vat_note": "+ 19% VAT",
+          "features": ["8 am – 6 pm", "Only valid on weekdays (Mo–Fri)"]
+        },
+        {
+          "title": "Pay 4 Use 5 Day Pack",
+          "price": 90,
+          "period": "per pack",
+          "vat_note": "+ 19% VAT",
+          "features": ["Must be used within 1 month", "Only valid on weekdays (Mo–Fri)"]
+        },
+        {
+          "title": "Flex 50 / Limited",
+          "price": 129,
+          "period": "per month",
+          "vat_note": "+ 19% VAT",
+          "features": ["Flexible desk with WiFi", "Half amount of hours of Flex 100", "Incl. 2 hrs. of meeting room usage", "40% discount on room booking"]
+        },
+        {
+          "title": "Flex 100 Unlimited 8–6",
+          "price": 159,
+          "period": "per month",
+          "vat_note": "+ 19% VAT",
+          "features": ["Flexible desk with WiFi", "Coworking weekdays 8 am – 6 pm", "Incl. 4 hrs. of meeting room usage", "40% discount on room booking"]
+        },
+        {
+          "title": "Flex 24/7 Unlimited",
+          "price": 199,
+          "period": "per month",
+          "vat_note": "+ 19% VAT",
+          "features": ["Flex desk with WiFi", "24/7 access with free air key app", "Incl. 8 hrs. meeting room usage", "40% discount on room booking", "Locker"]
+        },
+        {
+          "title": "Fix Desk Unlimited",
+          "price": 299,
+          "period": "per month",
+          "vat_note": "+ 19% VAT",
+          "features": ["Fix desk with WiFi", "24/7 access with free air key app", "Incl. 8 hrs. meeting room usage", "40% discount on room booking", "Locker"]
+        }
+      ]
+    }
   }
 }

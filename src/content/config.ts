@@ -92,8 +92,26 @@ export const collections = {
     schema: i18n(z.object({
       headline: z.string(),
       intro: z.string(),
+      hero_cta_label: z.string().optional(),
+      hero_cta_url: z.string().optional(),
+      welcome_title: z.string().optional(),
+      welcome_text: z.string().optional(),
+      cards: z.array(z.object({ title: z.string(), text: z.string(), url: z.string().optional(), image: z.string().optional() })).optional(),
       features: z.array(featureItem),
       pricing_note: z.string().optional(),
+      pricing: z.object({
+        title: z.string(),
+        description: z.string().optional(),
+        notes: z.array(z.string()).optional(),
+        cards: z.array(z.object({
+          title: z.string(),
+          price: z.number(),
+          currency: z.string().optional(),
+          period: z.string().optional(),
+          vat_note: z.string().optional(),
+          features: z.array(z.string()),
+        })),
+      }).optional(),
     })),
   }),
 
