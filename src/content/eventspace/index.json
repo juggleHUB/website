@@ -4,23 +4,129 @@
     "intro": "Der JuggleHUB Event Space ist der perfekte Ort für dein nächstes Event. Ob Business-Workshop, Produktlaunch, Firmenfeier oder private Veranstaltung – unser flexibler Veranstaltungsraum passt sich deinen Bedürfnissen an.",
     "hero_cta_label": "Jetzt anfragen",
     "hero_cta_url": "/de/about/contact/",
-    "features": [
-      { "title": "Kapazität & Ausstattung", "text": "Bis zu 80 Personen im Theaterstil, 50 im Klassenraum-Setup oder 40 in Bankettbestuhlung. Professionelle AV-Technik, Beamer, Bühne und Barsystem inklusive.", "image": "https://picsum.photos/seed/event1/800/500" },
-      { "title": "Catering-Service", "text": "Wir arbeiten mit ausgewählten Berliner Cateringpartnern zusammen. Von Kaffeepausen über Fingerfood bis zum Drei-Gänge-Menü organisieren wir alles für dich.", "image": "https://picsum.photos/seed/event2/800/500" },
-      { "title": "Technik & Support", "text": "Unser Events-Team begleitet dich von der Planung bis zur Nachbereitung. Technischer Vor-Ort-Support ist bei jeder Buchung inklusive.", "image": "https://picsum.photos/seed/event3/800/500" }
-    ],
-    "pricing_note": "Halbtagsmiete ab €350 · Ganztagsmiete ab €600 · Abendveranstaltung ab €450 · Individuelle Angebote auf Anfrage."
+    "welcome_title": "Räume für jede Gelegenheit",
+    "welcome_text": "Ob kleines Teammeeting, großes Seminar oder kreativer Workshop – im JuggleHUB findest du den passenden Raum. Unsere Räume lassen sich flexibel kombinieren und an deine Anforderungen anpassen. Alle Räume sind mit moderner Technik ausgestattet und bieten eine angenehme Arbeitsatmosphäre.",
+    "pricing": {
+      "title": "Raumpreise",
+      "cta_label": "Raum anfragen",
+      "cta_url": "/de/about/contact/",
+      "cards": [
+        {
+          "title": "Meetingraum",
+          "price": 29,
+          "period": "pro Stunde + 19% MwSt.",
+          "features": ["(18 € für Mitglieder)", "Tagesrate (> 5 Std.): 199 €", "(119 € für Mitglieder)"]
+        },
+        {
+          "title": "Konferenzraum",
+          "price": 49,
+          "period": "pro Stunde + 19% MwSt.",
+          "features": ["(29 € für Mitglieder)", "Tagesrate (> 5 Std.): 339 €", "(199 € für Mitglieder)"]
+        },
+        {
+          "title": "Event Space",
+          "price": 59,
+          "period": "pro Stunde + 19% MwSt.",
+          "features": ["Verfügbar ab September 2025", "(35 € für Mitglieder)", "Tagesrate (> 5 Std.): 399 €", "(239 € für Mitglieder)"]
+        }
+      ]
+    },
+    "rooms": [
+      {
+        "title": "Der Meetingraum – 20 qm",
+        "description": "Kann für Teambesprechungen oder Kundenmeetings genutzt werden, aber auch für Gruppenveranstaltungen oder Videokonferenzen mit bis zu 10 Personen am großen Tisch. Der Raum ist mit einem Flachbildschirm und einer Whiteboardwand ausgestattet.",
+        "images": ["/images/rooms/meeting-room-1.jpg"]
+      },
+      {
+        "title": "Neuer Event Space – 50 qm",
+        "description": "Dieser Raum steht ab September 2025 für Veranstaltungen zur Verfügung. (Das Bild ist ein Beispielbild aus unserem ersten Standort.)",
+        "images": ["/images/rooms/event-space-1.jpg"]
+      },
+      {
+        "title": "Der Konferenzraum – 40 qm",
+        "description": "Kann mit reiner Bestuhlung, Tischen und Stühlen oder als offener Raum genutzt werden, je nach Anforderungen. Geeignet für Veranstaltungen mit Frontalbestuhlung, für Gruppenseminare und Workshops mit bis zu 40 Teilnehmern (bis zu 20 Sitzplätze an Tischen). Kombination mit Meetingraum (20 qm) möglich. Mit Zugang zur Außenterrasse.",
+        "images": ["/images/rooms/conference-room-1.jpg"]
+      },
+      {
+        "title": "Neuer Event Space – 50 qm",
+        "description": "Dieser Raum steht ab September 2025 für Veranstaltungen zur Verfügung. (Das Bild ist ein Beispielbild aus unserem ersten Standort.)",
+        "images": ["/images/rooms/event-space-1.jpg"]
+      },
+      {
+        "title": "Der Meetingraum – 20 qm",
+        "description": "Kann für Teambesprechungen oder Kundenmeetings genutzt werden, aber auch für Gruppenveranstaltungen oder Videokonferenzen mit bis zu 10 Personen am großen Tisch. Der Raum ist mit einem Flachbildschirm und einer Whiteboardwand ausgestattet.",
+        "images": ["/images/rooms/meeting-room-1.jpg"]
+      },
+      {
+        "title": "Der Konferenzraum – 40 qm",
+        "description": "Kann mit reiner Bestuhlung, Tischen und Stühlen oder als offener Raum genutzt werden, je nach Anforderungen. Geeignet für Veranstaltungen mit Frontalbestuhlung, für Gruppenseminare und Workshops mit bis zu 40 Teilnehmern (bis zu 20 Sitzplätze an Tischen). Kombination mit Meetingraum (20 qm) möglich. Mit Zugang zur Außenterrasse.",
+        "images": ["/images/rooms/conference-room-1.jpg"]
+      }
+    ]
   },
   "en": {
     "headline": "Event Space",
     "intro": "The JuggleHUB Event Space is the perfect place for your next event. Whether a business workshop, product launch, company party or private occasion – our flexible event space adapts to your needs.",
     "hero_cta_label": "Get in touch",
     "hero_cta_url": "/en/about/contact/",
-    "features": [
-      { "title": "Capacity & Equipment", "text": "Up to 80 people in theatre setup, 50 in classroom setup or 40 in banquet seating. Professional AV technology, projector, stage and bar system included.", "image": "https://picsum.photos/seed/event1/800/500" },
-      { "title": "Catering Service", "text": "We work with selected Berlin catering partners. From coffee breaks to finger food to three-course menus, we organise everything for you.", "image": "https://picsum.photos/seed/event2/800/500" },
-      { "title": "Technology & Support", "text": "Our events team supports you from planning to follow-up. On-site technical support is included with every booking.", "image": "https://picsum.photos/seed/event3/800/500" }
-    ],
-    "pricing_note": "Half-day rental from €350 · Full-day rental from €600 · Evening event from €450 · Individual quotes on request."
+    "welcome_title": "Rooms for every occasion",
+    "welcome_text": "Whether a small team meeting, a large seminar, or a creative workshop – at JuggleHUB you'll find the right room. Our spaces can be flexibly combined and adapted to your requirements. All rooms are equipped with modern technology and offer a pleasant working atmosphere.",
+    "pricing": {
+      "title": "Room Prices",
+      "cta_label": "Request a room",
+      "cta_url": "/en/about/contact/",
+      "cards": [
+        {
+          "title": "Meeting Room",
+          "price": 29,
+          "period": "per hour + 19% VAT",
+          "features": ["(18 € for members)", "Day rate (> 5 hrs.): 199 €", "(119 € for members)"]
+        },
+        {
+          "title": "Conference Room",
+          "price": 49,
+          "period": "per hour + 19% VAT",
+          "features": ["(29 € for members)", "Day rate (> 5 hrs.): 339 €", "(199 € for members)"]
+        },
+        {
+          "title": "Event Space",
+          "price": 59,
+          "period": "per hour + 19% VAT",
+          "features": ["Available from September 2025", "(35 € for members)", "Day rate (> 5 hrs.): 399 €", "(239 € for members)"]
+        }
+      ]
+    },
+    "rooms": [
+      {
+        "title": "The meeting room – 20 sq.m.",
+        "description": "Can be used for team meetings or client meetings but also for group sessions or video conferences with up to 10 people seated on the large table. The room is furnished with a flatscreen and a whiteboard wall.",
+        "images": ["/images/rooms/meeting-room-1.jpg"]
+      },
+      {
+        "title": "New Event Space – 50 sq.m.",
+        "description": "This room will be available for events starting September 2025. (The image is an example image from our first space.)",
+        "images": ["/images/rooms/event-space-1.jpg"]
+      },
+      {
+        "title": "The conference room – 40 sq.m.",
+        "description": "Can be used with just seating, tables and chairs or as an open space, depending on your requirements. It is suitable for events with frontal seating, for group seminars and workshops with up to 40 participants (up to 20 seated at tables). Connection with meeting room (20 sqm) possible. With access to the courtyard terrace.",
+        "images": ["/images/rooms/conference-room-1.jpg"]
+      },
+      {
+        "title": "New Event Space – 50 sq.m.",
+        "description": "This room will be available for events starting September 2025. (The image is an example image from our first space.)",
+        "images": ["/images/rooms/event-space-1.jpg"]
+      },
+      {
+        "title": "The meeting room – 20 sq.m.",
+        "description": "Can be used for team meetings or client meetings but also for group sessions or video conferences with up to 10 people seated on the large table. The room is furnished with a flatscreen and a whiteboard wall.",
+        "images": ["/images/rooms/meeting-room-1.jpg"]
+      },
+      {
+        "title": "The conference room – 40 sq.m.",
+        "description": "Can be used with just seating, tables and chairs or as an open space, depending on your requirements. It is suitable for events with frontal seating, for group seminars and workshops with up to 40 participants (up to 20 seated at tables). Connection with meeting room (20 sqm) possible. With access to the courtyard terrace.",
+        "images": ["/images/rooms/conference-room-1.jpg"]
+      }
+    ]
   }
 }

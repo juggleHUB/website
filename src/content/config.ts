@@ -122,8 +122,24 @@ export const collections = {
       intro: z.string(),
       hero_cta_label: z.string().optional(),
       hero_cta_url: z.string().optional(),
-      features: z.array(featureItem),
-      pricing_note: z.string().optional(),
+      welcome_title: z.string().optional(),
+      welcome_text: z.string().optional(),
+      rooms: z.array(z.object({
+        title: z.string(),
+        description: z.string(),
+        images: z.array(z.string()),
+      })).optional(),
+      pricing: z.object({
+        title: z.string(),
+        cta_label: z.string().optional(),
+        cta_url: z.string().optional(),
+        cards: z.array(z.object({
+          title: z.string(),
+          price: z.number(),
+          period: z.string().optional(),
+          features: z.array(z.string()),
+        })),
+      }).optional(),
     })),
   }),
 

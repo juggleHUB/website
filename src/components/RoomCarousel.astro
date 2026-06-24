@@ -1,0 +1,106 @@
+---
+export interface Room {
+  title: string;
+  description: string;
+  images: string[];
+}
+
+export interface Props {
+  rooms: Room[];
+}
+
+const { rooms } = Astro.props;
+---
+
+<section class="max-w-7xl mx-auto px-8 sm:px-14 lg:px-20 pt-10 pb-20">
+  <div class="columns-1 md:columns-2 gap-8 space-y-8">
+    {rooms.map((room, roomIndex) => {
+      const id = `room-${roomIndex}`;
+      const multiImage = room.images.length > 1;
+      return (
+        <div class="break-inside-avoid bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+          <!-- Image carousel area -->
+          <div class="relative">
+            <div class="overflow-hidden rounded-t-2xl">
+              <div id={`${id}-inner`} class="flex transition-transform duration-400 ease-in-out">
+                {room.images.map((src, imgIndex) => (
+                  <img
+                    src={src}
+                    alt={`${room.title} – photo ${imgIndex + 1}`}
+                    class="min-w-full aspect-[4/3] object-cover"
+                  />
+                ))}
+              </div>
+            </div>
+
+            {multiImage && (
+              <>
+                <button id={`${id}-prev`} aria-label="Previous image" class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 shadow border border-gray-200 flex items-center justify-center hover:bg-white transition-colors z-10">
+                  <svg class="w-4 h-4 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+                <button id={`${id}-next`} aria-label="Next image" class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 shadow border border-gray-200 flex items-center justify-center hover:bg-white transition-colors z-10">
+                  <svg class="w-4 h-4 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+
+                <!-- Dot indicators -->
+                <div class="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5">
+                  {room.images.map((_, i) => (
+                    <button
+                      data-room={id}
+                      data-dot={i}
+                      class={`w-2 h-2 rounded-full transition-colors ${i === 0 ? 'bg-white' : 'bg-white/50'}`}
+                      aria-label={`Go to image ${i + 1}`}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+
+          <!-- Static text -->
+          <div class="px-7 py-6">
+            <h3 class="text-xl font-black mb-3 text-brand-dark">{room.title}</h3>
+            <p class="text-gray-600 leading-relaxed text-sm">{room.description}</p>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[id^="room-"][id$="-inner"]').forEach((inner) => {
+    const id = inner.id.replace('-inner', '');
+    const total = inner.children.length;
+    if (total <= 1) return;
+
+    let current = 0;
+    const dots = document.querySelectorAll<HTMLElement>(`[data-room="${id}"]`);
+
+    function goTo(index: number) {
+      current = ((index % total) + total) % total;
+      (inner as HTMLElement).style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((d, i) => {
+        d.classList.toggle('bg-white', i === current);
+        d.classList.toggle('bg-white/50', i !== current);
+      });
+    }
+
+    document.getElementById(`${id}-prev`)?.addEventListener('click', () => goTo(current - 1));
+    document.getElementById(`${id}-next`)?.addEventListener('click', () => goTo(current + 1));
+    dots.forEach(d => d.addEventListener('click', () => goTo(Number(d.dataset.dot))));
+
+    let touchStartX = 0;
+    let touchDeltaX = 0;
+    inner.addEventListener('touchstart', (e) => { touchStartX = (e as TouchEvent).touches[0].clientX; }, { passive: true });
+    inner.addEventListener('touchmove', (e) => { touchDeltaX = (e as TouchEvent).touches[0].clientX - touchStartX; }, { passive: true });
+    inner.addEventListener('touchend', () => {
+      if (Math.abs(touchDeltaX) > 40) goTo(touchDeltaX < 0 ? current + 1 : current - 1);
+      touchDeltaX = 0;
+    });
+  });
+</script>
