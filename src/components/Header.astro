@@ -43,7 +43,7 @@ const t = {
 const base = `/${lang}`;
 ---
 
-<header id="site-header" class="fixed top-4 left-4 right-4 z-50 bg-white/95 backdrop-blur-md rounded-full shadow-lg border border-white/30 transition-all duration-200">
+<header id="site-header" class="fixed top-4 left-4 right-4 z-50 bg-white/95 backdrop-blur-md rounded-full shadow-lg border border-white/30 transition-[box-shadow,backdrop-filter] duration-200">
   <div class="pl-4 pr-3">
     <div class="flex items-center justify-between h-14">
       <!-- Logo -->
@@ -109,7 +109,7 @@ const base = `/${lang}`;
   </div>
 
   <!-- Mobile menu -->
-  <div id="mobile-menu" class="hidden navbreak:hidden px-5 pb-4 space-y-1">
+  <div id="mobile-menu" class="hidden navbreak:hidden px-5 pb-5 space-y-1">
     <a href={`${base}/about/`} class="block py-2 text-brand-dark font-medium">{t.about}</a>
     <a href={`${base}/about/our-story/`} class="block py-1.5 pl-4 text-gray-500 text-sm">{t.ourStory}</a>
     <a href={`${base}/about/faq/`} class="block py-1.5 pl-4 text-gray-500 text-sm">{t.faq}</a>
@@ -134,13 +134,15 @@ const base = `/${lang}`;
   const menu = document.getElementById('mobile-menu');
   const header = document.getElementById('site-header');
   btn?.addEventListener('click', () => {
-    const isOpen = menu?.classList.toggle('hidden') === false;
-    if (isOpen) {
+    const isOpen = !menu?.classList.contains('hidden');
+    if (!isOpen) {
       header?.classList.remove('rounded-full');
-      header?.classList.add('rounded-t-3xl');
+      header?.classList.add('rounded-[28px]');
+      menu?.classList.remove('hidden');
     } else {
-      header?.classList.remove('rounded-t-3xl');
+      header?.classList.remove('rounded-[28px]');
       header?.classList.add('rounded-full');
+      menu?.classList.add('hidden');
     }
   });
 </script>
