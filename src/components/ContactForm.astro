@@ -1,0 +1,80 @@
+---
+interface Props {
+  lang: 'de' | 'en';
+}
+
+const { lang } = Astro.props;
+
+const t = {
+  de: {
+    title: 'Schreib uns',
+    name: 'Name',
+    email: 'E-Mail',
+    subject: 'Betreff',
+    message: 'Nachricht',
+    submit: 'Nachricht senden',
+  },
+  en: {
+    title: 'Get in touch',
+    name: 'Name',
+    email: 'Email',
+    subject: 'Subject',
+    message: 'Message',
+    submit: 'Send message',
+  },
+}[lang];
+---
+
+<section class="py-20 bg-white">
+  <div class="max-w-3xl mx-auto px-8 sm:px-14 lg:px-20">
+    <h2 class="text-4xl font-black mb-10">{t.title}</h2>
+
+    <form class="flex flex-col gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="flex flex-col gap-2">
+          <label class="text-sm font-semibold text-brand-dark">{t.name}</label>
+          <input
+            type="text"
+            name="name"
+            class="rounded-xl border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal transition"
+          />
+        </div>
+        <div class="flex flex-col gap-2">
+          <label class="text-sm font-semibold text-brand-dark">{t.email}</label>
+          <input
+            type="email"
+            name="email"
+            class="rounded-xl border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal transition"
+          />
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label class="text-sm font-semibold text-brand-dark">{t.subject}</label>
+        <input
+          type="text"
+          name="subject"
+          class="rounded-xl border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal transition"
+        />
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label class="text-sm font-semibold text-brand-dark">{t.message}</label>
+        <textarea
+          name="message"
+          rows="5"
+          class="rounded-xl border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal transition resize-none"
+        ></textarea>
+      </div>
+
+      <div>
+        <button
+          type="submit"
+          class="bg-brand-teal text-white font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity"
+        >
+          {t.submit}
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

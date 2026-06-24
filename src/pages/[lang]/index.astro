@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Carousel from '../../components/Carousel.astro';
 import Testimonials from '../../components/Testimonials.astro';
+import ContactForm from '../../components/ContactForm.astro';
 import { getEntry } from 'astro:content';
 
 export function getStaticPaths() {
@@ -120,4 +121,6 @@ const t = {
     description={testimonials_description}
     testimonials={testimonials}
   />
+
+  <ContactForm lang={lang} />
 </Layout>
