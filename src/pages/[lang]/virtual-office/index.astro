@@ -8,32 +8,158 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params as { lang: 'de' | 'en' };
 const content = await getEntry('virtualoffice', 'index');
-const { headline, intro, features, pricing_note } = content.data[lang];
+const {
+  headline, intro, hero_cta_label, hero_cta_url,
+  pricing,
+  form_title, form_name, form_email, form_company,
+  form_package, form_package_options, form_message, form_submit,
+} = content.data[lang];
 ---
 
-<Layout title={headline} lang={lang} currentPath={`/${lang}/virtual-office/`}>
-  <div class="max-w-7xl mx-auto px-8 sm:px-14 lg:px-20 py-20">
-    <div class="max-w-3xl mb-16">
-      <h1 class="text-5xl font-black mb-6">{headline}</h1>
-      <p class="text-xl text-gray-600 leading-relaxed">{intro}</p>
+<Layout title={headline} lang={lang} currentPath={`/${lang}/virtual-office/`} headerPad={false}>
+  <!-- MOBILE hero -->
+  <section class="navbreak:hidden bg-[#E6F5F3]">
+    <div class="px-6 pt-28 pb-20">
+      <div class="w-16 h-16 rounded-xl bg-gray-200 mb-5"></div>
+      <h1 class="text-3xl font-black tracking-tight mb-4 leading-tight text-brand-dark">{headline}</h1>
+      <p class="text-base text-brand-dark/70 mb-7 leading-relaxed">{intro}</p>
+      {hero_cta_label && hero_cta_url && (
+        <a href={hero_cta_url} class="inline-flex items-center bg-brand-teal text-white font-bold text-base px-6 py-3 rounded-full hover:opacity-90 transition-colors shadow-md">
+          {hero_cta_label}
+        </a>
+      )}
     </div>
-    <div class="space-y-20">
-      {features.map((f: { title: string; text: string; image?: string }, i: number) => (
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div class={i % 2 === 1 ? 'lg:order-2' : ''}>
-            <h2 class="text-3xl font-bold mb-4">{f.title}</h2>
-            <p class="text-gray-600 leading-relaxed">{f.text}</p>
-          </div>
-          <div class={`rounded-2xl overflow-hidden shadow-lg ${i % 2 === 1 ? 'lg:order-1' : ''}`}>
-            <img src={f.image || `https://picsum.photos/seed/vo-${i}/700/450`} alt={f.title} class="w-full h-64 object-cover" />
-          </div>
+    <div class="relative h-64 md:h-96 -mt-[62px]">
+      <img
+        src="https://picsum.photos/seed/virtual-office-hero/1600/700"
+        alt="JuggleHUB virtual office"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <img
+        src="/woosh/hero-coworking-mob.svg"
+        alt=""
+        aria-hidden="true"
+        class="absolute top-0 left-0 w-full z-10 pointer-events-none select-none"
+      />
+    </div>
+  </section>
+
+  <!-- DESKTOP hero -->
+  <section class="hidden navbreak:block relative overflow-hidden max-h-[760px]">
+    <img src="/woosh/hero-office.svg" aria-hidden="true" class="w-full opacity-0 pointer-events-none select-none" />
+    <img
+      src="https://picsum.photos/seed/virtual-office-hero/1600/700"
+      alt="JuggleHUB virtual office"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-y-0 left-0 w-[40%] bg-[#E6F5F3]"></div>
+    <img
+      src="/woosh/hero-office.svg"
+      alt=""
+      aria-hidden="true"
+      class="absolute top-0 left-[40%] h-full w-auto pointer-events-none select-none"
+    />
+    <div class="absolute inset-0 z-10 flex items-center">
+      <div class="w-[40%] flex justify-end pr-10 lg:pr-16">
+        <div class="w-full max-w-sm pt-16">
+          <div class="w-20 h-20 rounded-xl bg-gray-200 mb-6"></div>
+          <h1 class="text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-tight text-brand-dark">{headline}</h1>
+          <p class="text-lg lg:text-xl text-brand-dark/70 mb-10 leading-relaxed">{intro}</p>
+          {hero_cta_label && hero_cta_url && (
+            <a href={hero_cta_url} class="inline-flex items-center bg-brand-teal text-white font-bold text-lg px-8 py-4 rounded-full hover:opacity-90 transition-colors shadow-lg">
+              {hero_cta_label}
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing grid -->
+  <section class="max-w-5xl mx-auto px-8 sm:px-14 lg:px-20 py-20">
+    <div class="grid md:grid-cols-2 gap-6">
+      {pricing.map((tier: { title: string; from: string; sub: string; items: string[]; extras: string[] }) => (
+        <div class="bg-[#F5F0E8] rounded-2xl p-8 flex flex-col">
+          <h2 class="text-xs font-bold tracking-widest uppercase text-brand-dark/60 mb-6">{tier.title}</h2>
+          <p class="text-4xl font-black text-brand-dark mb-1">
+            <span class="text-xl font-semibold align-super mr-0.5">€</span>{tier.from}
+          </p>
+          <p class="text-sm text-brand-dark/60 mb-8">{tier.sub}</p>
+          <ul class="flex flex-col gap-3 mb-8 flex-1">
+            {tier.items.map((item: string) => (
+              <li class="text-sm text-brand-dark/80 leading-snug border-b border-brand-dark/10 pb-3 last:border-0">{item}</li>
+            ))}
+          </ul>
+          <ul class="flex flex-col gap-2 mt-auto pt-6 border-t border-brand-dark/10">
+            {tier.extras.map((extra: string) => (
+              <li class="text-sm text-brand-dark/60 text-center">{extra}</li>
+            ))}
+          </ul>
         </div>
       ))}
     </div>
-    {pricing_note && (
-      <div class="mt-20 bg-brand-yellow rounded-2xl p-8 text-center">
-        <p class="text-xl font-bold text-brand-dark">{pricing_note}</p>
-      </div>
-    )}
-  </div>
+  </section>
+
+  <!-- Contact form -->
+  <section class="py-20 bg-white">
+    <div class="max-w-3xl mx-auto px-8 sm:px-14 lg:px-20">
+      <h2 class="text-4xl font-black mb-10">{form_title}</h2>
+      <form class="flex flex-col gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="flex flex-col gap-2">
+            <label class="text-sm font-semibold text-brand-dark">{form_name}</label>
+            <input
+              type="text"
+              name="name"
+              class="rounded-xl border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal transition"
+            />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label class="text-sm font-semibold text-brand-dark">{form_email}</label>
+            <input
+              type="email"
+              name="email"
+              class="rounded-xl border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal transition"
+            />
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <label class="text-sm font-semibold text-brand-dark">{form_company}</label>
+          <input
+            type="text"
+            name="company"
+            class="rounded-xl border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal transition"
+          />
+        </div>
+        <div class="flex flex-col gap-2">
+          <label class="text-sm font-semibold text-brand-dark">{form_package}</label>
+          <select
+            name="package"
+            class="rounded-xl border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal transition bg-white"
+          >
+            <option value=""></option>
+            {form_package_options.map((opt: string) => (
+              <option value={opt}>{opt}</option>
+            ))}
+          </select>
+        </div>
+        <div class="flex flex-col gap-2">
+          <label class="text-sm font-semibold text-brand-dark">{form_message}</label>
+          <textarea
+            name="message"
+            rows="5"
+            class="rounded-xl border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal transition resize-none"
+          ></textarea>
+        </div>
+        <div>
+          <button
+            type="submit"
+            class="bg-brand-teal text-white font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity"
+          >
+            {form_submit}
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
 </Layout>
