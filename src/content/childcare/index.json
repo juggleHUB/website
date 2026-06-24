@@ -2,23 +2,137 @@
   "de": {
     "headline": "Flexible Kinderbetreuung",
     "intro": "Unsere Kinderbetreuung ist das Herzstück von JuggleHUB. Bring deine Kinder einfach mit und arbeite im Wissen, dass sie in besten Händen sind – direkt nebenan, sicher und gut betreut.",
-    "features": [
-      { "title": "Qualifiziertes Team", "text": "Alle unsere Betreuer sind staatlich anerkannt, haben Erste-Hilfe-Zertifikate und werden regelmäßig fortgebildet. Dein Kind ist bei uns in guten Händen.", "image": "https://picsum.photos/seed/kids1/800/500" },
-      { "title": "Altersgerechtes Programm", "text": "Kreatives Spielen, Basteln, Vorlesen und Bewegungsangebote – unser Tagesablauf ist abwechslungsreich und auf die Bedürfnisse verschiedener Altersgruppen abgestimmt.", "image": "https://picsum.photos/seed/kids2/800/500" },
-      { "title": "Flexibel buchbar", "text": "Betreuung stundenweise, halbtags oder ganztags – ganz wie du es brauchst. Buchung per App oder telefonisch, auch kurzfristig.", "image": "https://picsum.photos/seed/kids3/800/500" },
-      { "title": "Sicherheit & Transparenz", "text": "Abgeschlossene, kindersichere Räume, regelmäßige Updates über unser digitales Elternportal und offene Türen für alle Fragen – wir kommunizieren transparent.", "image": "https://picsum.photos/seed/kids4/800/500" }
+    "hero_cta_label": "Jetzt anfragen",
+    "hero_cta_url": "/de/about/contact/",
+    "welcome_title": "Betreuung, der du vertrauen kannst",
+    "welcome_text": "Unser qualifiziertes Team begleitet deine Kinder mit Herz und Fachkenntnis durch den Tag – mit altersgerechtem Programm, sicheren Räumen und offener Kommunikation. Du arbeitest, wir kümmern uns.",
+    "carousel_items": [
+      {
+        "image": "https://picsum.photos/seed/kids-play/800/500",
+        "title": "Kreatives Spielen",
+        "description": "Basteln, Malen, Bauen – unsere Betreuer gestalten jeden Tag neu und regen die Fantasie deiner Kinder an."
+      },
+      {
+        "image": "https://picsum.photos/seed/kids-read/800/500",
+        "title": "Vorlesen & Sprache",
+        "description": "Geschichten wecken Neugier. Wir lesen vor, erzählen und fördern spielerisch Sprache und Konzentration."
+      },
+      {
+        "image": "https://picsum.photos/seed/kids-move/800/500",
+        "title": "Bewegung & Toben",
+        "description": "Kinder brauchen Bewegung. Unser Innenbereich lädt zum Klettern, Tanzen und Entdecken ein."
+      }
     ],
-    "pricing_note": "Stundenweise ab €8/Std · Halbtagespaket €35 · Ganztagespaket €60 · Mitglieder-Rabatt 20%. Alle Preise inkl. MwSt."
+    "pricing": {
+      "title": "Kinderbetreuung Preise",
+      "notes": [
+        "Alle Preise zzgl. 19% MwSt.",
+        "Mindestbuchungszeit: 2 Stunden. Buchung mindestens 48 Std. im Voraus.",
+        "Geschwisterkinder: 10 € / Std. zusätzlich."
+      ],
+      "cards": [
+        {
+          "title": "Einzelstunde",
+          "price": 16,
+          "period": "pro Stunde",
+          "vat_note": "+ 19% MwSt.",
+          "features": [
+            "Mit aktivem Coworking-Paket (Flex 50, Flex 100, Flex 24/7)",
+            "Ohne Coworking-Paket: 18 € / Std.",
+            "Geschwisterkinder: 10 € / Std."
+          ]
+        },
+        {
+          "title": "20-Stunden-Paket",
+          "price": 300,
+          "period": "pauschal",
+          "vat_note": "+ 19% MwSt.",
+          "features": [
+            "15 € / Std. statt 16 € (mit Coworking-Paket)",
+            "Ohne Coworking-Paket: 340 € (17 € / Std.)",
+            "Geschwisterkinder: 10 € / Std."
+          ]
+        },
+        {
+          "title": "40-Stunden-Paket",
+          "price": 560,
+          "period": "pauschal",
+          "vat_note": "+ 19% MwSt.",
+          "features": [
+            "14 € / Std. statt 16 € (mit Coworking-Paket)",
+            "Ohne Coworking-Paket: 640 € (16 € / Std.)",
+            "Geschwisterkinder: 10 € / Std."
+          ]
+        }
+      ]
+    }
   },
   "en": {
     "headline": "Flexible Childcare",
     "intro": "Our childcare is the heart of JuggleHUB. Simply bring your children along and work knowing they are in the best hands – right next door, safe and well cared for.",
-    "features": [
-      { "title": "Qualified Team", "text": "All our caregivers are state-certified, hold first aid certificates and are regularly trained. Your child is in good hands with us.", "image": "https://picsum.photos/seed/kids1/800/500" },
-      { "title": "Age-Appropriate Programme", "text": "Creative play, crafts, reading and movement activities – our daily routine is varied and tailored to the needs of different age groups.", "image": "https://picsum.photos/seed/kids2/800/500" },
-      { "title": "Flexibly Bookable", "text": "Care by the hour, half-day or full-day – whatever you need. Book via app or by phone, also at short notice.", "image": "https://picsum.photos/seed/kids3/800/500" },
-      { "title": "Safety & Transparency", "text": "Enclosed, child-safe rooms, regular updates via our digital parent portal and open doors for all questions – we communicate transparently.", "image": "https://picsum.photos/seed/kids4/800/500" }
+    "hero_cta_label": "Get in touch",
+    "hero_cta_url": "/en/about/contact/",
+    "welcome_title": "Care you can trust",
+    "welcome_text": "Our qualified team guides your children through the day with warmth and expertise – age-appropriate activities, safe spaces and open communication. You work, we look after the rest.",
+    "carousel_items": [
+      {
+        "image": "https://picsum.photos/seed/kids-play/800/500",
+        "title": "Creative Play",
+        "description": "Crafts, painting, building – our carers plan each day freshly, sparking your children's imagination."
+      },
+      {
+        "image": "https://picsum.photos/seed/kids-read/800/500",
+        "title": "Stories & Language",
+        "description": "Stories spark curiosity. We read aloud, tell tales and playfully nurture language and concentration."
+      },
+      {
+        "image": "https://picsum.photos/seed/kids-move/800/500",
+        "title": "Movement & Fun",
+        "description": "Children need to move. Our indoor space invites climbing, dancing and exploring."
+      }
     ],
-    "pricing_note": "Hourly from €8/hr · Half-day package €35 · Full-day package €60 · Member discount 20%. All prices incl. VAT."
+    "pricing": {
+      "title": "Childcare Pricing",
+      "notes": [
+        "All prices excl. 19% VAT.",
+        "Minimum booking: 2 hours. Must be booked at least 48 hrs in advance.",
+        "Siblings: €10 / hr additional."
+      ],
+      "cards": [
+        {
+          "title": "Single Hour",
+          "price": 16,
+          "period": "per hour",
+          "vat_note": "+ 19% VAT",
+          "features": [
+            "With active coworking membership (Flex 50, Flex 100, Flex 24/7)",
+            "Without coworking membership: €18 / hr",
+            "Siblings: €10 / hr"
+          ]
+        },
+        {
+          "title": "20-Hour Package",
+          "price": 300,
+          "period": "flat rate",
+          "vat_note": "+ 19% VAT",
+          "features": [
+            "€15 / hr instead of €16 (with coworking membership)",
+            "Without coworking membership: €340 (€17 / hr)",
+            "Siblings: €10 / hr"
+          ]
+        },
+        {
+          "title": "40-Hour Package",
+          "price": 560,
+          "period": "flat rate",
+          "vat_note": "+ 19% VAT",
+          "features": [
+            "€14 / hr instead of €16 (with coworking membership)",
+            "Without coworking membership: €640 (€16 / hr)",
+            "Siblings: €10 / hr"
+          ]
+        }
+      ]
+    }
   }
 }

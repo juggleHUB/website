@@ -2,6 +2,8 @@
   "de": {
     "headline": "Event Space",
     "intro": "Der JuggleHUB Event Space ist der perfekte Ort für dein nächstes Event. Ob Business-Workshop, Produktlaunch, Firmenfeier oder private Veranstaltung – unser flexibler Veranstaltungsraum passt sich deinen Bedürfnissen an.",
+    "hero_cta_label": "Jetzt anfragen",
+    "hero_cta_url": "/de/about/contact/",
     "features": [
       { "title": "Kapazität & Ausstattung", "text": "Bis zu 80 Personen im Theaterstil, 50 im Klassenraum-Setup oder 40 in Bankettbestuhlung. Professionelle AV-Technik, Beamer, Bühne und Barsystem inklusive.", "image": "https://picsum.photos/seed/event1/800/500" },
       { "title": "Catering-Service", "text": "Wir arbeiten mit ausgewählten Berliner Cateringpartnern zusammen. Von Kaffeepausen über Fingerfood bis zum Drei-Gänge-Menü organisieren wir alles für dich.", "image": "https://picsum.photos/seed/event2/800/500" },
@@ -12,6 +14,8 @@
   "en": {
     "headline": "Event Space",
     "intro": "The JuggleHUB Event Space is the perfect place for your next event. Whether a business workshop, product launch, company party or private occasion – our flexible event space adapts to your needs.",
+    "hero_cta_label": "Get in touch",
+    "hero_cta_url": "/en/about/contact/",
     "features": [
       { "title": "Capacity & Equipment", "text": "Up to 80 people in theatre setup, 50 in classroom setup or 40 in banquet seating. Professional AV technology, projector, stage and bar system included.", "image": "https://picsum.photos/seed/event1/800/500" },
       { "title": "Catering Service", "text": "We work with selected Berlin catering partners. From coffee breaks to finger food to three-course menus, we organise everything for you.", "image": "https://picsum.photos/seed/event2/800/500" },

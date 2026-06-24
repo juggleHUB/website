@@ -8,15 +8,69 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params as { lang: 'de' | 'en' };
 const content = await getEntry('eventspace', 'index');
-const { headline, intro, features, pricing_note } = content.data[lang];
+const { headline, intro, hero_cta_label, hero_cta_url, features, pricing_note } = content.data[lang];
 ---
 
-<Layout title={headline} lang={lang} currentPath={`/${lang}/event-space/`}>
-  <div class="max-w-7xl mx-auto px-8 sm:px-14 lg:px-20 py-20">
-    <div class="max-w-3xl mb-16">
-      <h1 class="text-5xl font-black mb-6">{headline}</h1>
-      <p class="text-xl text-gray-600 leading-relaxed">{intro}</p>
+<Layout title={headline} lang={lang} currentPath={`/${lang}/event-space/`} headerPad={false}>
+  <!-- MOBILE hero -->
+  <section class="navbreak:hidden bg-[#FFFDD7]">
+    <div class="px-6 pt-28 pb-20">
+      <div class="w-16 h-16 rounded-xl bg-gray-200 mb-5"></div>
+      <h1 class="text-3xl font-black tracking-tight mb-4 leading-tight text-brand-dark">{headline}</h1>
+      <p class="text-base text-brand-dark/70 mb-7 leading-relaxed">{intro}</p>
+      {hero_cta_label && hero_cta_url && (
+        <a href={hero_cta_url} class="inline-flex items-center bg-brand-teal text-white font-bold text-base px-6 py-3 rounded-full hover:opacity-90 transition-colors shadow-md">
+          {hero_cta_label}
+        </a>
+      )}
     </div>
+    <div class="relative h-64 md:h-96 -mt-[62px]">
+      <img
+        src="https://picsum.photos/seed/event-hero/1600/700"
+        alt="JuggleHUB event space"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <img
+        src="/woosh/hero-home-mob.svg"
+        alt=""
+        aria-hidden="true"
+        class="absolute top-0 left-0 w-full z-10 pointer-events-none select-none"
+      />
+    </div>
+  </section>
+
+  <!-- DESKTOP hero -->
+  <section class="hidden navbreak:block relative overflow-hidden max-h-[760px]">
+    <img src="/woosh/hero-home.svg" aria-hidden="true" class="w-full opacity-0 pointer-events-none select-none" />
+    <img
+      src="https://picsum.photos/seed/event-hero/1600/700"
+      alt="JuggleHUB event space"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-y-0 left-0 w-[40%] bg-[#FFFDD7]"></div>
+    <img
+      src="/woosh/hero-event-space.svg"
+      alt=""
+      aria-hidden="true"
+      class="absolute top-0 left-[40%] h-full w-auto pointer-events-none select-none"
+    />
+    <div class="absolute inset-0 z-10 flex items-center">
+      <div class="w-[40%] flex justify-end pr-10 lg:pr-16">
+        <div class="w-full max-w-sm pt-16">
+          <div class="w-20 h-20 rounded-xl bg-gray-200 mb-6"></div>
+          <h1 class="text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-tight text-brand-dark">{headline}</h1>
+          <p class="text-lg lg:text-xl text-brand-dark/70 mb-10 leading-relaxed">{intro}</p>
+          {hero_cta_label && hero_cta_url && (
+            <a href={hero_cta_url} class="inline-flex items-center bg-brand-teal text-white font-bold text-lg px-8 py-4 rounded-full hover:opacity-90 transition-colors shadow-lg">
+              {hero_cta_label}
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-7xl mx-auto px-8 sm:px-14 lg:px-20 py-20">
     <div class="space-y-20">
       {features.map((f: { title: string; text: string; image?: string }, i: number) => (
         <div class="grid lg:grid-cols-2 gap-12 items-center">

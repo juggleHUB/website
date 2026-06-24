@@ -120,6 +120,8 @@ export const collections = {
     schema: i18n(z.object({
       headline: z.string(),
       intro: z.string(),
+      hero_cta_label: z.string().optional(),
+      hero_cta_url: z.string().optional(),
       features: z.array(featureItem),
       pricing_note: z.string().optional(),
     })),
@@ -130,8 +132,22 @@ export const collections = {
     schema: i18n(z.object({
       headline: z.string(),
       intro: z.string(),
-      features: z.array(featureItem),
-      pricing_note: z.string().optional(),
+      hero_cta_label: z.string().optional(),
+      hero_cta_url: z.string().optional(),
+      welcome_title: z.string().optional(),
+      welcome_text: z.string().optional(),
+      carousel_items: z.array(z.object({ image: z.string(), title: z.string(), description: z.string() })).optional(),
+      pricing: z.object({
+        title: z.string(),
+        notes: z.array(z.string()).optional(),
+        cards: z.array(z.object({
+          title: z.string(),
+          price: z.number(),
+          period: z.string().optional(),
+          vat_note: z.string().optional(),
+          features: z.array(z.string()),
+        })),
+      }).optional(),
     })),
   }),
 
