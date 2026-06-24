@@ -1,0 +1,20 @@
+---
+interface Props {
+  lang: 'de' | 'en';
+}
+
+const { lang } = Astro.props;
+
+const t = {
+  de: { title: 'Bereit, dein Arbeiten neu zu denken?', sub: 'Komm zu einem kostenlosen Schnuppertag und erlebe JuggleHUB selbst.', btn: 'Schnuppertag vereinbaren' },
+  en: { title: 'Ready to rethink the way you work?', sub: 'Join us for a free trial day and experience JuggleHUB for yourself.', btn: 'Book a trial day' },
+}[lang];
+---
+
+<section class="bg-brand-yellow py-16">
+  <div class="max-w-4xl mx-auto px-8 sm:px-14 lg:px-20 text-center">
+    <h2 class="text-3xl lg:text-4xl font-black text-brand-dark mb-4">{t.title}</h2>
+    <p class="text-brand-dark/70 text-lg mb-8">{t.sub}</p>
+    <a href={`/${lang}/about/contact/`} class="inline-flex items-center bg-brand-dark text-white font-bold text-lg px-8 py-4 rounded-xl hover:bg-gray-800 transition-colors">{t.btn}</a>
+  </div>
+</section>

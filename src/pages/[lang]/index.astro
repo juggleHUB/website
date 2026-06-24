@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Carousel from '../../components/Carousel.astro';
+import Testimonials from '../../components/Testimonials.astro';
 import { getEntry } from 'astro:content';
 
 export function getStaticPaths() {
@@ -9,11 +10,11 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params as { lang: 'de' | 'en' };
 const content = await getEntry('home', 'index');
-const { hero_headline, hero_subtext, hero_cta_label, hero_cta_url, welcome_title, welcome_text, feature_cards, carousel_items } = content.data[lang];
+const { hero_headline, hero_subtext, hero_cta_label, hero_cta_url, welcome_title, welcome_text, feature_cards, carousel_items, testimonials_title, testimonials_description, testimonials } = content.data[lang];
 
 const t = {
-  de: { about: 'Mehr über uns →', cta_title: 'Bereit, dein Arbeiten neu zu denken?', cta_sub: 'Komm zu einem kostenlosen Schnuppertag und erlebe JuggleHUB selbst.', cta_btn: 'Schnuppertag vereinbaren' },
-  en: { about: 'More about us →', cta_title: 'Ready to rethink the way you work?', cta_sub: 'Join us for a free trial day and experience JuggleHUB for yourself.', cta_btn: 'Book a trial day' },
+  de: { about: 'Mehr über uns →' },
+  en: { about: 'More about us →' },
 }[lang];
 ---
 
@@ -114,11 +115,9 @@ const t = {
   </section>
   </div>
 
-  <section class="bg-brand-yellow py-16">
-    <div class="max-w-4xl mx-auto px-8 sm:px-14 lg:px-20 text-center">
-      <h2 class="text-3xl lg:text-4xl font-black text-brand-dark mb-4">{t.cta_title}</h2>
-      <p class="text-brand-dark/70 text-lg mb-8">{t.cta_sub}</p>
-      <a href={`/${lang}/about/contact/`} class="inline-flex items-center bg-brand-dark text-white font-bold text-lg px-8 py-4 rounded-xl hover:bg-gray-800 transition-colors">{t.cta_btn}</a>
-    </div>
-  </section>
+  <Testimonials
+    title={testimonials_title}
+    description={testimonials_description}
+    testimonials={testimonials}
+  />
 </Layout>

@@ -49,6 +49,13 @@
 				"title": "Events & Community",
 				"description": "Von Workshops bis Networking-Abenden: Im JuggleHUB passiert immer etwas. Werde Teil der Community."
 			}
+		],
+		"testimonials_title": "Testimonials",
+		"testimonials_description": "Alle finden uns toll",
+		"testimonials": [
+			{ "text": "Das juggleHUB ist das Beste!", "name": "xy" },
+			{ "text": "Das juggleHUB ist das Beste!", "name": "xy" },
+			{ "text": "Das juggleHUB ist das Beste!", "name": "xy" }
 		]
 	},
 	"en": {
@@ -101,6 +108,13 @@
 				"title": "Events & Community",
 				"description": "From workshops to networking evenings: something is always happening at JuggleHUB. Become part of the community."
 			}
+		],
+		"testimonials_title": "Testimonials",
+		"testimonials_description": "Everyone loves us",
+		"testimonials": [
+			{ "text": "JuggleHUB is the best!", "name": "xy" },
+			{ "text": "JuggleHUB is the best!", "name": "xy" },
+			{ "text": "JuggleHUB is the best!", "name": "xy" }
 		]
 	}
 }
