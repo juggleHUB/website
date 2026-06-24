@@ -6,7 +6,7 @@ function i18n<T extends z.ZodTypeAny>(schema: T) {
   return z.object({ de: schema, en: schema });
 }
 
-const featureCard = z.object({ icon: z.string(), title: z.string(), text: z.string() });
+const featureCard = z.object({ title: z.string(), text: z.string(), url: z.string() });
 const carouselItem = z.object({ image: z.string(), title: z.string(), description: z.string() });
 const featureItem = z.object({ title: z.string(), text: z.string(), image: z.string().optional() });
 const teamMember = z.object({ name: z.string(), role: z.string(), bio: z.string(), image: z.string().optional() });

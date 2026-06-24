@@ -8,24 +8,29 @@
 		"welcome_text": "Im JuggleHUB glauben wir, dass Arbeit und Familie kein Widerspruch sein müssen. Unser moderner Coworking-Space bietet dir alles, was du brauchst: einen professionellen Arbeitsplatz, flexible Kinderbetreuung, inspirierende Events und eine Community, die dich trägt.",
 		"feature_cards": [
 			{
-				"icon": "💼",
 				"title": "Coworking",
-				"text": "Flexible Schreibtische, dedizierte Büros und Meeting-Räume – alles ausgestattet mit Highspeed-WLAN und Kaffeeflatrate."
+				"text": "Flexible Schreibtische, dedizierte Büros und Meeting-Räume – alles ausgestattet mit Highspeed-WLAN und Kaffeeflatrate.",
+				"url": "/de/coworking/"
 			},
 			{
-				"icon": "🎉",
 				"title": "Event Space",
-				"text": "Unser multifunktionaler Veranstaltungsraum ist ideal für Workshops, Präsentationen, Networking-Events und private Feiern."
+				"text": "Unser multifunktionaler Veranstaltungsraum ist ideal für Workshops, Präsentationen, Networking-Events und private Feiern.",
+				"url": "/de/event-space/"
 			},
 			{
-				"icon": "👶",
 				"title": "Flexible Kinderbetreuung",
-				"text": "Bring deine Kinder einfach mit! Unsere zertifizierten Betreuer kümmern sich liebevoll um deinen Nachwuchs, während du konzentriert arbeitest."
+				"text": "Bring deine Kinder einfach mit! Unsere zertifizierten Betreuer kümmern sich liebevoll um deinen Nachwuchs, während du konzentriert arbeitest.",
+				"url": "/de/flexible-childcare/"
 			},
 			{
-				"icon": "🏢",
 				"title": "Virtual Office",
-				"text": "Professionelle Geschäftsadresse, Postservice und Telefonanlage – alles was du für dein Unternehmen brauchst, ohne physisch anwesend zu sein."
+				"text": "Professionelle Geschäftsadresse, Postservice und Telefonanlage – alles was du für dein Unternehmen brauchst, ohne physisch anwesend zu sein.",
+				"url": "/de/virtual-office/"
+			},
+			{
+				"title": "Café",
+				"text": "Genieß frischen Kaffee, hausgemachte Snacks und eine entspannte Atmosphäre – der perfekte Ort für informelle Meetings oder eine kreative Pause.",
+				"url": "/de/about/contact/"
 			}
 		],
 		"carousel_items": [
@@ -55,24 +60,29 @@
 		"welcome_text": "At JuggleHUB, we believe work and family don't have to be at odds. Our modern coworking space offers everything you need: a professional workspace, flexible childcare, inspiring events and a community that supports you.",
 		"feature_cards": [
 			{
-				"icon": "💼",
 				"title": "Coworking",
-				"text": "Flexible desks, dedicated offices and meeting rooms – all equipped with high-speed WiFi and unlimited coffee."
+				"text": "Flexible desks, dedicated offices and meeting rooms – all equipped with high-speed WiFi and unlimited coffee.",
+				"url": "/en/coworking/"
 			},
 			{
-				"icon": "🎉",
 				"title": "Event Space",
-				"text": "Our multifunctional event space is ideal for workshops, presentations, networking events and private celebrations."
+				"text": "Our multifunctional event space is ideal for workshops, presentations, networking events and private celebrations.",
+				"url": "/en/event-space/"
 			},
 			{
-				"icon": "👶",
 				"title": "Flexible Childcare",
-				"text": "Just bring your kids along! Our certified caregivers lovingly look after your children while you work with focus."
+				"text": "Just bring your kids along! Our certified caregivers lovingly look after your children while you work with focus.",
+				"url": "/en/flexible-childcare/"
 			},
 			{
-				"icon": "🏢",
 				"title": "Virtual Office",
-				"text": "Professional business address, postal service and phone system – everything your company needs without being physically present."
+				"text": "Professional business address, postal service and phone system – everything your company needs without being physically present.",
+				"url": "/en/virtual-office/"
+			},
+			{
+				"title": "Café",
+				"text": "Enjoy fresh coffee, homemade snacks and a relaxed atmosphere – the perfect spot for informal meetings or a creative break.",
+				"url": "/en/about/contact/"
 			}
 		],
 		"carousel_items": [
