@@ -7,6 +7,7 @@ function i18n<T extends z.ZodTypeAny>(schema: T) {
 }
 
 const featureCard = z.object({ icon: z.string(), title: z.string(), text: z.string() });
+const carouselItem = z.object({ image: z.string(), title: z.string(), description: z.string() });
 const featureItem = z.object({ title: z.string(), text: z.string(), image: z.string().optional() });
 const teamMember = z.object({ name: z.string(), role: z.string(), bio: z.string(), image: z.string().optional() });
 
@@ -21,6 +22,7 @@ export const collections = {
       welcome_title: z.string(),
       welcome_text: z.string(),
       feature_cards: z.array(featureCard),
+      carousel_items: z.array(carouselItem),
     })),
   }),
 

@@ -8,7 +8,7 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params as { lang: 'de' | 'en' };
 const content = await getEntry('home', 'index');
-const { hero_headline, hero_subtext, hero_cta_label, hero_cta_url, welcome_title, welcome_text, feature_cards } = content.data[lang];
+const { hero_headline, hero_subtext, hero_cta_label, hero_cta_url, welcome_title, welcome_text, feature_cards, carousel_items } = content.data[lang];
 
 const t = {
   de: { about: 'Mehr über uns →', cta_title: 'Bereit, dein Arbeiten neu zu denken?', cta_sub: 'Komm zu einem kostenlosen Schnuppertag und erlebe JuggleHUB selbst.', cta_btn: 'Schnuppertag vereinbaren' },
@@ -76,18 +76,72 @@ const t = {
     </div>
   </section>
 
-  <section class="max-w-7xl mx-auto px-8 sm:px-14 lg:px-20 py-20">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <div>
-        <h2 class="text-4xl font-black mb-6">{welcome_title}</h2>
-        <p class="text-lg text-gray-600 leading-relaxed">{welcome_text}</p>
-        <a href={`/${lang}/about/`} class="inline-flex items-center mt-6 text-brand-dark font-semibold underline underline-offset-4 hover:text-gray-600 transition-colors">{t.about}</a>
+  <section class="max-w-4xl mx-auto px-8 sm:px-14 lg:px-20 py-20">
+    <h2 class="text-4xl font-black mb-6">{welcome_title}</h2>
+    <p class="text-lg text-gray-600 leading-relaxed">{welcome_text}</p>
+    <a href={`/${lang}/about/`} class="inline-flex items-center mt-6 text-brand-dark font-semibold underline underline-offset-4 hover:text-gray-600 transition-colors">{t.about}</a>
+  </section>
+
+  <!-- Carousel -->
+  <section class="pb-20">
+    <div class="max-w-4xl mx-auto px-8 sm:px-14 lg:px-20">
+      <div class="relative">
+        <!-- Slides -->
+        <div id="carousel-track" class="overflow-hidden rounded-2xl">
+          <div id="carousel-inner" class="flex transition-transform duration-400 ease-in-out">
+            {carousel_items.map((item: { image: string; title: string; description: string }) => (
+              <div class="min-w-full">
+                <img src={item.image} alt={item.title} class="w-full aspect-[16/9] object-cover rounded-t-2xl" />
+                <div class="bg-white px-8 py-6 rounded-b-2xl border border-t-0 border-gray-100 shadow-lg">
+                  <h3 class="text-2xl font-black mb-2">{item.title}</h3>
+                  <p class="text-gray-600 leading-relaxed">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Prev / Next buttons -->
+        <button id="carousel-prev" aria-label="Previous" class="absolute left-0 top-[45%] -translate-x-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white shadow-lg border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors z-10">
+          <svg class="w-5 h-5 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button id="carousel-next" aria-label="Next" class="absolute right-0 top-[45%] translate-x-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white shadow-lg border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors z-10">
+          <svg class="w-5 h-5 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
       </div>
-      <div class="rounded-2xl overflow-hidden shadow-xl">
-        <img src="https://picsum.photos/seed/welcome-jh/700/450" alt="JuggleHUB Community" class="w-full h-full object-cover" />
+
+      <!-- Dot indicators -->
+      <div class="flex justify-center gap-2 mt-5">
+        {carousel_items.map((_: unknown, i: number) => (
+          <button data-dot={i} class={`w-2.5 h-2.5 rounded-full transition-colors ${i === 0 ? 'bg-brand-dark' : 'bg-gray-300'}`} aria-label={`Go to slide ${i + 1}`} />
+        ))}
       </div>
     </div>
   </section>
+
+  <script>
+    const inner = document.getElementById('carousel-inner') as HTMLElement;
+    const dots = document.querySelectorAll<HTMLButtonElement>('[data-dot]');
+    const total = inner?.children.length ?? 0;
+    let current = 0;
+
+    function goTo(index: number) {
+      current = (index + total) % total;
+      inner.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((d, i) => {
+        d.classList.toggle('bg-brand-dark', i === current);
+        d.classList.toggle('bg-gray-300', i !== current);
+      });
+    }
+
+    document.getElementById('carousel-prev')?.addEventListener('click', () => goTo(current - 1));
+    document.getElementById('carousel-next')?.addEventListener('click', () => goTo(current + 1));
+    dots.forEach(d => d.addEventListener('click', () => goTo(Number(d.dataset.dot))));
+  </script>
 
   <section class="bg-white py-20">
     <div class="max-w-7xl mx-auto px-8 sm:px-14 lg:px-20">

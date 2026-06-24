@@ -27,6 +27,23 @@
 				"title": "Virtual Office",
 				"text": "Professionelle Geschäftsadresse, Postservice und Telefonanlage – alles was du für dein Unternehmen brauchst, ohne physisch anwesend zu sein."
 			}
+		],
+		"carousel_items": [
+			{
+				"image": "https://picsum.photos/seed/jh-cowork/800/500",
+				"title": "Dein Arbeitsplatz, deine Regeln",
+				"description": "Ob Schreibtisch für einen Tag oder festes Büro – im JuggleHUB findest du den Platz, der zu dir passt."
+			},
+			{
+				"image": "https://picsum.photos/seed/jh-kids/800/500",
+				"title": "Kinder willkommen",
+				"description": "Unsere zertifizierten Betreuer kümmern sich liebevoll um deinen Nachwuchs – direkt im Haus."
+			},
+			{
+				"image": "https://picsum.photos/seed/jh-events/800/500",
+				"title": "Events & Community",
+				"description": "Von Workshops bis Networking-Abenden: Im JuggleHUB passiert immer etwas. Werde Teil der Community."
+			}
 		]
 	},
 	"en": {
@@ -56,6 +73,23 @@
 				"icon": "🏢",
 				"title": "Virtual Office",
 				"text": "Professional business address, postal service and phone system – everything your company needs without being physically present."
+			}
+		],
+		"carousel_items": [
+			{
+				"image": "https://picsum.photos/seed/jh-cowork/800/500",
+				"title": "Your workspace, your rules",
+				"description": "Whether a hot desk for a day or a dedicated office – at JuggleHUB you'll find the space that works for you."
+			},
+			{
+				"image": "https://picsum.photos/seed/jh-kids/800/500",
+				"title": "Kids are welcome",
+				"description": "Our certified caregivers look after your children with care – right here in the building."
+			},
+			{
+				"image": "https://picsum.photos/seed/jh-events/800/500",
+				"title": "Events & Community",
+				"description": "From workshops to networking evenings: something is always happening at JuggleHUB. Become part of the community."
 			}
 		]
 	}
