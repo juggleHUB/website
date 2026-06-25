@@ -133,8 +133,11 @@ const breadcrumbJsonLd = breadcrumbItems.length > 1 ? {
     {breadcrumbJsonLd && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />}
   </head>
   <body class="bg-white text-brand-dark font-sans antialiased min-h-screen flex flex-col">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-brand-teal focus:text-white focus:font-bold focus:px-4 focus:py-2 focus:rounded-full">
+      {lang === 'de' ? 'Zum Hauptinhalt springen' : 'Skip to main content'}
+    </a>
     <Header lang={lang} currentPath={currentPath} />
-    <main class={`flex-1${headerPad ? ' pt-16' : ''}`}>
+    <main id="main-content" class={`flex-1${headerPad ? ' pt-16' : ''}`}>
       <slot />
     </main>
     <Footer lang={lang} />

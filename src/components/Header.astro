@@ -64,7 +64,7 @@ const base = `/${lang}`;
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </a>
-          <div class="absolute top-full left-0 mt-1 w-52 bg-white rounded-lg shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+          <div class="absolute top-full left-0 mt-1 w-52 bg-white rounded-lg shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200">
             <a href={`${base}/about/our-story/`} class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-yellow/20 rounded-t-lg transition-colors">{t.ourStory}</a>
             <a href={`${base}/about/faq/`} class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-yellow/20 transition-colors">{t.faq}</a>
             <a href={`${base}/about/contact/`} class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-yellow/20 transition-colors">{t.contact}</a>
@@ -100,6 +100,8 @@ const base = `/${lang}`;
         id="mobile-menu-btn"
         class="navbreak:hidden p-2 text-brand-dark"
         aria-label="Menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
       >
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -130,7 +132,7 @@ const base = `/${lang}`;
 </header>
 
 <script>
-  const btn = document.getElementById('mobile-menu-btn');
+  const btn = document.getElementById('mobile-menu-btn') as HTMLButtonElement | null;
   const menu = document.getElementById('mobile-menu');
   const header = document.getElementById('site-header');
   btn?.addEventListener('click', () => {
@@ -139,10 +141,12 @@ const base = `/${lang}`;
       header?.classList.remove('rounded-full');
       header?.classList.add('rounded-[28px]');
       menu?.classList.remove('hidden');
+      btn.setAttribute('aria-expanded', 'true');
     } else {
       header?.classList.remove('rounded-[28px]');
       header?.classList.add('rounded-full');
       menu?.classList.add('hidden');
+      btn.setAttribute('aria-expanded', 'false');
     }
   });
 </script>

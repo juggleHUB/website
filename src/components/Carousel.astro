@@ -18,7 +18,7 @@ const id = Math.random().toString(36).slice(2, 8);
     <div class="relative">
       <!-- Slides -->
       <div class="overflow-hidden rounded-2xl">
-        <div id={`carousel-inner-${id}`} class="flex transition-transform duration-400 ease-in-out">
+        <div id={`carousel-inner-${id}`} class="flex transition-transform duration-400 ease-in-out motion-reduce:transition-none">
           {items.map((item) => (
             <div class="min-w-full">
               <img src={item.image} alt={item.title} class="w-full aspect-[16/9] object-cover rounded-t-2xl" />

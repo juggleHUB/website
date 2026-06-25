@@ -32,38 +32,44 @@ const t = {
     <form class="flex flex-col gap-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="flex flex-col gap-2">
-          <label class="text-sm font-semibold text-brand-dark">{t.name}</label>
+          <label for="contact-name" class="text-sm font-semibold text-brand-dark">{t.name}</label>
           <input
+            id="contact-name"
             type="text"
             name="name"
-            class="rounded-xl border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal transition"
+            autocomplete="name"
+            class="rounded-xl border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal focus:border-brand-teal transition"
           />
         </div>
         <div class="flex flex-col gap-2">
-          <label class="text-sm font-semibold text-brand-dark">{t.email}</label>
+          <label for="contact-email" class="text-sm font-semibold text-brand-dark">{t.email}</label>
           <input
+            id="contact-email"
             type="email"
             name="email"
-            class="rounded-xl border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal transition"
+            autocomplete="email"
+            class="rounded-xl border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal focus:border-brand-teal transition"
           />
         </div>
       </div>
 
       <div class="flex flex-col gap-2">
-        <label class="text-sm font-semibold text-brand-dark">{t.subject}</label>
+        <label for="contact-subject" class="text-sm font-semibold text-brand-dark">{t.subject}</label>
         <input
+          id="contact-subject"
           type="text"
           name="subject"
-          class="rounded-xl border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal transition"
+          class="rounded-xl border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal focus:border-brand-teal transition"
         />
       </div>
 
       <div class="flex flex-col gap-2">
-        <label class="text-sm font-semibold text-brand-dark">{t.message}</label>
+        <label for="contact-message" class="text-sm font-semibold text-brand-dark">{t.message}</label>
         <textarea
+          id="contact-message"
           name="message"
           rows="5"
-          class="rounded-xl border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal transition resize-none"
+          class="rounded-xl border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal focus:border-brand-teal transition resize-none"
         ></textarea>
       </div>
 
