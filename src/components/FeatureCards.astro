@@ -30,7 +30,7 @@ const { cards, desktopCols = 5, showIcon = true, paddingTop = 'pt-20' } = Astro.
           >
             {card.image ? (
               <div class="w-16 h-16 mb-4 rounded-xl overflow-hidden">
-                <img src={card.image} alt="" class="w-full h-full object-cover" />
+                <img src={card.image} alt="" width="64" height="64" loading="lazy" decoding="async" class="w-full h-full object-cover" />
               </div>
             ) : showIcon ? (
               <div class="w-16 h-16 mb-4 bg-gray-200 rounded-xl flex items-center justify-center">

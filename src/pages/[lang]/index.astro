@@ -20,7 +20,7 @@ const t = {
 }[lang];
 ---
 
-<Layout title={lang === 'de' ? 'Startseite' : 'Home'} lang={lang} currentPath={`/${lang}/`} headerPad={false}>
+<Layout title={hero_headline} description={hero_subtext} lang={lang} currentPath={`/${lang}/`} headerPad={false}>
   <!-- MOBILE hero -->
   <section class="navbreak:hidden bg-[#FFFDD7]">
     <!-- Text -->
@@ -36,6 +36,9 @@ const t = {
       <img
         src="https://picsum.photos/seed/hero-juggle/1600/700"
         alt="JuggleHUB workspace"
+        width="1600"
+        height="700"
+        fetchpriority="high"
         class="absolute inset-0 w-full h-full object-cover"
       />
       <img
@@ -55,6 +58,9 @@ const t = {
     <img
       src="https://picsum.photos/seed/hero-juggle/1600/700"
       alt="JuggleHUB workspace"
+      width="1600"
+      height="700"
+      fetchpriority="high"
       class="absolute inset-0 w-full h-full object-cover"
     />
     <!-- Solid left panel -->
@@ -98,6 +104,23 @@ const t = {
 
   <FeatureCards cards={feature_cards} desktopCols={5} paddingTop="pt-0" />
   </div>
+
+  <section class="pt-20 pb-20">
+    <div class="max-w-4xl mx-auto px-8 sm:px-14 lg:px-20">
+      <div class="overflow-hidden rounded-2xl border border-gray-100 shadow-lg">
+        <div class="aspect-[16/9]">
+          <iframe
+            src="https://www.youtube.com/embed/kxJwGU8YBKI"
+            title="JuggleHUB"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            class="w-full h-full"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <Testimonials
     title={testimonials_title}

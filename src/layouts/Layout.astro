@@ -131,6 +131,16 @@ const breadcrumbJsonLd = breadcrumbItems.length > 1 ? {
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
 
+    <script type="speculationrules" set:html={JSON.stringify({
+      prefetch: [{ source: 'list', urls: [
+        `/${lang}/coworking/`,
+        `/${lang}/flexible-childcare/`,
+        `/${lang}/event-space/`,
+        `/${lang}/virtual-office/`,
+        `/${lang}/about/`,
+      ]}]
+    })} />
+
     <script type="application/ld+json" set:html={JSON.stringify(organizationJsonLd)} />
     {breadcrumbJsonLd && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />}
   </head>

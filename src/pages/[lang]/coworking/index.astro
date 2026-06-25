@@ -13,7 +13,7 @@ const content = await getEntry('coworking', 'index');
 const { headline, intro, hero_cta_label, hero_cta_url, welcome_title, welcome_text, cards, pricing } = content.data[lang];
 ---
 
-<Layout title={headline} lang={lang} currentPath={`/${lang}/coworking/`} headerPad={false}>
+<Layout title={headline} description={intro} lang={lang} currentPath={`/${lang}/coworking/`} headerPad={false}>
   <!-- MOBILE hero -->
   <section class="navbreak:hidden bg-[#E6F5F3]">
     <div class="px-6 pt-28 pb-20">
@@ -30,6 +30,9 @@ const { headline, intro, hero_cta_label, hero_cta_url, welcome_title, welcome_te
       <img
         src="https://picsum.photos/seed/coworking-hero/1600/700"
         alt="JuggleHUB coworking space"
+        width="1600"
+        height="700"
+        fetchpriority="high"
         class="absolute inset-0 w-full h-full object-cover"
       />
       <img
@@ -47,6 +50,9 @@ const { headline, intro, hero_cta_label, hero_cta_url, welcome_title, welcome_te
     <img
       src="https://picsum.photos/seed/coworking-hero/1600/700"
       alt="JuggleHUB coworking space"
+      width="1600"
+      height="700"
+      fetchpriority="high"
       class="absolute inset-0 w-full h-full object-cover"
     />
     <div class="absolute inset-y-0 left-0 w-[40%] bg-[#E6F5F3]"></div>

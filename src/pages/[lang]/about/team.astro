@@ -9,16 +9,19 @@ export function getStaticPaths() {
 const { lang } = Astro.params as { lang: 'de' | 'en' };
 const content = await getEntry('team', 'index');
 const { headline, members } = content.data[lang];
+const description = lang === 'de'
+  ? 'Lern das Team hinter JuggleHUB kennen – die Menschen, die unseren Coworking-Space täglich mit Leben füllen.'
+  : 'Meet the team behind JuggleHUB – the people who bring our coworking space to life every day.';
 ---
 
-<Layout title={headline} lang={lang} currentPath={`/${lang}/about/team/`}>
+<Layout title={headline} description={description} lang={lang} currentPath={`/${lang}/about/team/`}>
   <div class="max-w-7xl mx-auto px-8 sm:px-14 lg:px-20 py-20">
     <h1 class="text-4xl lg:text-5xl font-black mb-12">{headline}</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 navbreak:grid-cols-3 gap-8">
       {members.map((m: { name: string; role: string; bio: string; image?: string }, i: number) => (
         <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden">
           <div class="aspect-[4/3] overflow-hidden">
-            <img src={m.image || `https://picsum.photos/seed/team-${i}/400/300`} alt={m.name} class="w-full h-full object-cover" />
+            <img src={m.image || `https://picsum.photos/seed/team-${i}/400/300`} alt={m.name} width="400" height="300" loading="lazy" decoding="async" class="w-full h-full object-cover" />
           </div>
           <div class="p-6">
             <h2 class="text-xl font-bold">{m.name}</h2>

@@ -27,6 +27,10 @@ const { rooms } = Astro.props;
                   <img
                     src={src}
                     alt={`${room.title} – photo ${imgIndex + 1}`}
+                    width="800"
+                    height="600"
+                    loading="lazy"
+                    decoding="async"
                     class="min-w-full aspect-[4/3] object-cover"
                   />
                 ))}
