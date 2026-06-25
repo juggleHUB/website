@@ -9,9 +9,12 @@ export function getStaticPaths() {
 const { lang } = Astro.params as { lang: 'de' | 'en' };
 const content = await getEntry('faq', 'index');
 const { headline, items } = content.data[lang];
+const description = lang === 'de'
+  ? 'Häufig gestellte Fragen zu Coworking, Kinderbetreuung, Event Space und Virtual Office bei JuggleHUB Berlin.'
+  : 'Frequently asked questions about coworking, childcare, event space and virtual office at JuggleHUB Berlin.';
 ---
 
-<Layout title={headline} lang={lang} currentPath={`/${lang}/about/faq/`}>
+<Layout title={headline} description={description} lang={lang} currentPath={`/${lang}/about/faq/`}>
   <div class="max-w-3xl mx-auto px-8 sm:px-14 lg:px-20 py-20">
     <h1 class="text-4xl lg:text-5xl font-black mb-12">{headline}</h1>
     <div class="space-y-4">
