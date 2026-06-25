@@ -9,9 +9,90 @@ export interface Props {
   lang: 'de' | 'en';
   currentPath?: string;
   headerPad?: boolean;
+  ogImage?: string;
 }
 
-const { title, description = 'JuggleHUB – Coworking mit integrierter Kinderbetreuung in Berlin', lang, currentPath, headerPad = true } = Astro.props;
+const {
+  title,
+  description = 'JuggleHUB – Coworking mit integrierter Kinderbetreuung in Berlin',
+  lang,
+  currentPath,
+  headerPad = true,
+  ogImage = '/og.png',
+} = Astro.props;
+
+const site = Astro.site ?? new URL('https://jugglehub.de');
+const siteBase = site.toString().replace(/\/$/, '');
+
+const canonicalUrl = currentPath ? `${siteBase}${currentPath}` : undefined;
+
+const alternateLang = lang === 'de' ? 'en' : 'de';
+const alternatePath = currentPath
+  ? currentPath.replace(`/${lang}/`, `/${alternateLang}/`)
+  : undefined;
+const alternateUrl = alternatePath ? `${siteBase}${alternatePath}` : undefined;
+const defaultUrl = `${siteBase}/de/`;
+
+const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${siteBase}${ogImage}`;
+const pageTitle = `${title} | JuggleHUB`;
+
+// Build breadcrumb list from currentPath, e.g. /de/about/our-story/
+const segmentLabels: Record<string, string> = {
+  about: lang === 'de' ? 'Über uns' : 'About',
+  'our-story': lang === 'de' ? 'Unsere Geschichte' : 'Our Story',
+  faq: 'FAQ',
+  contact: lang === 'de' ? 'Kontakt' : 'Contact',
+  press: lang === 'de' ? 'Presse' : 'Press',
+  team: 'Team',
+  coworking: 'Coworking',
+  'event-space': lang === 'de' ? 'Veranstaltungsraum' : 'Event Space',
+  'virtual-office': 'Virtual Office',
+  'flexible-childcare': lang === 'de' ? 'Flexible Kinderbetreuung' : 'Flexible Childcare',
+};
+
+const breadcrumbItems: { name: string; url: string }[] = [];
+if (currentPath) {
+  const segments = currentPath.replace(/^\/|\/$/g, '').split('/').slice(1); // drop lang
+  breadcrumbItems.push({ name: lang === 'de' ? 'Startseite' : 'Home', url: `${siteBase}/${lang}/` });
+  let built = `/${lang}`;
+  for (const seg of segments) {
+    built += `/${seg}`;
+    const name = segmentLabels[seg] ?? seg.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    breadcrumbItems.push({ name, url: `${siteBase}${built}/` });
+  }
+}
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': `${siteBase}/#organization`,
+  name: 'JuggleHUB',
+  description: lang === 'de'
+    ? 'Coworking-Space mit integrierter Kinderbetreuung in Berlin'
+    : 'Coworking space with integrated childcare in Berlin',
+  url: siteBase,
+  logo: `${siteBase}/logo.svg`,
+  image: ogImageUrl,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Immanuelkirchstraße 14a',
+    postalCode: '10405',
+    addressLocality: 'Berlin',
+    addressCountry: 'DE',
+  },
+  sameAs: [],
+};
+
+const breadcrumbJsonLd = breadcrumbItems.length > 1 ? {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: breadcrumbItems.map((item, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: item.name,
+    item: item.url,
+  })),
+} : null;
 ---
 
 <!doctype html>
@@ -20,11 +101,36 @@ const { title, description = 'JuggleHUB – Coworking mit integrierter Kinderbet
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <title>{title} | JuggleHUB</title>
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#2B9D8F" />
+
+    <title>{pageTitle}</title>
+
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+    {canonicalUrl && <link rel="alternate" hreflang={lang} href={canonicalUrl} />}
+    {alternateUrl && <link rel="alternate" hreflang={alternateLang} href={alternateUrl} />}
+    {canonicalUrl && <link rel="alternate" hreflang="x-default" href={defaultUrl} />}
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="JuggleHUB" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:locale" content={lang === 'de' ? 'de_DE' : 'en_GB'} />
+    <meta property="og:locale:alternate" content={lang === 'de' ? 'en_GB' : 'de_DE'} />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Nunito+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(organizationJsonLd)} />
+    {breadcrumbJsonLd && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />}
   </head>
   <body class="bg-white text-brand-dark font-sans antialiased min-h-screen flex flex-col">
     <Header lang={lang} currentPath={currentPath} />

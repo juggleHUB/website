@@ -1,0 +1,113 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'de' } }, { params: { lang: 'en' } }];
+}
+
+const { lang } = Astro.params as { lang: 'de' | 'en' };
+const base = `/${lang}`;
+
+const t = {
+  de: {
+    title: 'Sitemap',
+    description: 'Alle Seiten von JuggleHUB im Überblick.',
+    spaces: 'Unsere Angebote',
+    about: 'Über uns',
+    legal: 'Rechtliches',
+    home: 'Startseite',
+    coworking: 'Coworking',
+    childcare: 'Flexible Kinderbetreuung',
+    event_space: 'Event Space',
+    virtual_office: 'Virtual Office',
+    our_story: 'Unsere Geschichte',
+    team: 'Team',
+    press: 'Presse',
+    faq: 'FAQ',
+    contact: 'Kontakt',
+    impressum: 'Impressum',
+    datenschutz: 'Datenschutz',
+    agb: 'AGB',
+  },
+  en: {
+    title: 'Sitemap',
+    description: 'All pages on JuggleHUB at a glance.',
+    spaces: 'Our Spaces',
+    about: 'About',
+    legal: 'Legal',
+    home: 'Home',
+    coworking: 'Coworking',
+    childcare: 'Flexible Childcare',
+    event_space: 'Event Space',
+    virtual_office: 'Virtual Office',
+    our_story: 'Our Story',
+    team: 'Team',
+    press: 'Press',
+    faq: 'FAQ',
+    contact: 'Contact',
+    impressum: 'Imprint',
+    datenschutz: 'Privacy Policy',
+    agb: 'Terms & Conditions',
+  },
+}[lang];
+
+const topLinks = [
+  { label: t.home, href: `${base}/` },
+  { label: t.coworking, href: `${base}/coworking/` },
+  { label: t.childcare, href: `${base}/flexible-childcare/` },
+  { label: t.event_space, href: `${base}/event-space/` },
+  { label: t.virtual_office, href: `${base}/virtual-office/` },
+];
+
+const sections = [
+  {
+    heading: t.about,
+    links: [
+      { label: t.our_story, href: `${base}/about/our-story/` },
+      { label: t.team, href: `${base}/about/team/` },
+      { label: t.press, href: `${base}/about/press/` },
+      { label: t.faq, href: `${base}/about/faq/` },
+      { label: t.contact, href: `${base}/about/contact/` },
+    ],
+  },
+  {
+    heading: t.legal,
+    links: [
+      { label: t.impressum, href: `${base}/impressum/` },
+      { label: t.datenschutz, href: `${base}/datenschutz/` },
+      { label: t.agb, href: `${base}/agb/` },
+    ],
+  },
+];
+---
+
+<Layout title={t.title} description={t.description} lang={lang} currentPath={`/${lang}/sitemap/`}>
+  <div class="max-w-4xl mx-auto px-8 sm:px-14 lg:px-20 py-20">
+    <h1 class="text-4xl font-black mb-12">{t.title}</h1>
+    <ul class="flex flex-col sm:flex-row flex-wrap gap-x-10 gap-y-2 mb-12">
+      {topLinks.map(link => (
+        <li>
+          <a href={link.href} class="text-brand-dark hover:text-brand-teal transition-colors font-medium">
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
+      {sections.map(section => (
+        <div>
+          <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">{section.heading}</h2>
+          <ul class="space-y-2">
+            {section.links.map(link => (
+              <li>
+                <a href={link.href} class="text-brand-dark hover:text-brand-teal transition-colors font-medium">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</Layout>
