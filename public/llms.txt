@@ -1,0 +1,27 @@
+# JuggleHUB
+
+> JuggleHUB is a coworking space with integrated childcare in Berlin, Germany. It is designed for working parents and freelancers who need a professional workspace alongside flexible, certified childcare — all under one roof. Located at Immanuelkirchstraße 14a, 10405 Berlin (tram stop Hufelandstraße). Open Monday to Friday, 8am–6pm.
+
+## Services
+
+- [Coworking](https://jugglehub.de/en/coworking/): Flexible hot desks, dedicated offices and meeting rooms with high-speed WiFi and unlimited coffee. Suitable for freelancers, remote workers and small teams.
+- [Flexible Childcare](https://jugglehub.de/en/flexible-childcare/): Certified caregivers look after children on-site while parents work. Book childcare flexibly by the hour or day — no long-term commitments required.
+- [Event Space](https://jugglehub.de/en/event-space/): Multifunctional venue for workshops, presentations, networking events and private celebrations.
+- [Virtual Office](https://jugglehub.de/en/virtual-office/): Professional Berlin business address, postal handling and phone system for companies that don't need a physical presence.
+- [The Daily Café](https://jugglehub.de/en/about/contact/): On-site café serving fresh coffee, homemade snacks and a relaxed atmosphere.
+
+## About
+
+- [Our Story](https://jugglehub.de/en/about/our-story/): Founded in 2022 by Maria Hoffmann in Berlin-Mitte after experiencing the challenge of combining freelance work with childcare. Built for parents, by parents.
+- [Team](https://jugglehub.de/en/about/team/): The people behind JuggleHUB.
+- [FAQ](https://jugglehub.de/en/about/faq/): Common questions about membership, childcare booking, pricing and access.
+- [Press](https://jugglehub.de/en/about/press/): Media coverage and press resources.
+- [Contact](https://jugglehub.de/en/about/contact/): Get in touch with the JuggleHUB team.
+
+## Key Facts
+
+- **Address**: Immanuelkirchstraße 14a, 10405 Berlin, Germany
+- **Opening hours**: Monday–Friday, 8:00–18:00
+- **Languages**: German and English
+- **Target audience**: Working parents, freelancers, remote workers, small businesses in Berlin
+- **Unique selling point**: The only coworking space in Berlin that combines professional workspace with flexible, certified on-site childcare

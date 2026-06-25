@@ -2,4 +2,33 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 
+# AI crawlers — allow full access for training and retrieval
+User-agent: GPTBot
+Allow: /
+Disallow: /admin/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /admin/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /admin/
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /admin/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin/
+
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /admin/
+
 Sitemap: https://jugglehub.de/sitemap-index.xml
