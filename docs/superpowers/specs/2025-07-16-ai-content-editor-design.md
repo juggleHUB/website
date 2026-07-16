@@ -8,10 +8,12 @@ A lightweight web dashboard that lets non-technical clients edit content on thei
 
 - Non-technical clients can edit existing page content via AI prompts
 - Clients write freeform prompts (e.g., "On the homepage, make the hero headline more punchy and mention summer") — no page selection required
+- **AI can edit any file in the repo**: content JSON, Astro components, layouts, nav menus, footers, etc. — not limited to structured content
 - Preview of changes on a live Netlify deploy before going live (critical requirement)
 - Simple passcode authentication (one passcode per client)
 - Support for image uploads (replace existing images)
 - Support for bilingual content (DE/EN)
+- **Multi-file diff view**: when the AI edits multiple files, all changes are shown in the diff viewer before preview
 - Reusable across multiple client sites
 
 ## Architecture
@@ -36,17 +38,21 @@ A single-page Astro application with minimal UI:
 
 1. **Passcode Gate**: Simple form to enter the client passcode
 2. **Prompt Interface**: Textarea for the AI prompt + optional image upload
-3. **Loading State**: Shows progress while AI generates changes and deploy is building
-4. **Diff View**: Shows which files changed and field-level modifications
+3. **Loading State**: Shows progress while AI reads files, generates changes, and deploy is building
+4. **Multi-File Diff View**: Shows all files that changed, each with its own diff section
+   - JSON files: field-level diff with readable labels
+   - Code files: syntax-highlighted line-level diff (additions in green, deletions in red)
+   - Each file section shows the file path and can be collapsed/expanded
 5. **Preview Link**: Button to open the Netlify deploy preview in a new tab
 6. **Approve/Retry**: Buttons to merge to main or try again with a new prompt
 
 #### Backend (Netlify Functions)
 
-- **`/api/generate`**: Takes a prompt + optional image context, loads all content schemas and current JSON from GitHub, calls the AI, returns proposed changes with field-level diffs
-- **`/api/preview`**: Creates a branch, commits the changed JSON files, triggers a Netlify deploy, polls for completion, returns the preview URL
+- **`/api/generate`**: Takes a prompt + optional image context, fetches repo file listing, lets AI request files, generates proposed changes across any file types, returns multi-file diff
+- **`/api/preview`**: Creates a branch, commits all changed files, triggers a Netlify deploy, polls for completion, returns the preview URL
 - **`/api/approve`**: Merges the preview branch to main
-- **`/api/upload`**: Handles image uploads, commits images to the repo (e.g., `public/uploads/`), returns the committed path for use in JSON updates
+- **`/api/upload`**: Handles image uploads, commits images to the repo (e.g., `public/uploads/`), returns the committed path for use in file updates
+- **`/api/files`**: Fetches file contents from GitHub (used by the AI request-files loop)
 
 ### AI Integration
 
@@ -54,26 +60,30 @@ A single-page Astro application with minimal UI:
 
 The AI receives:
 
-1. **All content collection schemas** (from `config.ts`) — defines the structure and allowed fields for each content type
-2. **All current content JSON files** — the actual content values
-3. **The user's prompt** — what they want to change
-4. **Image paths** (if images were uploaded) — new image paths that can be referenced
+1. **Repository file listing** — a tree of files so the AI knows what exists and can request relevant files
+2. **Relevant file contents** — the AI can request specific files to read (e.g., `src/components/Nav.astro`, `src/content/home/index.json`, `src/layouts/Layout.astro`)
+3. **Content schemas** (from `config.ts`) — if editing content JSON, the schema defines allowed fields
+4. **The user's prompt** — what they want to change
+5. **Image paths** (if images were uploaded) — new image paths that can be referenced
+
+The AI operates in a **request-files** loop: it can request to read specific files from the repo, and the backend fetches them from GitHub. This lets the AI understand the codebase before making changes.
 
 #### Output from AI
 
 The AI returns:
 
-1. **Modified JSON files** — only the files that changed, with updated values
-2. **Change summary** — human-readable description of what was changed (e.g., "Updated homepage hero headline in both German and English")
+1. **Modified files** — a map of file paths to new file contents (can be JSON, Astro, TypeScript, Markdown, etc.)
+2. **Change summary** — human-readable description of what was changed (e.g., "Updated nav menu to add 'Blog' link", "Changed hero headline in German and English")
 
 #### Validation
 
-Before showing the diff to the client:
+Validation strategy depends on file type:
 
-1. Parse the AI's JSON output
-2. Validate each modified file against its Zod schema
-3. If validation fails, retry with error context or show an error to the client
-4. Only proceed if all changes are schema-valid
+- **Content JSON files**: Validate against the Zod schema from `config.ts`. If validation fails, retry with error context.
+- **Code files** (`.astro`, `.ts`, `.js`, etc.): No schema validation — the preview deploy is the validation. If the site builds and renders correctly on the preview branch, the changes are valid.
+- **Mixed edits**: If the AI edits both JSON and code files, validate the JSON files against schemas, then rely on the preview deploy for the code files.
+
+If JSON validation fails, retry once with error context. If it fails again, show an error to the client.
 
 #### Language Handling
 
@@ -89,31 +99,38 @@ The content is bilingual (DE/EN). The AI should:
 
 ```
 1. Client enters passcode → authenticated
-2. Client types prompt: "On the homepage, make the hero headline more punchy"
+2. Client types prompt: "Add a 'Blog' link to the nav and update the homepage hero"
 3. Dashboard calls /api/generate with:
    - Prompt
-   - All schemas (from config.ts)
-   - All current content JSON
-4. AI generates modified JSON files
-5. Backend validates against Zod schemas
-6. Backend computes field-level diff and returns to dashboard
-7. Dashboard shows diff: "Homepage (de): hero_headline changed from 'X' to 'Y'"
-8. Client clicks "Preview"
-9. Dashboard calls /api/preview:
-   - Creates branch: `content-edit-{timestamp}`
-   - Commits changed JSON files to the branch
-   - Pushes to GitHub
-   - Triggers Netlify deploy for the branch
-   - Polls Netlify API until deploy completes
-   - Returns preview URL
-10. Dashboard shows preview URL + "Open Preview" button
-11. Client opens preview in new tab, reviews the actual rendered site
-12. Client returns to dashboard
-13. Client clicks "Approve":
+   - Repo file listing
+4. AI requests files it needs to read:
+   - src/components/Nav.astro
+   - src/content/home/index.json
+   - src/content/config.ts (if editing JSON)
+5. Backend fetches requested files from GitHub, returns to AI
+6. AI generates modified files (Nav.astro + home/index.json)
+7. Backend validates JSON files against Zod schemas
+8. Backend computes multi-file diff and returns to dashboard
+9. Dashboard shows multi-file diff:
+   - "src/components/Nav.astro: added 'Blog' link"
+   - "src/content/home/index.json (de): hero_headline changed from 'X' to 'Y'"
+   - "src/content/home/index.json (en): hero_headline changed from 'A' to 'B'"
+10. Client clicks "Preview"
+11. Dashboard calls /api/preview:
+    - Creates branch: content-edit-{timestamp}
+    - Commits ALL changed files to the branch
+    - Pushes to GitHub
+    - Triggers Netlify deploy for the branch
+    - Polls Netlify API until deploy completes
+    - Returns preview URL
+12. Dashboard shows preview URL + "Open Preview" button
+13. Client opens preview in new tab, reviews the actual rendered site
+14. Client returns to dashboard
+15. Client clicks "Approve":
     - Dashboard calls /api/approve
     - Backend merges the branch to main
     - Netlify auto-deploys main → changes go live
-14. OR: Client clicks "Try Again" → new prompt, new branch, repeat
+16. OR: Client clicks "Try Again" → new prompt, new branch, repeat
 ```
 
 ### Image Upload Flow
