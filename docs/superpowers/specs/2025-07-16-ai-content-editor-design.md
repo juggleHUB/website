@@ -20,15 +20,20 @@ A lightweight web dashboard that lets non-technical clients edit content on thei
 
 ### Deployment Model
 
-One standalone dashboard instance per client site, deployed to its own Netlify site. Each instance is configured via environment variables:
+One standalone dashboard deployment serving multiple client sites. The dashboard is configured via a single set of environment variables plus a multi-client config:
 
-- `GITHUB_REPO`: The client's GitHub repository (e.g., `owner/jugglehub-website`)
-- `GITHUB_TOKEN`: Personal access token with repo access
-- `NETLIFY_SITE_ID`: The client's Netlify site ID
-- `NETLIFY_API_TOKEN`: Netlify API token
-- `CLIENT_PASSCODE`: Shared secret for dashboard access
+**Shared environment variables:**
+- `GITHUB_TOKEN`: Personal access token with repo access (needs access to all client repos)
+- `NETLIFY_API_TOKEN`: Netlify API token (needs access to all client sites)
 - `AI_API_KEY`: API key for the AI provider (OpenAI/Anthropic)
-- `CONTENT_PATH`: Path to content files in the repo (default: `src/content`)
+- `DASHBOARD_PASSCODE`: Optional master passcode for dashboard admin access
+
+**Per-client configuration** (stored in config file, not env vars):
+- Client ID (e.g., `jugglehub`, `tessaheise`)
+- Client passcode (unique per client)
+- GitHub repo (e.g., `owner/jugglehub-website`)
+- Netlify site ID
+- Content path (default: `src/content`)
 
 ### Components
 
@@ -154,33 +159,38 @@ The content is bilingual (DE/EN). The AI should:
 
 ## Configuration
 
-Each client instance is configured via a simple config file or environment variables:
+The dashboard uses a multi-client configuration file (`clients.config.json`) that maps each client passcode to their repo and Netlify site:
 
-```javascript
-// config.js
-export default {
-  github: {
-    repo: 'owner/jugglehub-website',
-    token: process.env.GITHUB_TOKEN,
-  },
-  netlify: {
-    siteId: process.env.NETLIFY_SITE_ID,
-    apiToken: process.env.NETLIFY_API_TOKEN,
-  },
-  auth: {
-    passcode: process.env.CLIENT_PASSCODE,
-  },
-  ai: {
-    provider: 'openai', // or 'anthropic'
-    apiKey: process.env.AI_API_KEY,
-    model: 'gpt-4o', // or 'claude-3-5-sonnet-20241022'
-  },
-  content: {
-    path: 'src/content',
-    schemaFile: 'src/content/config.ts',
-  },
-};
+```json
+{
+  "clients": [
+    {
+      "id": "jugglehub",
+      "name": "JuggleHub",
+      "passcode": "juggle-edit-2025",
+      "githubRepo": "owner/jugglehub-website",
+      "netlifySiteId": "abc123-def456-ghi789",
+      "contentPath": "src/content"
+    },
+    {
+      "id": "tessaheise",
+      "name": "Tessa Heise",
+      "passcode": "tessa-edit-2025",
+      "githubRepo": "owner/tessaheise.com",
+      "netlifySiteId": "xyz987-uvw654-rst321",
+      "contentPath": "src/content"
+    }
+  ]
+}
 ```
+
+**How it works:**
+1. Client enters their passcode at login
+2. System looks up the matching client config
+3. All subsequent operations use that client's GitHub repo and Netlify site
+4. Each client can only access their own site — the passcode determines the scope
+
+This config file is committed to the dashboard repo (not the client sites). The sensitive tokens (GitHub, Netlify, AI API key) remain in Netlify environment variables.
 
 ## Future Enhancements
 
