@@ -34,7 +34,7 @@ const t = {
     <!-- Image with woosh on top — image pulled up so woosh overlaps visible photo -->
     <div class="relative h-64 md:h-96 -mt-[62px]">
       <img
-        src="https://picsum.photos/seed/hero-juggle/1600/700"
+        src="/images/pages/home/multiple-people-working.jpeg"
         alt="JuggleHUB workspace"
         width="1600"
         height="700"
@@ -56,7 +56,7 @@ const t = {
     <img src="/woosh/hero-home.svg" aria-hidden="true" class="w-full opacity-0 pointer-events-none select-none" />
     <!-- Photo — full background -->
     <img
-      src="https://picsum.photos/seed/hero-juggle/1600/700"
+      src="/images/pages/home/multiple-people-working.jpeg"
       alt="JuggleHUB workspace"
       width="1600"
       height="700"
@@ -94,13 +94,15 @@ const t = {
       style="object-fit: cover; opacity: 0.5;"
     />
 
-  <section class="relative max-w-4xl mx-auto px-8 sm:px-14 lg:px-20 py-20">
+  <div class="pt-16">
+    <Carousel items={carousel_items} />
+  </div>
+
+  <section class="relative max-w-4xl mx-auto px-8 sm:px-14 lg:px-20 pt-0 pb-20">
     <h2 class="text-4xl font-black mb-6">{welcome_title}</h2>
-    <p class="text-lg text-gray-600 leading-relaxed">{welcome_text}</p>
+    <p class="text-lg text-gray-600 leading-relaxed whitespace-pre-line">{welcome_text}</p>
     <a href={`/${lang}/about/`} class="inline-flex items-center mt-6 text-brand-dark font-semibold underline underline-offset-4 hover:text-gray-600 transition-colors">{t.about}</a>
   </section>
-
-  <Carousel items={carousel_items} />
 
   <FeatureCards cards={feature_cards} desktopCols={5} paddingTop="pt-0" />
   </div>

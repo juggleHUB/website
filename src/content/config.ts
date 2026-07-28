@@ -6,7 +6,7 @@ function i18n<T extends z.ZodTypeAny>(schema: T) {
   return z.object({ de: schema, en: schema });
 }
 
-const featureCard = z.object({ title: z.string(), text: z.string(), url: z.string() });
+const featureCard = z.object({ title: z.string(), text: z.string(), url: z.string(), image: z.string().optional() });
 const carouselItem = z.object({ image: z.string(), title: z.string(), description: z.string() });
 const testimonial = z.object({ text: z.string(), name: z.string() });
 const featureItem = z.object({ title: z.string(), text: z.string(), image: z.string().optional() });
@@ -50,7 +50,11 @@ export const collections = {
     type: 'data',
     schema: i18n(z.object({
       headline: z.string(),
-      items: z.array(z.object({ question: z.string(), answer: z.string() })),
+      categories: z.array(z.object({
+        icon: z.string().optional(),
+        title: z.string(),
+        items: z.array(z.object({ question: z.string(), answer: z.string() })),
+      })),
     })),
   }),
 
@@ -75,7 +79,7 @@ export const collections = {
     type: 'data',
     schema: i18n(z.object({
       headline: z.string(),
-      press_releases: z.array(z.object({ date: z.string(), title: z.string(), button_text: z.string().optional(), url: z.string().optional() })),
+      press_releases: z.array(z.object({ date: z.string().optional(), title: z.string(), button_text: z.string().optional(), url: z.string().optional() })),
     })),
   }),
 
@@ -96,7 +100,7 @@ export const collections = {
       hero_cta_url: z.string().optional(),
       welcome_title: z.string().optional(),
       welcome_text: z.string().optional(),
-      cards: z.array(z.object({ title: z.string(), text: z.string(), url: z.string().optional(), image: z.string().optional() })).optional(),
+      cards: z.array(z.object({ title: z.string(), text: z.string().optional(), items: z.array(z.string()).optional(), url: z.string().optional(), image: z.string().optional() })).optional(),
       features: z.array(featureItem),
       pricing_note: z.string().optional(),
       pricing: z.object({
@@ -133,6 +137,7 @@ export const collections = {
         title: z.string(),
         cta_label: z.string().optional(),
         cta_url: z.string().optional(),
+        notes: z.array(z.string()).optional(),
         cards: z.array(z.object({
           title: z.string(),
           price: z.number(),
@@ -152,7 +157,11 @@ export const collections = {
       hero_cta_url: z.string().optional(),
       welcome_title: z.string().optional(),
       welcome_text: z.string().optional(),
+      carousel_title: z.string().optional(),
       carousel_items: z.array(z.object({ image: z.string(), title: z.string(), description: z.string() })).optional(),
+      testimonials_title: z.string().optional(),
+      testimonials_description: z.string().optional(),
+      testimonials: z.tuple([testimonial, testimonial, testimonial]).optional(),
       pricing: z.object({
         title: z.string(),
         notes: z.array(z.string()).optional(),
@@ -189,6 +198,20 @@ export const collections = {
       form_package_options: z.array(z.string()),
       form_message: z.string(),
       form_submit: z.string(),
+    })),
+  }),
+
+  cafe: defineCollection({
+    type: 'data',
+    schema: i18n(z.object({
+      headline: z.string(),
+      intro: z.string(),
+      hero_cta_label: z.string().optional(),
+      hero_cta_url: z.string().optional(),
+      sections: z.array(z.object({
+        title: z.string(),
+        text: z.string(),
+      })),
     })),
   }),
 

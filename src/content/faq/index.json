@@ -1,24 +1,110 @@
 {
   "de": {
     "headline": "Häufig gestellte Fragen",
-    "items": [
-      { "question": "Wie flexibel sind die Mitgliedschaften?", "answer": "Sehr flexibel! Wir bieten Tages-, Wochen- und Monatspässe an. Du kannst jederzeit upgraden oder downgraden. Für unsere Flex-Tarife gibt es keine Mindestlaufzeiten." },
-      { "question": "Ab welchem Alter betreut ihr Kinder?", "answer": "Wir betreuen Kinder ab 6 Monaten bis 10 Jahre. Unsere zertifizierten Erzieher haben Erfahrung mit allen Altersgruppen und gestalten altersgerechte Programme." },
-      { "question": "Muss ich die Kinderbetreuung im Voraus buchen?", "answer": "Wir empfehlen eine Anmeldung mindestens 24 Stunden im Voraus, um einen Platz zu sichern. In der Regel haben wir aber auch kurzfristig Kapazitäten – ruf einfach kurz an." },
-      { "question": "Gibt es Parkplätze?", "answer": "Im Gebäude stehen begrenzte Tiefgaragenplätze zur Verfügung (€5/Tag für Mitglieder). In der Nähe gibt es zudem öffentliche Parkplätze und eine sehr gute ÖPNV-Anbindung." },
-      { "question": "Kann ich den Event Space ohne Mitgliedschaft mieten?", "answer": "Ja, selbstverständlich! Der Event Space steht auch für externe Buchungen zur Verfügung. Kontaktiere uns für ein individuelles Angebot." },
-      { "question": "Gibt es eine Probezeit oder Schnupperoption?", "answer": "Ja! Wir bieten jeder interessierten Person einen kostenlosen Schnuppertag an. Einfach über unsere Website buchen oder anrufen." }
+    "categories": [
+      {
+        "icon": "🖥️",
+        "title": "Coworking",
+        "items": [
+          { "question": "Kann ich spontan vorbeikommen oder muss ich buchen?", "answer": "Du kannst jederzeit spontan ins juggleHUB kommen – eine Buchung ist nicht nötig. Wenn du neu bist, melde dich kurz vorher bei uns, damit wir dir eine kurze Führung geben und du direkt durchstarten kannst." },
+          { "question": "Gibt es feste Arbeitsplätze?", "answer": "Unser Coworking Space in Berlin Prenzlauer Berg funktioniert größtenteils nach dem Flex-Desk-Prinzip – du suchst dir jeden Tag deinen Platz selbst aus. Für alle, die lieber einen festen Platz haben, bieten wir eine begrenzte Anzahl an Fix Desks an. Einfach melden!" },
+          { "question": "Wie ist die Internetverbindung?", "answer": "Stabile 100 Mbit DSL – ideal für Videocalls, große Uploads und konzentriertes Arbeiten. Glasfaser mit 1 GB wird in Kürze angeschlossen." },
+          { "question": "Gibt es Lagermöglichkeiten?", "answer": "Du kannst einen Locker dazumieten – praktisch für alle, die regelmäßig bei uns arbeiten. Wer mit einem externen Bildschirm arbeitet, kann diesen außerdem über Nacht in unserem dafür vorgesehenen Regal lassen." }
+        ]
+      },
+      {
+        "icon": "👶",
+        "title": "Kinderbetreuung",
+        "items": [
+          { "question": "Ab welchem Alter gibt es Betreuung?", "answer": "Unsere Kinderbetreuung in Berlin richtet sich an Kinder von 6 Monaten bis 5 Jahren. Unser jüngstes Betreuungskind war gerade mal 6 Wochen alt – du kannst also früher als gedacht wieder durchstarten – das ist natürlich sehr individuell und wird pro Einzelfall entschieden." },
+          { "question": "Wie früh muss ich buchen?", "answer": "Die Betreuung sollte mindestens 36 Stunden im Voraus gebucht werden. Kurzfristige Buchungen innerhalb von 24 Stunden sind manchmal möglich – einfach kurz anfragen." },
+          { "question": "Welche Bedingungen gelten?", "answer": "Die Mindestbuchungsdauer beträgt 2 Stunden. Die Kinderbetreuung ist nur in Kombination mit einem Coworking Arbeitsplatz nutzbar. Ein Elternteil muss also vor Ort bleiben." },
+          { "question": "Gibt es Betreuung in den Berliner Schulferien?", "answer": "Ja! In den Berliner Schulferien bieten wir ganztägige Kinderbetreuung von 9 bis 17 Uhr an. Außerhalb der Schulferien ist die Betreuung von 9 bis 14 Uhr verfügbar – danach öffnet der Raum als öffentliches Spielcafé." },
+          { "question": "Können Unternehmen Kinderbetreuung für ihr Team buchen?", "answer": "Ja – betriebliche Kinderbetreuung ist beim juggleHUB möglich und wurde bereits von Unternehmen als Teil ihrer Mitarbeiter-Benefits genutzt. Für Infos zur Unternehmenskooperation meldet euch einfach bei uns." }
+        ]
+      },
+      {
+        "icon": "🏢",
+        "title": "Meetingräume & Eventflächen",
+        "items": [
+          { "question": "Was ist bei einer Raumbuchung inklusive?", "answer": "Bei jeder Buchung eines Meetingraums in Berlin sind Flipchart, Whiteboard und Pinnwand standardmäßig dabei. Zusätzlich kannst du Equipment wie Beamer, Moderationskoffer oder Konferenztools dazubuchen – ebenso wie Verpflegungspakete." },
+          { "question": "Kann ich Räume auch für externe Events buchen?", "answer": "Ja! Unsere Eventflächen in Berlin sind auch für externe Veranstaltungen buchbar – ob Workshop, Teamtag oder Firmenevent. Melde dich bei uns für Verfügbarkeiten und das passende Setup." },
+          { "question": "Gibt es Parkmöglichkeiten?", "answer": "Einen eigenen Parkplatz haben wir nicht, aber in den umliegenden Straßen finden sich Parkmöglichkeiten. Wir empfehlen die Anreise mit dem ÖPNV – das juggleHUB ist in Berlin gut angebunden." }
+        ]
+      },
+      {
+        "icon": "👥",
+        "title": "Team Offices",
+        "items": [
+          { "question": "Welche Bürogrößen gibt es?", "answer": "Unsere Team Offices in Berlin Prenzlauer Berg sind zwischen 18 und 500 qm groß – ideal für kleine Startups genauso wie für größere Teams." },
+          { "question": "Was ist inklusive?", "answer": "Unsere Büros werden vollständig full-service vermietet: Internet, Strom, Heizkosten, Reinigung und Kaffee sind inklusive. Auf Wunsch auch möbliert – damit ihr direkt einziehen und loslegen könnt." },
+          { "question": "Kann mein Team die Coworking-Fläche mitnutzen?", "answer": "Team Offices und Coworking Space sind getrennte Bereiche. Wenn ihr zusätzliche Flächen braucht, sprecht uns einfach an – wir finden gemeinsam eine Lösung." },
+          { "question": "Kann ich die Bürofläche besichtigen?", "answer": "Sehr gerne! Meldet euch per Mail oder Telefon – wir vereinbaren einen Termin, der zu euch passt." }
+        ]
+      },
+      {
+        "icon": "📬",
+        "title": "Virtual Office",
+        "items": [
+          { "question": "Kann ich mein Gewerbe unter eurer Adresse anmelden?", "answer": "Ja! Mit dem Virtual Office beim juggleHUB kannst du dein Gewerbe unter unserer Berliner Geschäftsadresse in Prenzlauer Berg anmelden – ganz ohne die Kosten eines eigenen Büros." },
+          { "question": "Wie funktioniert die Postweiterleitung?", "answer": "Sobald Post eintrifft, wirst du per App oder E-Mail benachrichtigt. Je nach Plan scannen wir deine Post innerhalb von 24 Stunden digital ein. Die physische Weiterleitung erfolgt wöchentlich." },
+          { "question": "Können Virtual Office Kunden auch Meetingräume buchen?", "answer": "Ja – als Virtual Office Kunde hast du Zugang zu unseren Meetingräumen und Eventflächen in Berlin, zu einem exklusiven Rabatt. Ideal für Kundenmeetings oder Teamtreffen." }
+        ]
+      }
     ]
   },
   "en": {
     "headline": "Frequently Asked Questions",
-    "items": [
-      { "question": "How flexible are the memberships?", "answer": "Very flexible! We offer daily, weekly and monthly passes. You can upgrade or downgrade at any time. There are no minimum terms for our flex plans." },
-      { "question": "From what age do you look after children?", "answer": "We care for children from 6 months to 10 years. Our certified educators have experience with all age groups and design age-appropriate programmes." },
-      { "question": "Do I need to book childcare in advance?", "answer": "We recommend registering at least 24 hours in advance to secure a spot. However, we usually have capacity at short notice too – just give us a quick call." },
-      { "question": "Is there parking?", "answer": "Limited underground parking is available in the building (€5/day for members). There are also public parking spaces nearby and excellent public transport connections." },
-      { "question": "Can I rent the event space without a membership?", "answer": "Yes, absolutely! The event space is also available for external bookings. Contact us for a personalised quote." },
-      { "question": "Is there a trial period or taster option?", "answer": "Yes! We offer every interested person a free trial day. Simply book via our website or give us a call." }
+    "categories": [
+      {
+        "icon": "🖥️",
+        "title": "Coworking",
+        "items": [
+          { "question": "Can I just drop in, or do I need to book?", "answer": "You can drop into juggleHUB spontaneously at any time – no booking required. If you're new, let us know shortly beforehand so we can give you a quick tour and you can get started right away." },
+          { "question": "Are there fixed desks?", "answer": "Our coworking space in Berlin Prenzlauer Berg mostly runs on a flex-desk principle – you choose your own spot each day. For anyone who prefers a fixed spot, we offer a limited number of fixed desks. Just get in touch!" },
+          { "question": "What's the internet connection like?", "answer": "A stable 100 Mbit DSL connection – ideal for video calls, large uploads and focused work. 1 GB fibre will be connected shortly." },
+          { "question": "Is there storage available?", "answer": "You can rent a locker – handy for anyone who works with us regularly. If you use an external monitor, you can also leave it overnight on our dedicated shelf." }
+        ]
+      },
+      {
+        "icon": "👶",
+        "title": "Childcare",
+        "items": [
+          { "question": "From what age do you offer childcare?", "answer": "Our childcare in Berlin is for children aged 6 months to 5 years. Our youngest child in care was just 6 weeks old – so you can get back to work earlier than you might think. Of course, this is very individual and decided on a case-by-case basis." },
+          { "question": "How far in advance do I need to book?", "answer": "Childcare should be booked at least 36 hours in advance. Short-notice bookings within 24 hours are sometimes possible – just get in touch and ask." },
+          { "question": "What are the conditions?", "answer": "The minimum booking is 2 hours. Childcare can only be used in combination with a coworking workspace – one parent must remain on site." },
+          { "question": "Is there childcare during Berlin school holidays?", "answer": "Yes! During Berlin school holidays we offer all-day childcare from 9am to 5pm. Outside of school holidays, care is available from 9am to 2pm – after that, the room opens as a public play café." },
+          { "question": "Can companies book childcare for their team?", "answer": "Yes – corporate childcare is available at juggleHUB and has already been used by companies as part of their employee benefits. Get in touch with us for information on company partnerships." }
+        ]
+      },
+      {
+        "icon": "🏢",
+        "title": "Meeting Rooms & Event Spaces",
+        "items": [
+          { "question": "What's included in a room booking?", "answer": "Every meeting room booking in Berlin includes a flipchart, whiteboard and pinboard as standard. You can also add equipment such as a projector, facilitation kit or conferencing tools – as well as catering packages." },
+          { "question": "Can I book rooms for external events too?", "answer": "Yes! Our event spaces in Berlin are also available for external events – whether a workshop, team day or company event. Get in touch with us for availability and the right setup." },
+          { "question": "Is there parking?", "answer": "We don't have our own parking lot, but there is parking available on the surrounding streets. We recommend arriving by public transport – juggleHUB is well connected in Berlin." }
+        ]
+      },
+      {
+        "icon": "👥",
+        "title": "Team Offices",
+        "items": [
+          { "question": "What office sizes are available?", "answer": "Our Team Offices in Berlin Prenzlauer Berg range from 18 to 500 sqm – ideal for small startups as well as larger teams." },
+          { "question": "What's included?", "answer": "Our offices are rented fully full-service: internet, electricity, heating, cleaning and coffee are all included. Furnished on request – so you can move in and get started right away." },
+          { "question": "Can my team also use the coworking area?", "answer": "Team Offices and the coworking space are separate areas. If you need additional space, just talk to us – we'll find a solution together." },
+          { "question": "Can I view the office space?", "answer": "Absolutely! Get in touch by email or phone – we'll arrange a time that works for you." }
+        ]
+      },
+      {
+        "icon": "📬",
+        "title": "Virtual Office",
+        "items": [
+          { "question": "Can I register my business at your address?", "answer": "Yes! With the Virtual Office at juggleHUB you can register your business at our Berlin business address in Prenzlauer Berg – without the cost of your own office." },
+          { "question": "How does mail forwarding work?", "answer": "As soon as mail arrives, you're notified via app or email. Depending on your plan, we scan your mail digitally within 24 hours. Physical forwarding happens weekly." },
+          { "question": "Can Virtual Office customers also book meeting rooms?", "answer": "Yes – as a Virtual Office customer you have access to our meeting rooms and event spaces in Berlin at an exclusive discount. Ideal for client meetings or team gatherings." }
+        ]
+      }
     ]
   }
 }

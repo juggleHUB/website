@@ -1,7 +1,7 @@
 {
   "de": {
-    "headline": "Event Space",
-    "intro": "Der JuggleHUB Event Space ist der perfekte Ort für dein nächstes Event. Ob Business-Workshop, Produktlaunch, Firmenfeier oder private Veranstaltung – unser flexibler Veranstaltungsraum passt sich deinen Bedürfnissen an.",
+    "headline": "Mehr Raum für eure Ideen.",
+    "intro": "Ob Strategie-Workshop, Firmen-Offsite oder Kreativformat – unsere Eventlocation in Berlin Prenzlauer Berg bietet den richtigen Rahmen für das, was ihr voranbringen wollt. Professionell, aber nicht steril. Flexibel, aber nicht beliebig.\n\nWas den juggleHUB als Workshop- und Meetinglocation besonders macht: Ihr bucht nicht nur einen Raum, sondern einen Ort mit Atmosphäre. Das Café im Haus sorgt für Verpflegung, auf Wunsch stellen wir Catering- und Snackpakete zusammen. Bei schönem Wetter steht zusätzlich unsere Außenterrasse zur Verfügung. Und wer mit Eltern im Team plant: Kinderbetreuung ist auf Anfrage möglich.\n\nUnsere Räume eignen sich für Unternehmen jeder Größe – vom kleinen Kernteam bis zur großen Veranstaltung.",
     "hero_cta_label": "Jetzt anfragen",
     "hero_cta_url": "/de/about/contact/",
     "welcome_title": "Räume für jede Gelegenheit",
@@ -10,24 +10,31 @@
       "title": "Raumpreise",
       "cta_label": "Raum anfragen",
       "cta_url": "/de/about/contact/",
+      "notes": ["*Alle Preise zzgl. MwSt.", "Es gelten unsere AGB und Stornierungsrichtlinien."],
       "cards": [
         {
           "title": "Meetingraum",
           "price": 29,
-          "period": "pro Stunde + 19% MwSt.",
-          "features": ["(18 € für Mitglieder)", "Tagesrate (> 5 Std.): 199 €", "(119 € für Mitglieder)"]
+          "period": "pro Std. + 19% MwSt.",
+          "features": ["20m²", "inkl. Flipchart, Metaplanwand, Screen", "Tagesrate: 199€"]
         },
         {
-          "title": "Konferenzraum",
+          "title": "Workshopraum",
+          "price": 35,
+          "period": "pro Std. + 19% MwSt.",
+          "features": ["26m²", "inkl. Flipchart, Metaplanwand, Screen", "Tagesrate: 245€"]
+        },
+        {
+          "title": "Konferenzraum EG",
           "price": 49,
-          "period": "pro Stunde + 19% MwSt.",
-          "features": ["(29 € für Mitglieder)", "Tagesrate (> 5 Std.): 339 €", "(199 € für Mitglieder)"]
+          "period": "pro Std. + 19% MwSt.",
+          "features": ["40m²", "Tagesrate: 339€"]
         },
         {
-          "title": "Event Space",
-          "price": 59,
-          "period": "pro Stunde + 19% MwSt.",
-          "features": ["Verfügbar ab September 2025", "(35 € für Mitglieder)", "Tagesrate (> 5 Std.): 399 €", "(239 € für Mitglieder)"]
+          "title": "Konferenzraum 1. OG",
+          "price": 49,
+          "period": "pro Std. + 19% MwSt.",
+          "features": ["38m²", "Tagesrate: 339€"]
         }
       ]
     },
@@ -65,8 +72,8 @@
     ]
   },
   "en": {
-    "headline": "Event Space",
-    "intro": "The JuggleHUB Event Space is the perfect place for your next event. Whether a business workshop, product launch, company party or private occasion – our flexible event space adapts to your needs.",
+    "headline": "More room for your ideas.",
+    "intro": "Whether it's a strategy workshop, company offsite or creative format – our event location in Berlin Prenzlauer Berg offers the right setting for what you want to move forward. Professional, but not sterile. Flexible, but not arbitrary.\n\nWhat makes juggleHUB special as a workshop and meeting location: you're not just booking a room, but a place with atmosphere. Our in-house café takes care of catering, and on request we can put together catering and snack packages. In good weather, our outdoor terrace is also available. And if you're planning with parents on your team: childcare is available on request.\n\nOur rooms are suitable for companies of any size – from a small core team to a large event.",
     "hero_cta_label": "Get in touch",
     "hero_cta_url": "/en/about/contact/",
     "welcome_title": "Rooms for every occasion",
@@ -75,24 +82,31 @@
       "title": "Room Prices",
       "cta_label": "Request a room",
       "cta_url": "/en/about/contact/",
+      "notes": ["*All prices excl. VAT.", "Our terms and cancellation policy apply."],
       "cards": [
         {
           "title": "Meeting Room",
           "price": 29,
           "period": "per hour + 19% VAT",
-          "features": ["(18 € for members)", "Day rate (> 5 hrs.): 199 €", "(119 € for members)"]
+          "features": ["20 sq.m.", "incl. flipchart, pinboard, screen", "Day rate: €199"]
         },
         {
-          "title": "Conference Room",
+          "title": "Workshop Room",
+          "price": 35,
+          "period": "per hour + 19% VAT",
+          "features": ["26 sq.m.", "incl. flipchart, pinboard, screen", "Day rate: €245"]
+        },
+        {
+          "title": "Conference Room Ground Floor",
           "price": 49,
           "period": "per hour + 19% VAT",
-          "features": ["(29 € for members)", "Day rate (> 5 hrs.): 339 €", "(199 € for members)"]
+          "features": ["40 sq.m.", "Day rate: €339"]
         },
         {
-          "title": "Event Space",
-          "price": 59,
+          "title": "Conference Room 1st Floor",
+          "price": 49,
           "period": "per hour + 19% VAT",
-          "features": ["Available from September 2025", "(35 € for members)", "Day rate (> 5 hrs.): 399 €", "(239 € for members)"]
+          "features": ["38 sq.m.", "Day rate: €339"]
         }
       ]
     },

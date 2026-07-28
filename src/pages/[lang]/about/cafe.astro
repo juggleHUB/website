@@ -1,0 +1,49 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'de' } }, { params: { lang: 'en' } }];
+}
+
+const { lang } = Astro.params as { lang: 'de' | 'en' };
+const content = await getEntry('cafe', 'index');
+const { headline, intro, hero_cta_label, hero_cta_url, sections } = content.data[lang];
+const description = lang === 'de'
+  ? 'The Daily – das Café im juggleHUB. Frischer Kaffee von Coffee Circle, hausgemachte Snacks und nachmittags unser Spielcafé für Kinder und Eltern.'
+  : 'The Daily – the café at juggleHUB. Fresh coffee from Coffee Circle, homemade snacks and our afternoon Spielcafé for children and parents.';
+---
+
+<Layout title={headline} description={description} lang={lang} currentPath={`/${lang}/about/cafe/`}>
+  <div class="max-w-3xl mx-auto px-8 sm:px-14 lg:px-20 py-20">
+    <h1 class="text-4xl lg:text-5xl font-black mb-6">{headline}</h1>
+    <p class="text-xl text-gray-600 leading-relaxed mb-10">{intro}</p>
+
+    <div class="rounded-2xl overflow-hidden mb-12 aspect-[16/9]">
+      <img
+        src="https://picsum.photos/seed/jh-cafe/1200/675"
+        alt="The Daily – Café im juggleHUB"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+        class="w-full h-full object-cover"
+      />
+    </div>
+
+    <div class="space-y-6">
+      {sections.map((section: { title: string; text: string }) => (
+        <div class="bg-white rounded-2xl border border-gray-100 p-8">
+          <h2 class="text-2xl font-black mb-4">{section.title}</h2>
+          <p class="text-gray-600 leading-relaxed whitespace-pre-line">{section.text}</p>
+        </div>
+      ))}
+    </div>
+
+    {hero_cta_label && hero_cta_url && (
+      <a href={hero_cta_url} class="inline-flex items-center mt-10 bg-brand-teal text-white font-bold text-base px-6 py-3 rounded-full hover:opacity-90 transition-colors shadow-md">
+        {hero_cta_label}
+      </a>
+    )}
+  </div>
+</Layout>

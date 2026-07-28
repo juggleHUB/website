@@ -18,10 +18,10 @@ const description = lang === 'de'
   <div class="max-w-3xl mx-auto px-8 sm:px-14 lg:px-20 py-20">
     <h1 class="text-4xl lg:text-5xl font-black mb-12">{headline}</h1>
     <div class="space-y-4">
-      {press_releases.map((pr: { date: string; title: string; button_text?: string; url?: string }) => (
+      {press_releases.map((pr: { date?: string; title: string; button_text?: string; url?: string }) => (
         <div class="bg-white rounded-2xl border border-gray-100 p-6 flex flex-col navbreak:flex-row navbreak:items-center navbreak:justify-between gap-3">
           <div>
-            <p class="text-sm text-gray-400 mb-1">{pr.date}</p>
+            {pr.date && <p class="text-sm text-gray-400 mb-1">{pr.date}</p>}
             <p class="font-semibold text-lg">{pr.title}</p>
           </div>
           {pr.url && (

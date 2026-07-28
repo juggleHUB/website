@@ -1,60 +1,52 @@
 {
-	"de": {
-		"headline": "Presse",
-		"press_releases": [
-			{
-				"date": "2024-03-15",
-				"title": "JuggleHUB eröffnet zweiten Standort in Berlin-Prenzlauer Berg",
-				"button_text": "Artikel lesen",
-				"url": "https://example.com/artikel-1"
-			},
-			{
-				"date": "2023-11-08",
-				"title": "JuggleHUB gewinnt Berliner Gründerpreis für familienfreundliche Innovation",
-				"button_text": "Artikel lesen",
-				"url": "https://example.com/artikel-2"
-			},
-			{
-				"date": "2023-06-22",
-				"title": "200 Mitglieder in 12 Monaten: JuggleHUB zieht Bilanz",
-				"button_text": "Artikel lesen",
-				"url": "https://example.com/artikel-3"
-			},
-			{
-				"date": "2022-09-01",
-				"title": "Eröffnung: JuggleHUB startet als Berlins erster familienfreundlicher Coworking-Space",
-				"button_text": "Artikel lesen",
-				"url": "https://example.com/artikel-4"
-			}
-		]
-	},
-	"en": {
-		"headline": "Press",
-		"press_releases": [
-			{
-				"date": "2024-03-15",
-				"title": "JuggleHUB opens second location in Berlin-Prenzlauer Berg",
-				"button_text": "Read article",
-				"url": "https://example.com/article-1"
-			},
-			{
-				"date": "2023-11-08",
-				"title": "JuggleHUB wins Berlin Founders Award for family-friendly innovation",
-				"button_text": "Read article",
-				"url": "https://example.com/article-2"
-			},
-			{
-				"date": "2023-06-22",
-				"title": "200 members in 12 months: JuggleHUB takes stock",
-				"button_text": "Read article",
-				"url": "https://example.com/article-3"
-			},
-			{
-				"date": "2022-09-01",
-				"title": "Opening: JuggleHUB launches as Berlin's first family-friendly coworking space",
-				"button_text": "Read article",
-				"url": "https://example.com/article-4"
-			}
-		]
-	}
+  "de": {
+    "headline": "Presse",
+    "press_releases": [
+      { "title": "Selbstbestimmt arbeiten mit Kind – Coworking als Arbeitsmodell der Zukunft für Unternehmen", "button_text": "Zum Buch", "url": "https://books.google.de/books?id=XL5dDwAAQBAJ&pg=PR1&lpg=PR1&dq=Anabel+Ternes+agenda+HR&source=bl&ots=r9Arg-Id16&sig=4Eaz1jvqeNhKUN7Rrz6XBQJCv74&hl=de&sa=X&ved=0ahUKEwjnjM3kyfjbAhUE6KQKHZp6DZQQ6AEIVDAI#v=onepage&q=Anabel%20Ternes%20agenda%20HR&f=false" },
+      { "title": "#ChangeAgent Katja Thiede – mit flexibler Kinderbetreuung zu einer familienfreundlichen Arbeitswelt", "button_text": "Zum Blog", "url": "https://www.tandemploy.com/de/blog/changeagent-katja-thiede-mit-flexibler-kinderbetreuung-zu-einer-familienfreundlichen-arbeitswelt/" },
+      { "title": "Coworking Spaces – Gemeinschaftsbüros für junge Firmen", "button_text": "Zum Artikel & Radiobeitrag", "url": "https://www.inforadio.de/programm/schema/sendungen/die_wirtschaftsdoku/201807/251560.html" },
+      { "title": "HR TEC NIGHT: Work-Life-Balance auch im (Tec-)Start-up?", "button_text": "Zum Artikel", "url": "https://hrtecnight.com/work-life-balance-auch-im-tec-start-up/" },
+      { "title": "Tagesspiegel: Verändern oder Verschwinden", "button_text": "Zum Artikel", "url": "http://www.tagesspiegel.de/themen/koepfe/new-work-veraendern-oder-verschwinden/20411860.html" },
+      { "title": "WDR: Wie flexibel soll Arbeit werden?", "button_text": "Zum Podcast", "url": "https://www1.wdr.de/mediathek/audio/wdr5/wdr5-politikum-meinungsreportage/audio-wie-flexibel-soll-arbeit-werden-100.html" },
+      { "title": "Coca-Cola Journey: Büro mit Kita – ein Tag im juggleHUB", "button_text": "Zum Artikel", "url": "https://www.coca-cola-deutschland.de/stories/ein-tag-im-juggle-hub" },
+      { "title": "Berliner Morgenpost: Wie Freiberufler und Firmen von Coworking Spaces profitieren", "button_text": "Zum Artikel", "url": "https://www.morgenpost.de/berlin-aktuell/startups/article213403113/Wie-Freiberufler-und-Firmen-von-Coworking-Spaces-profitieren.html" },
+      { "title": "Podcast „Transforming Organisations\": #10 Katja Thiede vom juggleHUB über Vereinbarkeit von Beruf und Familie", "button_text": "Zum Podcast", "url": "http://gesellschaftsein.com/podcast-transforming-organisations/podcast-runde-2/10-katja-thiede-vom-jugglehub-ueber-vereinbarkeit-von-beruf-und-familie/" },
+      { "title": "Dear Work: „Wir sehen das ganz unaufgeregt: für uns gehören Erwachsene und Kinder bzw. Arbeit und Leben einfach nur zusammen.”", "button_text": "Zum Artikel", "url": "https://www.dearwork.de/single-post/2018/02/06/Experts-Mit-der-Mitgr%C3%BCnderin-vom-juggleHUB-Katja-Thiede" },
+      { "title": "Arbeitgebermarkenfreunde: Berufstätig als Mutter oder Vater? Für die Einen ein Problem, für die Anderen Inspiration", "button_text": "Zum Artikel", "url": "https://www.arbeitgebermarkenfreunde.de/berufstaetig-als-mutter-oder-vater-fuer-die-einen-ein-problem-fuer-die-anderen-inspiration/" },
+      { "title": "Humans of New Work: New Work Space", "button_text": "Zum Artikel", "url": "http://www.humansofnewwork.com/stories/jugglehubcoworking/" },
+      { "title": "Arbeitsgesellschaft: Inspiration von außen", "button_text": "Zum Artikel", "url": "http://arbeitsgesellschaft.com/2016/09/26/inspiration-von-aussen/" },
+      { "title": "Ute Blindert – Podcast „Netzwerkboost\": Katja Thiede von juggleHUB: „Wir sind Netzwerk-Ermöglicher!”", "button_text": "Zum Podcast", "url": "https://www.uteblindert.de/blog/katja-thiede-jugglehub-episode-012/" },
+      { "title": "Jobinnovator: Vergesst den Anspruch alles perfekt zu machen", "button_text": "Zum Artikel", "url": "https://www.jobinnovator.com/magazin/wir-wollen-mut-machen-auch-mit-kindern-beruflich-gross-zu-denken/" },
+      { "title": "Modusvisionis Podcast „Finde dein Mama-Konzept\": #008 Expertin-Interview Katja Thiede", "button_text": "Zum Podcast", "url": "http://www.modusvisionis-onlinecoaching.de/2017/05/30/008-katja-thiede/" },
+      { "title": "Happy Works Blitzlicht: juggleHUB", "button_text": "Zum Artikel", "url": "http://www.happy-works.de/happy-works-blitzlicht-jugglehub/" },
+      { "title": "Luxemburger Wort: Zukunftsmodell für Luxemburg – Ein Coworking Space mit Kinderbetreuung", "button_text": "Zum Artikel", "url": "https://www.wort.lu/de/business/zukunftsmodell-fuer-luxemburg-ein-coworking-space-mit-kinderbetreuung-58c2d1b0a5e74263e13abca9" },
+      { "title": "FluxFM: Neustart", "button_text": "Zum Podcast", "url": "https://jugglehub.de/wp-content/uploads/2016/07/0720-Mitschnitt-juggleHUB-mit-Moderation.mp3" },
+      { "title": "Hauptstadtmutti: Wir haben unsere Vereinbarkeit einfach gegründet", "button_text": "Zum Artikel", "url": "https://hauptstadtmutti.de/katja-thiede-und-silvia-steude-wir-haben-unsere-vereinbarkeit-einfach-gegruendet/" }
+    ]
+  },
+  "en": {
+    "headline": "Press",
+    "press_releases": [
+      { "title": "Selbstbestimmt arbeiten mit Kind – Coworking als Arbeitsmodell der Zukunft für Unternehmen", "button_text": "View book", "url": "https://books.google.de/books?id=XL5dDwAAQBAJ&pg=PR1&lpg=PR1&dq=Anabel+Ternes+agenda+HR&source=bl&ots=r9Arg-Id16&sig=4Eaz1jvqeNhKUN7Rrz6XBQJCv74&hl=de&sa=X&ved=0ahUKEwjnjM3kyfjbAhUE6KQKHZp6DZQQ6AEIVDAI#v=onepage&q=Anabel%20Ternes%20agenda%20HR&f=false" },
+      { "title": "#ChangeAgent Katja Thiede – mit flexibler Kinderbetreuung zu einer familienfreundlichen Arbeitswelt", "button_text": "Read blog post", "url": "https://www.tandemploy.com/de/blog/changeagent-katja-thiede-mit-flexibler-kinderbetreuung-zu-einer-familienfreundlichen-arbeitswelt/" },
+      { "title": "Coworking Spaces – Gemeinschaftsbüros für junge Firmen", "button_text": "Read article & listen", "url": "https://www.inforadio.de/programm/schema/sendungen/die_wirtschaftsdoku/201807/251560.html" },
+      { "title": "HR TEC NIGHT: Work-Life-Balance auch im (Tec-)Start-up?", "button_text": "Read article", "url": "https://hrtecnight.com/work-life-balance-auch-im-tec-start-up/" },
+      { "title": "Tagesspiegel: Verändern oder Verschwinden", "button_text": "Read article", "url": "http://www.tagesspiegel.de/themen/koepfe/new-work-veraendern-oder-verschwinden/20411860.html" },
+      { "title": "WDR: Wie flexibel soll Arbeit werden?", "button_text": "Listen to podcast", "url": "https://www1.wdr.de/mediathek/audio/wdr5/wdr5-politikum-meinungsreportage/audio-wie-flexibel-soll-arbeit-werden-100.html" },
+      { "title": "Coca-Cola Journey: Büro mit Kita – ein Tag im juggleHUB", "button_text": "Read article", "url": "https://www.coca-cola-deutschland.de/stories/ein-tag-im-juggle-hub" },
+      { "title": "Berliner Morgenpost: Wie Freiberufler und Firmen von Coworking Spaces profitieren", "button_text": "Read article", "url": "https://www.morgenpost.de/berlin-aktuell/startups/article213403113/Wie-Freiberufler-und-Firmen-von-Coworking-Spaces-profitieren.html" },
+      { "title": "Podcast „Transforming Organisations\": #10 Katja Thiede vom juggleHUB über Vereinbarkeit von Beruf und Familie", "button_text": "Listen to podcast", "url": "http://gesellschaftsein.com/podcast-transforming-organisations/podcast-runde-2/10-katja-thiede-vom-jugglehub-ueber-vereinbarkeit-von-beruf-und-familie/" },
+      { "title": "Dear Work: „Wir sehen das ganz unaufgeregt: für uns gehören Erwachsene und Kinder bzw. Arbeit und Leben einfach nur zusammen.”", "button_text": "Read article", "url": "https://www.dearwork.de/single-post/2018/02/06/Experts-Mit-der-Mitgr%C3%BCnderin-vom-juggleHUB-Katja-Thiede" },
+      { "title": "Arbeitgebermarkenfreunde: Berufstätig als Mutter oder Vater? Für die Einen ein Problem, für die Anderen Inspiration", "button_text": "Read article", "url": "https://www.arbeitgebermarkenfreunde.de/berufstaetig-als-mutter-oder-vater-fuer-die-einen-ein-problem-fuer-die-anderen-inspiration/" },
+      { "title": "Humans of New Work: New Work Space", "button_text": "Read article", "url": "http://www.humansofnewwork.com/stories/jugglehubcoworking/" },
+      { "title": "Arbeitsgesellschaft: Inspiration von außen", "button_text": "Read article", "url": "http://arbeitsgesellschaft.com/2016/09/26/inspiration-von-aussen/" },
+      { "title": "Ute Blindert – Podcast „Netzwerkboost\": Katja Thiede von juggleHUB: „Wir sind Netzwerk-Ermöglicher!”", "button_text": "Listen to podcast", "url": "https://www.uteblindert.de/blog/katja-thiede-jugglehub-episode-012/" },
+      { "title": "Jobinnovator: Vergesst den Anspruch alles perfekt zu machen", "button_text": "Read article", "url": "https://www.jobinnovator.com/magazin/wir-wollen-mut-machen-auch-mit-kindern-beruflich-gross-zu-denken/" },
+      { "title": "Modusvisionis Podcast „Finde dein Mama-Konzept\": #008 Expertin-Interview Katja Thiede", "button_text": "Listen to podcast", "url": "http://www.modusvisionis-onlinecoaching.de/2017/05/30/008-katja-thiede/" },
+      { "title": "Happy Works Blitzlicht: juggleHUB", "button_text": "Read article", "url": "http://www.happy-works.de/happy-works-blitzlicht-jugglehub/" },
+      { "title": "Luxemburger Wort: Zukunftsmodell für Luxemburg – Ein Coworking Space mit Kinderbetreuung", "button_text": "Read article", "url": "https://www.wort.lu/de/business/zukunftsmodell-fuer-luxemburg-ein-coworking-space-mit-kinderbetreuung-58c2d1b0a5e74263e13abca9" },
+      { "title": "FluxFM: Neustart", "button_text": "Listen to podcast", "url": "https://jugglehub.de/wp-content/uploads/2016/07/0720-Mitschnitt-juggleHUB-mit-Moderation.mp3" },
+      { "title": "Hauptstadtmutti: Wir haben unsere Vereinbarkeit einfach gegründet", "button_text": "Read article", "url": "https://hauptstadtmutti.de/katja-thiede-und-silvia-steude-wir-haben-unsere-vereinbarkeit-einfach-gegruendet/" }
+    ]
+  }
 }

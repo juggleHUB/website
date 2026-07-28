@@ -12,8 +12,8 @@ const content = await getEntry('ourstory', 'index');
 const { headline, body } = content.data[lang];
 const htmlBody = marked(body);
 const description = lang === 'de'
-  ? 'Erfahre, wie JuggleHUB entstanden ist – gegründet von Eltern für Eltern, die Arbeit und Familie vereinen wollen.'
-  : 'Find out how JuggleHUB came to be – founded by parents for parents who want to balance work and family life.';
+  ? 'Zehn Jahre juggleHUB: Erfahre, wie Katja und Silvia 2016 den ersten familienfreundlichen Coworking Space in Berlin eröffneten.'
+  : 'Ten years of juggleHUB: find out how Katja and Silvia opened Berlin\'s first family-friendly coworking space in 2016.';
 ---
 
 <Layout title={headline} description={description} lang={lang} currentPath={`/${lang}/about/our-story/`}>

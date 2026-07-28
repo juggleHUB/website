@@ -1,37 +1,36 @@
 {
   "de": {
-    "headline": "Virtual Office",
-    "intro": "Du arbeitest remote, brauchst aber eine professionelle Berliner Geschäftsadresse? Mit unserem Virtual-Office-Paket bekommst du alles Wichtige – ohne täglich vor Ort sein zu müssen.",
+    "headline": "Eine Berliner Adresse – Ohne eigenes Büro.",
+    "intro": "Mit dem Virtual Office im juggleHUB bekommt ihr eine professionelle Geschäftsadresse in Berlin Prenzlauer Berg – für Impressum, Handelsregister und Geschäftsdokumente. Eure Post nehmen wir zuverlässig entgegen und leiten sie auf Wunsch weiter.\n\nIdeal für Freelancer, Gründer:innen und Unternehmen, die professionell auftreten wollen, ohne ein eigenes Büro zu mieten. Und wer doch mal vor Ort arbeiten möchte – unsere Coworking-Plätze und Meetingräume stehen jederzeit offen.",
     "pricing": [
       {
         "title": "Geschäftsadresse",
-        "from": "ab 49 / 29*",
+        "from": "ab 49",
         "sub": "pro Monat + 19% MwSt.",
         "items": [
-          "Basic: 49€/29€* Nutzung der Adresse für Website, keine Post",
-          "Pro: 59€/35€* Posteingangsbenachrichtigung, Lagerung, Selbstabholung",
-          "Pro Scan: 79€ Posteingang plus Scan per E-Mail, Lagerung, Selbstabholung",
-          "Pro Send: 89€ Posteingang, Lagerung, wöchentliche Weiterleitung"
+          "Basic – keine Postannahme: 49€",
+          "Pro – Benachrichtigung über Posteingang: 59€",
+          "Pro Scan – Benachrichtigung über Posteingang & Scan: 79€",
+          "Pro Send – Benachrichtigung & wöchentliche Nachsendung: 89€"
         ],
         "extras": [
-          "inkl. 2 Tages-Coworking-Pässe",
-          "40% Rabatt auf Raumbuchungen",
-          "*Mitgliederpreis"
+          "inkl. 2 Tagespässe pro Monat",
+          "40% Rabatt auf Raumbuchungen"
         ]
       },
       {
-        "title": "Eingetragene Geschäftsadresse",
-        "from": "ab 79 / 59*",
+        "title": "Firmensitz",
+        "from": "ab 79",
         "sub": "pro Monat + 19% MwSt.",
         "items": [
-          "Pro: 79€/59€* Posteingangsbenachrichtigung, Lagerung, Schließfach, Selbstabholung",
-          "Pro Scan: 99€ Posteingang plus Scan per E-Mail, Lagerung, Schließfach, Selbstabholung",
-          "Pro Send: 109€ Posteingang, Lagerung, wöchentliche Weiterleitung, Schließfach"
+          "Pro – Benachrichtigung über Posteingang: 79€",
+          "Pro Scan – Benachrichtigung über Posteingang & Scan: 99€",
+          "Pro Send – Benachrichtigung & wöchentliche Nachsendung: 109€"
         ],
         "extras": [
-          "inkl. 2 Tages-Coworking-Pässe",
+          "inkl. 2 Tagespässe pro Monat",
           "40% Rabatt auf Raumbuchungen",
-          "*Mitgliederpreis"
+          "inkl. Schließfach für Firmenunterlagen"
         ]
       }
     ],
@@ -40,43 +39,42 @@
     "form_email": "E-Mail",
     "form_company": "Firmenname",
     "form_package": "Gewünschtes Paket",
-    "form_package_options": ["Geschäftsadresse Basic", "Geschäftsadresse Pro", "Geschäftsadresse Pro Scan", "Geschäftsadresse Pro Send", "Eingetragene Adresse Pro", "Eingetragene Adresse Pro Scan", "Eingetragene Adresse Pro Send", "Noch nicht sicher"],
+    "form_package_options": ["Geschäftsadresse Basic", "Geschäftsadresse Pro", "Geschäftsadresse Pro Scan", "Geschäftsadresse Pro Send", "Firmensitz Pro", "Firmensitz Pro Scan", "Firmensitz Pro Send", "Noch nicht sicher"],
     "form_message": "Nachricht (optional)",
     "form_submit": "Anfrage senden"
   },
   "en": {
-    "headline": "Virtual Office",
-    "intro": "You work remotely but need a professional Berlin business address? With our Virtual Office package you get everything important – without needing to be on site every day.",
+    "headline": "A Berlin address – without an office of your own.",
+    "intro": "With the Virtual Office at juggleHUB you get a professional business address in Berlin Prenzlauer Berg – for your imprint, trade register and business documents. We reliably receive your mail and forward it on request.\n\nIdeal for freelancers, founders and companies who want to appear professional without renting their own office. And if you'd like to work on site every now and then – our coworking spaces and meeting rooms are open to you anytime.",
     "pricing": [
       {
         "title": "Business Address",
-        "from": "from 49 / 29*",
+        "from": "from 49",
         "sub": "per month + 19% VAT",
         "items": [
-          "Basic: 49€/29€* use of address for website, no mail",
-          "Pro: 59€/35€* incoming mail notification service, storage, self-pick-up",
-          "Pro Scan: 79€ incoming mail notification plus scan to email, mail storage, self-pick-up",
-          "Pro Send: 89€ incoming mail notification, mail storage, weekly mail forwarding"
+          "Basic – no mail service: €49",
+          "Pro – incoming mail notification: €59",
+          "Pro Scan – incoming mail notification & scan: €79",
+          "Pro Send – notification & weekly forwarding: €89"
         ],
         "extras": [
-          "includes 2 day passes for coworking",
-          "40% discount on room bookings",
-          "*member price"
+          "incl. 2 day passes per month",
+          "40% discount on room bookings"
         ]
       },
       {
-        "title": "Registered Business Address",
-        "from": "from 79 / 59*",
+        "title": "Registered Office",
+        "from": "from 79",
         "sub": "per month + 19% VAT",
         "items": [
-          "Pro: 79€/59€* incoming mail notification service, mail storage, locker, self-pick-up",
-          "Pro Scan: 99€ incoming mail notification plus scan to email, mail storage, locker, self-pick-up",
-          "Pro Send: 109€ incoming mail notification, mail storage, weekly mail forwarding, locker"
+          "Pro – incoming mail notification: €79",
+          "Pro Scan – incoming mail notification & scan: €99",
+          "Pro Send – notification & weekly forwarding: €109"
         ],
         "extras": [
-          "includes 2 day passes for coworking",
+          "incl. 2 day passes per month",
           "40% discount on room bookings",
-          "*member price"
+          "incl. locker for company documents"
         ]
       }
     ],
@@ -85,7 +83,7 @@
     "form_email": "Email",
     "form_company": "Company name",
     "form_package": "Package of interest",
-    "form_package_options": ["Business Address Basic", "Business Address Pro", "Business Address Pro Scan", "Business Address Pro Send", "Registered Address Pro", "Registered Address Pro Scan", "Registered Address Pro Send", "Not sure yet"],
+    "form_package_options": ["Business Address Basic", "Business Address Pro", "Business Address Pro Scan", "Business Address Pro Send", "Registered Office Pro", "Registered Office Pro Scan", "Registered Office Pro Send", "Not sure yet"],
     "form_message": "Message (optional)",
     "form_submit": "Send enquiry"
   }

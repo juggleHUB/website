@@ -12,6 +12,9 @@ export function getStaticPaths() {
 const { lang } = Astro.params as { lang: 'de' | 'en' };
 const content = await getEntry('eventspace', 'index');
 const { headline, intro, hero_cta_label, hero_cta_url, welcome_title, welcome_text, rooms, pricing } = content.data[lang];
+
+const [heroIntro, ...introRestParts] = intro.split('\n\n');
+const introRest = introRestParts.join('\n\n');
 ---
 
 <Layout title={headline} description={intro} lang={lang} currentPath={`/${lang}/event-space/`} headerPad={false}>
@@ -20,7 +23,7 @@ const { headline, intro, hero_cta_label, hero_cta_url, welcome_title, welcome_te
     <div class="px-6 pt-28 pb-20">
       <div class="w-16 h-16 rounded-xl bg-gray-200 mb-5"></div>
       <h1 class="text-3xl font-black tracking-tight mb-4 leading-tight text-brand-dark">{headline}</h1>
-      <p class="text-base text-brand-dark/70 mb-7 leading-relaxed">{intro}</p>
+      <p class="text-base text-brand-dark/70 mb-7 leading-relaxed">{heroIntro}</p>
       {hero_cta_label && hero_cta_url && (
         <a href={hero_cta_url} class="inline-flex items-center bg-brand-teal text-white font-bold text-base px-6 py-3 rounded-full hover:opacity-90 transition-colors shadow-md">
           {hero_cta_label}
@@ -68,7 +71,7 @@ const { headline, intro, hero_cta_label, hero_cta_url, welcome_title, welcome_te
         <div class="w-full max-w-sm pt-16">
           <div class="w-20 h-20 rounded-xl bg-gray-200 mb-6"></div>
           <h1 class="text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-tight text-brand-dark">{headline}</h1>
-          <p class="text-lg lg:text-xl text-brand-dark/70 mb-10 leading-relaxed">{intro}</p>
+          <p class="text-lg lg:text-xl text-brand-dark/70 mb-10 leading-relaxed">{heroIntro}</p>
           {hero_cta_label && hero_cta_url && (
             <a href={hero_cta_url} class="inline-flex items-center bg-brand-teal text-white font-bold text-lg px-8 py-4 rounded-full hover:opacity-90 transition-colors shadow-lg">
               {hero_cta_label}
@@ -87,8 +90,14 @@ const { headline, intro, hero_cta_label, hero_cta_url, welcome_title, welcome_te
       style="object-fit: cover; opacity: 0.5;"
     />
 
+    {introRest && (
+      <section class="relative max-w-4xl mx-auto px-8 sm:px-14 lg:px-20 pt-16">
+        <p class="text-lg text-gray-600 leading-relaxed whitespace-pre-line">{introRest}</p>
+      </section>
+    )}
+
     {(welcome_title || welcome_text) && (
-      <section class="relative max-w-4xl mx-auto px-8 sm:px-14 lg:px-20 pt-20 pb-8">
+      <section class="relative max-w-4xl mx-auto px-8 sm:px-14 lg:px-20 pt-8 pb-8">
         {welcome_title && <h2 class="text-4xl font-black mb-6">{welcome_title}</h2>}
         {welcome_text && <p class="text-lg text-gray-600 leading-relaxed">{welcome_text}</p>}
       </section>
@@ -101,6 +110,7 @@ const { headline, intro, hero_cta_label, hero_cta_url, welcome_title, welcome_te
     <div class="bg-[#FFFDD7] pt-8">
       <Pricing
         title={pricing.title}
+        notes={pricing.notes}
         cards={pricing.cards}
         headerColor="#F0E68C"
         accentColor="#C8A800"

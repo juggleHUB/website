@@ -1,61 +1,66 @@
 {
 	"de": {
-		"hero_headline": "Platz zum Arbeiten. Raum zum Leben.",
+		"hero_headline": "Space for Work. Room for Life.",
 		"hero_subtext": "JuggleHUB ist dein flexibler Coworking-Space in Berlin – mit integrierter Kinderbetreuung, inspirierenden Events und einer lebendigen Community.",
 		"hero_cta_label": "Jetzt entdecken",
 		"hero_cta_url": "/de/coworking",
-		"welcome_title": "Willkommen im JuggleHUB",
-		"welcome_text": "Im JuggleHUB glauben wir, dass Arbeit und Familie kein Widerspruch sein müssen. Unser moderner Coworking-Space bietet dir alles, was du brauchst: einen professionellen Arbeitsplatz, flexible Kinderbetreuung, inspirierende Events und eine Community, die dich trägt.",
+		"welcome_title": "Ein Ort, der Arbeit und Alltag verbindet.",
+		"welcome_text": "Der juggleHUB ist ein Coworking Space in Berlin Prenzlauer Berg – mit integrierter flexibler Kinderbetreuung, einem offenen Café und Räumen für Events und Begegnung.\n\nWir ergänzen die Arbeitswelt um das, was oft fehlt: Gemeinschaft, Nähe und Unterstützung im Alltag. Wer hierher kommt, muss nicht zwischen Arbeiten und Leben wählen – beides findet hier seinen Platz, getragen von Wärme, Verlässlichkeit und echter Verbundenheit.\n\nSeit zehn Jahren ist der juggleHUB ein Ort, der trägt – für Eltern, Selbstständige, Teams und alle, die flexibel arbeiten wollen, ohne auf Gemeinschaft und Struktur zu verzichten.",
 		"feature_cards": [
 			{
 				"title": "Coworking",
 				"text": "Flexible Schreibtische, dedizierte Büros und Meeting-Räume – alles ausgestattet mit Highspeed-WLAN und Kaffeeflatrate.",
-				"url": "/de/coworking/"
+				"url": "/de/coworking/",
+				"image": "/images/icons/coworking.png"
 			},
 			{
 				"title": "Event Space",
 				"text": "Unser multifunktionaler Veranstaltungsraum ist ideal für Workshops, Präsentationen, Networking-Events und private Feiern.",
-				"url": "/de/event-space/"
+				"url": "/de/event-space/",
+				"image": "/images/icons/room.png"
 			},
 			{
 				"title": "Flexible Kinderbetreuung",
 				"text": "Bring deine Kinder einfach mit! Unsere zertifizierten Betreuer kümmern sich liebevoll um deinen Nachwuchs, während du konzentriert arbeitest.",
-				"url": "/de/flexible-childcare/"
+				"url": "/de/flexible-childcare/",
+				"image": "/images/icons/childcare.png"
 			},
 			{
 				"title": "Virtual Office",
 				"text": "Professionelle Geschäftsadresse, Postservice und Telefonanlage – alles was du für dein Unternehmen brauchst, ohne physisch anwesend zu sein.",
-				"url": "/de/virtual-office/"
+				"url": "/de/virtual-office/",
+				"image": "/images/icons/virtual-office.png"
 			},
 			{
 				"title": "Café",
 				"text": "Genieß frischen Kaffee, hausgemachte Snacks und eine entspannte Atmosphäre – der perfekte Ort für informelle Meetings oder eine kreative Pause.",
-				"url": "/de/about/contact/"
+				"url": "/de/about/cafe/",
+				"image": "/images/icons/cafe.png"
 			}
 		],
 		"carousel_items": [
 			{
-				"image": "https://picsum.photos/seed/jh-cowork/800/500",
-				"title": "Dein Arbeitsplatz, deine Regeln",
-				"description": "Ob Schreibtisch für einen Tag oder festes Büro – im JuggleHUB findest du den Platz, der zu dir passt."
+				"image": "/images/pages/home/working-at-desk.jpeg",
+				"title": "Flexibel arbeiten",
+				"description": "Im juggleHUB arbeitet jede*r so, wie es zur eigenen Lebenssituation passt – ruhig und fokussiert oder im Austausch mit anderen, mit Kind oder ohne. Wir schaffen die Freiräume, die Menschen brauchen, um wirklich gut arbeiten zu können."
 			},
 			{
-				"image": "https://picsum.photos/seed/jh-kids/800/500",
+				"image": "/images/pages/home/childcare.jpeg",
 				"title": "Kinder willkommen",
-				"description": "Unsere zertifizierten Betreuer kümmern sich liebevoll um deinen Nachwuchs – direkt im Haus."
+				"description": "Im juggleHUB müssen Eltern nicht wählen zwischen Arbeiten und Dasein für ihre Kinder. Beides geht – an einem Ort, im gleichen Haus, ohne große Umwege."
 			},
 			{
-				"image": "https://picsum.photos/seed/jh-events/800/500",
-				"title": "Events & Community",
-				"description": "Von Workshops bis Networking-Abenden: Im JuggleHUB passiert immer etwas. Werde Teil der Community."
+				"image": "/images/pages/home/workspace.jpeg",
+				"title": "Raum für mehr",
+				"description": "Ob Workshop, Teammeeting oder Kiez-Event – unsere Räume und Außenflächen lassen sich flexibel bespielen. Ein Ort, der nicht nur für Arbeit da ist, sondern für alles, was Menschen zusammenbringt."
 			}
 		],
 		"testimonials_title": "Testimonials",
 		"testimonials_description": "Alle finden uns toll",
 		"testimonials": [
-			{ "text": "Das juggleHUB ist das Beste!", "name": "xy" },
-			{ "text": "Das juggleHUB ist das Beste!", "name": "xy" },
-			{ "text": "Das juggleHUB ist das Beste!", "name": "xy" }
+			{ "text": "Einer meiner absoluten Lieblings-Coworking-Spaces. Komfortabel, gut ausgestattet, preiswert und mit hilfsbereitem Personal.", "name": "z fang" },
+			{ "text": "Tolle Atmosphäre und superfreundliches Personal! Meine Frau und ich nutzen das Kita-Angebot gelegentlich und es ist fantastisch – das Kita-Team ist einfach klasse.", "name": "Adam Burnard" },
+			{ "text": "Ganz toller Co-Working Space! Café direkt angeschlossen, kinder- und hundefreundlich, mit sehr netten Menschen. Silvia und ihr Team machen es einem leicht, Teil der Community zu werden.", "name": "Jennifer Naumann" }
 		]
 	},
 	"en": {
@@ -63,58 +68,63 @@
 		"hero_subtext": "JuggleHUB is your flexible coworking space in Berlin – with integrated childcare, inspiring events and a vibrant community.",
 		"hero_cta_label": "Discover now",
 		"hero_cta_url": "/en/coworking",
-		"welcome_title": "Welcome to JuggleHUB",
-		"welcome_text": "At JuggleHUB, we believe work and family don't have to be at odds. Our modern coworking space offers everything you need: a professional workspace, flexible childcare, inspiring events and a community that supports you.",
+		"welcome_title": "A place that connects work and everyday life.",
+		"welcome_text": "juggleHUB is a coworking space in Berlin Prenzlauer Berg – with integrated flexible childcare, an open café and rooms for events and connection.\n\nWe complement the world of work with what's often missing: community, closeness and everyday support. Anyone who comes here doesn't have to choose between working and living – both find their place here, carried by warmth, reliability and genuine connection.\n\nFor ten years, juggleHUB has been a place that carries people – for parents, freelancers, teams and anyone who wants to work flexibly without giving up community and structure.",
 		"feature_cards": [
 			{
 				"title": "Coworking",
 				"text": "Flexible desks, dedicated offices and meeting rooms – all equipped with high-speed WiFi and unlimited coffee.",
-				"url": "/en/coworking/"
+				"url": "/en/coworking/",
+				"image": "/images/icons/coworking.png"
 			},
 			{
 				"title": "Event Space",
 				"text": "Our multifunctional event space is ideal for workshops, presentations, networking events and private celebrations.",
-				"url": "/en/event-space/"
+				"url": "/en/event-space/",
+				"image": "/images/icons/room.png"
 			},
 			{
 				"title": "Flexible Childcare",
 				"text": "Just bring your kids along! Our certified caregivers lovingly look after your children while you work with focus.",
-				"url": "/en/flexible-childcare/"
+				"url": "/en/flexible-childcare/",
+				"image": "/images/icons/childcare.png"
 			},
 			{
 				"title": "Virtual Office",
 				"text": "Professional business address, postal service and phone system – everything your company needs without being physically present.",
-				"url": "/en/virtual-office/"
+				"url": "/en/virtual-office/",
+				"image": "/images/icons/virtual-office.png"
 			},
 			{
 				"title": "Café",
 				"text": "Enjoy fresh coffee, homemade snacks and a relaxed atmosphere – the perfect spot for informal meetings or a creative break.",
-				"url": "/en/about/contact/"
+				"url": "/en/about/cafe/",
+				"image": "/images/icons/cafe.png"
 			}
 		],
 		"carousel_items": [
 			{
-				"image": "https://picsum.photos/seed/jh-cowork/800/500",
-				"title": "Your workspace, your rules",
-				"description": "Whether a hot desk for a day or a dedicated office – at JuggleHUB you'll find the space that works for you."
+				"image": "/images/pages/home/working-at-desk.jpeg",
+				"title": "Work flexibly",
+				"description": "At juggleHUB, everyone works the way that fits their life – quiet and focused, or in exchange with others, with or without a child. We create the freedom people need to do truly good work."
 			},
 			{
-				"image": "https://picsum.photos/seed/jh-kids/800/500",
-				"title": "Kids are welcome",
-				"description": "Our certified caregivers look after your children with care – right here in the building."
+				"image": "/images/pages/home/childcare.jpeg",
+				"title": "Kids welcome",
+				"description": "At juggleHUB, parents don't have to choose between working and being there for their children. Both are possible – in one place, under the same roof, without detours."
 			},
 			{
-				"image": "https://picsum.photos/seed/jh-events/800/500",
-				"title": "Events & Community",
-				"description": "From workshops to networking evenings: something is always happening at JuggleHUB. Become part of the community."
+				"image": "/images/pages/home/workspace.jpeg",
+				"title": "Room for more",
+				"description": "Whether it's a workshop, team meeting or neighbourhood event – our rooms and outdoor spaces can be used flexibly. A place that's not just for work, but for everything that brings people together."
 			}
 		],
 		"testimonials_title": "Testimonials",
 		"testimonials_description": "Everyone loves us",
 		"testimonials": [
-			{ "text": "JuggleHUB is the best!", "name": "xy" },
-			{ "text": "JuggleHUB is the best!", "name": "xy" },
-			{ "text": "JuggleHUB is the best!", "name": "xy" }
+			{ "text": "One of my absolute favorite coworking spaces. Comfortable, well-equipped, affordable, and with helpful staff.", "name": "z fang" },
+			{ "text": "Great atmosphere and super friendly staff! My wife and I occasionally use the childcare service and it's fantastic – the childcare team is just brilliant.", "name": "Adam Burnard" },
+			{ "text": "Wonderful coworking space with a café right on site – kid- and dog-friendly, with really nice people. Silvia and her team make it easy to feel part of the community.", "name": "Jennifer Naumann" }
 		]
 	}
 }

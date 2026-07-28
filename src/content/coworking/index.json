@@ -1,132 +1,126 @@
 {
   "de": {
-    "headline": "Coworking",
-    "intro": "Dein professioneller Arbeitsplatz in Berlin – flexibel, inspirierend und mit allem ausgestattet, was du brauchst. Von einem ruhigen Schreibtisch bis zum voll ausgestatteten Privatbüro findest du bei uns das passende Modell.",
+    "headline": "Dein Arbeitsplatz in Berlin Prenzlauer Berg.",
+    "intro": "Der juggleHUB ist ein Coworking Space für alle, die flexibel arbeiten wollen – ohne auf Struktur, Gemeinschaft und einen guten Arbeitsplatz verzichten zu müssen. Bei uns arbeiten Menschen aus den unterschiedlichsten Bereichen – von Design und Tech über Coaching bis hin zu Finance. Was sie verbindet, ist der Wunsch nach einem Ort, der funktioniert – und der sich gut anfühlt.\n\nNeben konzentriertem Arbeiten entsteht hier ganz selbstverständlich Austausch und Verbindung: zwischen Menschen, die unterschiedliche Wege gehen, aber am gleichen Ort arbeiten. Mit oder ohne Kind, in Teilzeit oder Vollzeit – der juggleHUB passt zu deinem Leben, nicht umgekehrt.",
     "hero_cta_label": "Jetzt buchen",
     "hero_cta_url": "/de/about/contact/",
-    "welcome_title": "Dein Arbeitsplatz im JuggleHUB",
-    "welcome_text": "Ob du ein ruhiges Plätzchen zum Konzentrieren suchst, ein Büro für dein Team oder einfach einen Ort, an dem Arbeit und Alltag zusammenpassen – bei uns findest du genau das. Unser Coworking-Space in Berlin ist mehr als nur ein Schreibtisch: Er ist eine lebendige Community aus Selbstständigen, Eltern und Kreativen, die gemeinsam wachsen.",
+    "welcome_title": "Space for Work. Room for Life.",
+    "welcome_text": "Bei uns findest du alles, was du brauchst – für konzentriertes Arbeiten und einen Alltag, der funktioniert.",
     "cards": [
-      { "title": "Vorteile", "text": "Highspeed-WLAN, Kaffeeflatrate, Drucker, Schließfächer und eine vollausgestattete Küche – alles inklusive, damit du dich voll auf deine Arbeit konzentrieren kannst." },
-      { "title": "Services", "text": "Rezeptionsservice, Postannahme, Reinigung und technischer Support. Wir kümmern uns um den Rest, damit du es nicht musst." },
-      { "title": "Zugang", "text": "24/7-Zugang mit Chipkarte, flexible Tages- und Monatspässe sowie die Möglichkeit, spontan zu buchen – Coworking nach deinem Rhythmus." }
+      { "title": "Arbeiten", "items": ["Flex & Fix Desks", "Meeting- & Eventräume", "Drucker", "Schnelles WLAN"] },
+      { "title": "Alltag", "items": ["Filterkaffee & Tee", "Café im Haus", "Begrünter Innenhof", "Community Events & Lunch"] },
+      { "title": "Kinderbetreuung", "items": ["Flexibel buchbar", "Kurzfristig verfügbar", "Liebevoll begleitet", "Direkt im Haus"] },
+      { "title": "Membership", "items": ["24/7 Zugang möglich", "Flexible Tarife", "Private Offices", "Halbtages- & Tagespässe"] }
     ],
     "features": [],
     "pricing": {
       "title": "Coworking Preise",
       "notes": [
-        "Alle Preise verstehen sich zzgl. MwSt.",
-        "Unsere Mitgliedschaften sind unbefristet und monatlich kündbar.",
+        "Alle Preise zzgl. MwSt. · Monatlich kündbar, keine Mindestlaufzeit.",
+        "Es gelten unsere AGB.",
         "Studierende zahlen weniger. Sprich uns gerne an."
       ],
       "cards": [
         {
-          "title": "Tagespass",
+          "title": "Drop In",
           "price": 23,
           "period": "pro Tag",
           "vat_note": "+ 19% MwSt.",
-          "features": ["8 bis 18 Uhr", "Nur gültig Mo–Fr"]
+          "features": ["werktags zwischen 8-18 Uhr"]
         },
         {
-          "title": "4 kaufen, 5 nutzen",
+          "title": "Five Days",
           "price": 90,
           "period": "pro Pack",
           "vat_note": "+ 19% MwSt.",
-          "features": ["Innerhalb 1 Monat nutzbar", "Nur gültig Mo–Fr"]
+          "features": ["gültig innerhalb eines Monats", "werktags zwischen 8-18 Uhr"]
         },
         {
-          "title": "Flex 50 / Limited",
+          "title": "Part-Time",
           "price": 129,
           "period": "pro Monat",
-          "vat_note": "+ 19% MwSt.",
-          "features": ["Flexibler Schreibtisch mit WLAN", "Halbe Stundenzahl von Flex 100", "Inkl. 2 Std. Meeting-Raum", "40% Rabatt auf Raumbuchungen"]
+          "features": ["100h monatlich", "flexibel einteilbar", "inkl. 2h Meetingraumnutzung", "40% auf Raumbuchungen"]
         },
         {
-          "title": "Flex 100 Unlimited 8–18",
+          "title": "Full-Time",
           "price": 159,
           "period": "pro Monat",
-          "vat_note": "+ 19% MwSt.",
-          "features": ["Flexibler Schreibtisch mit WLAN", "Coworking Mo–Fr 8–18 Uhr", "Inkl. 4 Std. Meeting-Raum", "40% Rabatt auf Raumbuchungen"]
+          "features": ["werktags 8-18 Uhr", "inkl. 4h Meetingraumnutzung", "40% auf Raumbuchungen"]
         },
         {
-          "title": "Flex 24/7 Unlimited",
+          "title": "Anytime",
           "price": 199,
           "period": "pro Monat",
-          "vat_note": "+ 19% MwSt.",
-          "features": ["Flexibler Schreibtisch mit WLAN", "24/7-Zugang per Air Key App", "Inkl. 8 Std. Meeting-Raum", "40% Rabatt auf Raumbuchungen", "Schließfach"]
+          "features": ["24/7 Zugang per App", "inkl. 8h Meetingraumnutzung", "40% auf Raumbuchungen", "Schließfach"]
         },
         {
-          "title": "Fix Desk Unlimited",
+          "title": "My Desk",
           "price": 299,
           "period": "pro Monat",
-          "vat_note": "+ 19% MwSt.",
-          "features": ["Fester Schreibtisch mit WLAN", "24/7-Zugang per Air Key App", "Inkl. 8 Std. Meeting-Raum", "40% Rabatt auf Raumbuchungen", "Schließfach"]
+          "features": ["fester eigener Schreibtisch", "24/7 Zugang per App", "inkl. 8h Meetingraumnutzung", "40% auf Raumbuchungen", "Schließfach – je nach Verfügbarkeit"]
         }
       ]
     }
   },
   "en": {
-    "headline": "Coworking",
-    "intro": "Your professional workspace in Berlin – flexible, inspiring and equipped with everything you need. From a quiet desk to a fully equipped private office, you'll find the right model with us.",
+    "headline": "Your workspace in Berlin Prenzlauer Berg.",
+    "intro": "juggleHUB is a coworking space for anyone who wants to work flexibly – without giving up structure, community and a good workspace. People from all kinds of fields work here – from design and tech to coaching and finance. What connects them is the wish for a place that works – and feels good.\n\nAlongside focused work, exchange and connection happen here quite naturally: between people who take different paths but work in the same place. With or without a child, part-time or full-time – juggleHUB fits your life, not the other way around.",
     "hero_cta_label": "Book now",
     "hero_cta_url": "/en/about/contact/",
-    "welcome_title": "Your workspace at JuggleHUB",
-    "welcome_text": "Whether you're looking for a quiet spot to focus, an office for your team, or simply a place where work and everyday life fit together – you'll find exactly that here. Our coworking space in Berlin is more than just a desk: it's a vibrant community of freelancers, parents and creatives growing together.",
+    "welcome_title": "Space for Work. Room for Life.",
+    "welcome_text": "With us you'll find everything you need – for focused work and an everyday life that works.",
     "cards": [
-      { "title": "Benefits", "text": "High-speed WiFi, unlimited coffee, printer, lockers and a fully equipped kitchen – all included so you can focus entirely on your work." },
-      { "title": "Services", "text": "Reception service, mail handling, cleaning and technical support. We take care of the rest so you don't have to." },
-      { "title": "Access", "text": "24/7 access with a key card, flexible day and monthly passes and the ability to book on the fly – coworking on your schedule." }
+      { "title": "Work", "items": ["Flex & fixed desks", "Meeting & event rooms", "Printer", "Fast WiFi"] },
+      { "title": "Everyday Life", "items": ["Filter coffee & tea", "Café on site", "Green courtyard", "Community events & lunch"] },
+      { "title": "Childcare", "items": ["Flexibly bookable", "Available at short notice", "Caring support", "Right on site"] },
+      { "title": "Membership", "items": ["24/7 access available", "Flexible plans", "Private offices", "Half-day & day passes"] }
     ],
     "features": [],
     "pricing": {
       "title": "Coworking Prices",
       "notes": [
-        "All prices exclude VAT.",
-        "Our memberships are open-ended and can be terminated monthly.",
+        "All prices excl. VAT. · Cancel monthly, no minimum term.",
+        "Our terms and conditions apply.",
         "Students pay less. Please talk to us for further details."
       ],
       "cards": [
         {
-          "title": "Day Pass",
+          "title": "Drop In",
           "price": 23,
           "period": "per day",
           "vat_note": "+ 19% VAT",
-          "features": ["8 am – 6 pm", "Only valid on weekdays (Mo–Fri)"]
+          "features": ["weekdays 8 am – 6 pm"]
         },
         {
-          "title": "Pay 4 Use 5 Day Pack",
+          "title": "Five Days",
           "price": 90,
           "period": "per pack",
           "vat_note": "+ 19% VAT",
-          "features": ["Must be used within 1 month", "Only valid on weekdays (Mo–Fri)"]
+          "features": ["valid within one month", "weekdays 8 am – 6 pm"]
         },
         {
-          "title": "Flex 50 / Limited",
+          "title": "Part-Time",
           "price": 129,
           "period": "per month",
-          "vat_note": "+ 19% VAT",
-          "features": ["Flexible desk with WiFi", "Half amount of hours of Flex 100", "Incl. 2 hrs. of meeting room usage", "40% discount on room booking"]
+          "features": ["100h monthly", "flexible scheduling", "incl. 2h of meeting room usage", "40% off room bookings"]
         },
         {
-          "title": "Flex 100 Unlimited 8–6",
+          "title": "Full-Time",
           "price": 159,
           "period": "per month",
-          "vat_note": "+ 19% VAT",
-          "features": ["Flexible desk with WiFi", "Coworking weekdays 8 am – 6 pm", "Incl. 4 hrs. of meeting room usage", "40% discount on room booking"]
+          "features": ["weekdays 8 am – 6 pm", "incl. 4h of meeting room usage", "40% off room bookings"]
         },
         {
-          "title": "Flex 24/7 Unlimited",
+          "title": "Anytime",
           "price": 199,
           "period": "per month",
-          "vat_note": "+ 19% VAT",
-          "features": ["Flex desk with WiFi", "24/7 access with free air key app", "Incl. 8 hrs. meeting room usage", "40% discount on room booking", "Locker"]
+          "features": ["24/7 access via app", "incl. 8h of meeting room usage", "40% off room bookings", "Locker"]
         },
         {
-          "title": "Fix Desk Unlimited",
+          "title": "My Desk",
           "price": 299,
           "period": "per month",
-          "vat_note": "+ 19% VAT",
-          "features": ["Fix desk with WiFi", "24/7 access with free air key app", "Incl. 8 hrs. meeting room usage", "40% discount on room booking", "Locker"]
+          "features": ["your own fixed desk", "24/7 access via app", "incl. 8h of meeting room usage", "40% off room bookings", "Locker – subject to availability"]
         }
       ]
     }

@@ -23,6 +23,7 @@ const t = {
     contact: 'Kontakt',
     press: 'Presse',
     team: 'Team',
+    cafe: 'Café',
     memberLogin: 'Login',
   },
   en: {
@@ -36,6 +37,7 @@ const t = {
     contact: 'Contact',
     press: 'Press',
     team: 'Team',
+    cafe: 'Café',
     memberLogin: 'Login',
   },
 }[lang];
@@ -69,7 +71,8 @@ const base = `/${lang}`;
             <a href={`${base}/about/faq/`} class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-yellow/20 transition-colors">{t.faq}</a>
             <a href={`${base}/about/contact/`} class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-yellow/20 transition-colors">{t.contact}</a>
             <a href={`${base}/about/press/`} class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-yellow/20 transition-colors">{t.press}</a>
-            <a href={`${base}/about/team/`} class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-yellow/20 rounded-b-lg transition-colors">{t.team}</a>
+            <a href={`${base}/about/team/`} class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-yellow/20 transition-colors">{t.team}</a>
+            <a href={`${base}/about/cafe/`} class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-yellow/20 rounded-b-lg transition-colors">{t.cafe}</a>
           </div>
         </div>
 
@@ -118,6 +121,7 @@ const base = `/${lang}`;
     <a href={`${base}/about/contact/`} class="block py-1.5 pl-4 text-gray-500 text-sm">{t.contact}</a>
     <a href={`${base}/about/press/`} class="block py-1.5 pl-4 text-gray-500 text-sm">{t.press}</a>
     <a href={`${base}/about/team/`} class="block py-1.5 pl-4 text-gray-500 text-sm">{t.team}</a>
+    <a href={`${base}/about/cafe/`} class="block py-1.5 pl-4 text-gray-500 text-sm">{t.cafe}</a>
     <a href={`${base}/coworking/`} class="block py-2 text-brand-dark font-medium">{t.coworking}</a>
     <a href={`${base}/flexible-childcare/`} class="block py-2 text-brand-dark font-medium">{t.childcare}</a>
     <a href={`${base}/event-space/`} class="block py-2 text-brand-dark font-medium">{t.eventSpace}</a>

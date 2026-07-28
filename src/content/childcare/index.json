@@ -4,65 +4,70 @@
     "intro": "Unsere Kinderbetreuung ist das Herzstück von JuggleHUB. Bring deine Kinder einfach mit und arbeite im Wissen, dass sie in besten Händen sind – direkt nebenan, sicher und gut betreut.",
     "hero_cta_label": "Jetzt anfragen",
     "hero_cta_url": "/de/about/contact/",
-    "welcome_title": "Betreuung, der du vertrauen kannst",
-    "welcome_text": "Unser qualifiziertes Team begleitet deine Kinder mit Herz und Fachkenntnis durch den Tag – mit altersgerechtem Programm, sicheren Räumen und offener Kommunikation. Du arbeitest, wir kümmern uns.",
+    "welcome_title": "Arbeiten mit Kind – ganz einfach.",
+    "welcome_text": "Die Kinderbetreuung im juggleHUB ist für Kinder von 6 Monaten bis 5 Jahren – und für alle Eltern, die flexibel arbeiten wollen, ohne auf verlässliche Betreuung verzichten zu müssen.\n\nOb als Überbrückung vor dem Kitastart, während der Berliner Schulferien oder einfach an den Tagen, an denen der Alltag mal anders läuft als geplant – wir sind da. Regulär betreuen wir montags bis freitags von 9 bis 14 Uhr. In den Berliner Schulferien verlängern wir auf 9 bis 17 Uhr – gerade dann, wenn andere Betreuungsangebote schließen.\n\nUnsere erfahrenen Betreuerinnen sprechen Deutsch und Englisch – damit sich alle Kinder von Anfang an willkommen fühlen, egal woher sie kommen.\n\nEinen Platz könnt ihr bis zu 36 Stunden vorher buchen – unkompliziert und ohne lange Vorlaufzeit. Weil wir wissen, dass der Alltag mit Kindern selten nach Plan läuft. Ob einmalig, regelmäßig oder in den Ferien – ihr bucht genau das, was ihr braucht.\n\nAusserhalb der Schulferien verwandelt sich unser Betreuungsraum ab 14 Uhr in ein Spielcafé – eine entspannte Kombination aus Spielzimmer und Café, die ihr ohne vorherige Buchung nutzen könnt.",
+    "carousel_title": "Was euch erwartet",
     "carousel_items": [
       {
         "image": "https://picsum.photos/seed/kids-play/800/500",
-        "title": "Kreatives Spielen",
-        "description": "Basteln, Malen, Bauen – unsere Betreuer gestalten jeden Tag neu und regen die Fantasie deiner Kinder an."
+        "title": "Flexibel buchen",
+        "description": "Ob Einzelstunde oder Paket – die Kinderbetreuung im juggleHUB passt sich eurer Tagesplanung an. Kurzfristig, unkompliziert und ohne lange Vorlaufzeit."
       },
       {
         "image": "https://picsum.photos/seed/kids-read/800/500",
-        "title": "Vorlesen & Sprache",
-        "description": "Geschichten wecken Neugier. Wir lesen vor, erzählen und fördern spielerisch Sprache und Konzentration."
+        "title": "Direkt dabei",
+        "description": "Eure Kinder sind nebenan – der Coworking Bereich und der Betreuungsraum sind nur wenige Meter voneinander entfernt. Diese räumliche Verbindung gibt Eltern die Ruhe zum Arbeiten und Kindern die Sicherheit, die sie brauchen."
       },
       {
         "image": "https://picsum.photos/seed/kids-move/800/500",
-        "title": "Bewegung & Toben",
-        "description": "Kinder brauchen Bewegung. Unser Innenbereich lädt zum Klettern, Tanzen und Entdecken ein."
+        "title": "Liebevoll begleitet",
+        "description": "Erfahrene Betreuerinnen begleiten eure Kinder auf Deutsch und Englisch – in kleinen Gruppen, mit echter Aufmerksamkeit für jedes Kind."
+      }
+    ],
+    "testimonials_title": "Stimmen aus dem juggleHUB",
+    "testimonials_description": "Lernt uns kennen!",
+    "testimonials": [
+      {
+        "text": "Wir kamen für 8 Wochen Elternzeit nach Berlin und haben im juggleHUB alles gefunden, was wir brauchten – einen großartigen Ort zum Arbeiten und eine Community, die uns sofort willkommen geheißen hat.",
+        "name": "Danielle, New York"
+      },
+      {
+        "text": "Ich kann mich auf meine Arbeit konzentrieren und weiß mein Kind nur ein paar Schritte entfernt in guten Händen. Wenn doch mal was ist, sind die Wege kurz. So überbrücken wir die Zeit vor der Kita!",
+        "name": "Anne, Berlin"
+      },
+      {
+        "text": "juggleHUB war unser Anlaufpunkt, bevor unsere Tochter in die Kita kam. Damals gab es uns genau die Flexibilität, die wir brauchten – ein Ort zum Arbeiten, während sie nur ein paar Schritte entfernt in guten Händen war. Heute komme ich immer noch als Mitglied ins juggleHUB und genieße die Community anderer arbeitender Eltern.",
+        "name": "R.M.B, Berlin"
       }
     ],
     "pricing": {
       "title": "Kinderbetreuung Preise",
       "notes": [
         "Alle Preise zzgl. 19% MwSt.",
-        "Mindestbuchungszeit: 2 Stunden. Buchung mindestens 48 Std. im Voraus.",
-        "Geschwisterkinder: 10 € / Std. zusätzlich."
+        "Mindestbuchungsdauer: 2 Stunden. Buchung muss 36 Stunden vor Betreuung erfolgen.",
+        "10 € für jedes Geschwisterkind."
       ],
       "cards": [
         {
           "title": "Einzelstunde",
-          "price": 16,
+          "price": 18,
           "period": "pro Stunde",
           "vat_note": "+ 19% MwSt.",
-          "features": [
-            "Mit aktivem Coworking-Paket (Flex 50, Flex 100, Flex 24/7)",
-            "Ohne Coworking-Paket: 18 € / Std.",
-            "Geschwisterkinder: 10 € / Std."
-          ]
+          "features": ["10 € für jedes Geschwisterkind", "Mindestbuchungsdauer 2 Stunden", "Buchung 36 Std. vor Betreuung"]
         },
         {
-          "title": "20-Stunden-Paket",
-          "price": 300,
+          "title": "20h Paket",
+          "price": 340,
           "period": "pauschal",
           "vat_note": "+ 19% MwSt.",
-          "features": [
-            "15 € / Std. statt 16 € (mit Coworking-Paket)",
-            "Ohne Coworking-Paket: 340 € (17 € / Std.)",
-            "Geschwisterkinder: 10 € / Std."
-          ]
+          "features": ["17 € pro Stunde", "10 € für jedes Geschwisterkind", "Mindestbuchungsdauer 2 Stunden", "Buchung 36 Std. vor Betreuung"]
         },
         {
-          "title": "40-Stunden-Paket",
-          "price": 560,
+          "title": "40h Paket",
+          "price": 640,
           "period": "pauschal",
           "vat_note": "+ 19% MwSt.",
-          "features": [
-            "14 € / Std. statt 16 € (mit Coworking-Paket)",
-            "Ohne Coworking-Paket: 640 € (16 € / Std.)",
-            "Geschwisterkinder: 10 € / Std."
-          ]
+          "features": ["16 € pro Stunde", "10 € für jedes Geschwisterkind", "Mindestbuchungsdauer 2 Stunden", "Buchung 36 Std. vor Betreuung"]
         }
       ]
     }
@@ -72,65 +77,70 @@
     "intro": "Our childcare is the heart of JuggleHUB. Simply bring your children along and work knowing they are in the best hands – right next door, safe and well cared for.",
     "hero_cta_label": "Get in touch",
     "hero_cta_url": "/en/about/contact/",
-    "welcome_title": "Care you can trust",
-    "welcome_text": "Our qualified team guides your children through the day with warmth and expertise – age-appropriate activities, safe spaces and open communication. You work, we look after the rest.",
+    "welcome_title": "Working with a child – made simple.",
+    "welcome_text": "Childcare at juggleHUB is for children aged 6 months to 5 years – and for all parents who want to work flexibly without giving up reliable care.\n\nWhether as a bridge before daycare starts, during Berlin school holidays, or simply on days when everyday life doesn't go as planned – we're here. Regular hours are Monday to Friday, 9am to 2pm. During Berlin school holidays we extend to 9am–5pm – exactly when other childcare options close.\n\nOur experienced carers speak German and English – so every child feels welcome from the start, no matter where they're from.\n\nYou can book a spot up to 36 hours in advance – simple and without a long lead time. Because we know everyday life with kids rarely goes to plan. Whether one-off, regular, or during the holidays – you book exactly what you need.\n\nOutside school holidays, our childcare room turns into a Spielcafé (play café) from 2pm – a relaxed mix of playroom and café that you can use without booking ahead.",
+    "carousel_title": "What to expect",
     "carousel_items": [
       {
         "image": "https://picsum.photos/seed/kids-play/800/500",
-        "title": "Creative Play",
-        "description": "Crafts, painting, building – our carers plan each day freshly, sparking your children's imagination."
+        "title": "Book flexibly",
+        "description": "Whether a single hour or a package – childcare at juggleHUB adapts to your day. Short notice, uncomplicated, no long lead time."
       },
       {
         "image": "https://picsum.photos/seed/kids-read/800/500",
-        "title": "Stories & Language",
-        "description": "Stories spark curiosity. We read aloud, tell tales and playfully nurture language and concentration."
+        "title": "Right next door",
+        "description": "Your children are right next door – the coworking area and childcare room are just a few metres apart. This closeness gives parents peace of mind to work and children the security they need."
       },
       {
         "image": "https://picsum.photos/seed/kids-move/800/500",
-        "title": "Movement & Fun",
-        "description": "Children need to move. Our indoor space invites climbing, dancing and exploring."
+        "title": "Cared for with love",
+        "description": "Experienced carers support your children in German and English – in small groups, with real attention for every child."
+      }
+    ],
+    "testimonials_title": "Voices from juggleHUB",
+    "testimonials_description": "Get to know us!",
+    "testimonials": [
+      {
+        "text": "We came to Berlin for 8 weeks during parental leave and found everything we needed at juggleHUB – a great space to work and a community that made us feel welcome right away.",
+        "name": "Danielle, New York"
+      },
+      {
+        "text": "I can focus on my work knowing my child is in good hands just a few steps away. If something does come up, the distance is short. This is how we're bridging the time before kita starts!",
+        "name": "Anne, Berlin"
+      },
+      {
+        "text": "juggleHUB was our go-to before our daughter started kita. Back then, it gave us the flexibility we needed – a place to work while she was in good hands, just a few steps away. Today I'm still coming to juggleHUB as a member, and enjoying the community of other working parents.",
+        "name": "R.M.B, Berlin"
       }
     ],
     "pricing": {
       "title": "Childcare Pricing",
       "notes": [
         "All prices excl. 19% VAT.",
-        "Minimum booking: 2 hours. Must be booked at least 48 hrs in advance.",
-        "Siblings: €10 / hr additional."
+        "Minimum booking: 2 hours. Must be booked at least 36 hours in advance.",
+        "€10 for each sibling."
       ],
       "cards": [
         {
           "title": "Single Hour",
-          "price": 16,
+          "price": 18,
           "period": "per hour",
           "vat_note": "+ 19% VAT",
-          "features": [
-            "With active coworking membership (Flex 50, Flex 100, Flex 24/7)",
-            "Without coworking membership: €18 / hr",
-            "Siblings: €10 / hr"
-          ]
+          "features": ["€10 for each sibling", "Minimum booking 2 hours", "Book 36 hrs before care"]
         },
         {
-          "title": "20-Hour Package",
-          "price": 300,
+          "title": "20h Package",
+          "price": 340,
           "period": "flat rate",
           "vat_note": "+ 19% VAT",
-          "features": [
-            "€15 / hr instead of €16 (with coworking membership)",
-            "Without coworking membership: €340 (€17 / hr)",
-            "Siblings: €10 / hr"
-          ]
+          "features": ["€17 per hour", "€10 for each sibling", "Minimum booking 2 hours", "Book 36 hrs before care"]
         },
         {
-          "title": "40-Hour Package",
-          "price": 560,
+          "title": "40h Package",
+          "price": 640,
           "period": "flat rate",
           "vat_note": "+ 19% VAT",
-          "features": [
-            "€14 / hr instead of €16 (with coworking membership)",
-            "Without coworking membership: €640 (€16 / hr)",
-            "Siblings: €10 / hr"
-          ]
+          "features": ["€16 per hour", "€10 for each sibling", "Minimum booking 2 hours", "Book 36 hrs before care"]
         }
       ]
     }

@@ -1,0 +1,34 @@
+{
+  "de": {
+    "headline": "Café",
+    "intro": "The Daily ist der Ort, an dem der Tag beginnt. Mit einem Kaffee in der Hand, einem Croissant auf dem Tisch und dem Gefühl, erstmal anzukommen – bevor der erste Meeting-Call startet.",
+    "hero_cta_label": "Kontakt aufnehmen",
+    "hero_cta_url": "/de/about/contact/",
+    "sections": [
+      {
+        "title": "The Daily – unser Café im juggleHUB",
+        "text": "Unsere Kaffeespezialitäten kommen von Coffee Circle, einer Berliner Rösterei, mit der wir seit zehn Jahren zusammenarbeiten. Was uns daran gefällt: guter Kaffee mit einer Haltung dahinter. Dazu gibt es frische Croissants, hausgemachtes Bananenbrot oder vegane Brownies – je nachdem, was der Tag mitbringt. Und eine Auswahl an Softgetränken und Schorlen für alle, die es lieber ohne Koffein mögen.\n\nThe Daily ist nicht nur für Coworkende. Die Tür steht offen – für Nachbar*innen, Menschen aus dem Kiez und alle, die einen kurzen Moment Pause brauchen. An sonnigen Tagen öffnet sich das Café in unseren ruhigen, sonnigen Innenhof. Ein seltenes Stück Stille mitten in Prenzlauer Berg.\n\nThe Daily ist montags bis freitags von 8 bis 17 Uhr geöffnet und außerhalb der Schulferien auch samstags von 9 bis 13 Uhr. Für private Veranstaltungen kann der Cafébereich auch exklusiv gemietet werden – meldet euch einfach bei uns."
+      },
+      {
+        "title": "Spielcafé",
+        "text": "Nach 14 Uhr öffnet, außerhalb der Schulferien, unser Spielcafé – ein offener Nachmittagsort für Kinder und Eltern. Der Betreuungsraum wird zum freien Spielbereich, Getränke und Snacks könnt ihr euch direkt aus The Daily holen. Ohne Buchung, ohne Programm. Einfach vorbeikommen."
+      }
+    ]
+  },
+  "en": {
+    "headline": "Café",
+    "intro": "The Daily is the place where your day begins. With a coffee in hand, a croissant on the table, and the feeling of arriving – before the first meeting call starts.",
+    "hero_cta_label": "Get in touch",
+    "hero_cta_url": "/en/about/contact/",
+    "sections": [
+      {
+        "title": "The Daily – our café at juggleHUB",
+        "text": "Our coffee specialties come from Coffee Circle, a Berlin roastery we've been working with for ten years. What we love about it: good coffee with a conscience behind it. Alongside that there are fresh croissants, homemade banana bread or vegan brownies – depending on what the day brings. And a selection of soft drinks and spritzers for anyone who prefers to skip the caffeine.\n\nThe Daily isn't just for coworkers. The door is open – for neighbours, people from the Kiez, and anyone who needs a short break. On sunny days the café opens out into our quiet, sun-drenched courtyard – a rare piece of stillness in the middle of Prenzlauer Berg.\n\nThe Daily is open Monday to Friday from 8am to 5pm, and outside school holidays also on Saturdays from 9am to 1pm. For private events, the café area can also be rented exclusively – just get in touch with us."
+      },
+      {
+        "title": "Spielcafé (Play Café)",
+        "text": "After 2pm, outside school holidays, our Spielcafé opens – an open afternoon spot for children and parents. The childcare room turns into a free play area, and you can grab drinks and snacks straight from The Daily. No booking, no programme. Just drop by."
+      }
+    ]
+  }
+}
