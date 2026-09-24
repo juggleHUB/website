@@ -1,7 +1,7 @@
 {
 	"de": {
 		"hero_headline": "Space for Work. Room for Life.",
-		"hero_subtext": "JuggleHUB ist dein flexibler Coworking-Space in Berlin – mit integrierter Kinderbetreuung, inspirierenden Events und einer lebendigen Community.",
+		"hero_subtext": "Der juggleHUB verbindet Coworking, Events, Kinderbetreuung und Community an einem Ort.",
 		"hero_cta_label": "Jetzt entdecken",
 		"hero_cta_url": "/de/coworking",
 		"welcome_title": "Ein Ort, der Arbeit und Alltag verbindet.",
@@ -9,54 +9,54 @@
 		"feature_cards": [
 			{
 				"title": "Coworking",
-				"text": "Flexible Schreibtische, dedizierte Büros und Meeting-Räume – alles ausgestattet mit Highspeed-WLAN und Kaffeeflatrate.",
+				"text": "Flex Desk, fester Platz oder eigenes Büro – such dir aus, was zu dir passt.",
 				"url": "/de/coworking/",
 				"image": "/images/icons/coworking.png"
 			},
 			{
 				"title": "Event Space",
-				"text": "Unser multifunktionaler Veranstaltungsraum ist ideal für Workshops, Präsentationen, Networking-Events und private Feiern.",
+				"text": "Raum für Begegnung, Austausch und gemeinsame Ideen. Für Workshops, Vorträge oder alles, was Menschen zusammenbringt.",
 				"url": "/de/event-space/",
 				"image": "/images/icons/room.png"
 			},
 			{
 				"title": "Flexible Kinderbetreuung",
-				"text": "Bring deine Kinder einfach mit! Unsere zertifizierten Betreuer kümmern sich liebevoll um deinen Nachwuchs, während du konzentriert arbeitest.",
+				"text": "Bring deine Kinder einfach mit. Unsere Betreuerinnen sind für euch da – du kommst zur Ruhe und kannst dich voll auf deine Arbeit konzentrieren.",
 				"url": "/de/flexible-childcare/",
 				"image": "/images/icons/childcare.png"
 			},
 			{
 				"title": "Virtual Office",
-				"text": "Professionelle Geschäftsadresse, Postservice und Telefonanlage – alles was du für dein Unternehmen brauchst, ohne physisch anwesend zu sein.",
+				"text": "Eine professionelle Geschäftsadresse und Postservice — alles, was dein Unternehmen braucht, ohne täglich vor Ort zu sein.",
 				"url": "/de/virtual-office/",
 				"image": "/images/icons/virtual-office.png"
 			},
 			{
 				"title": "Café",
-				"text": "Genieß frischen Kaffee, hausgemachte Snacks und eine entspannte Atmosphäre – der perfekte Ort für informelle Meetings oder eine kreative Pause.",
+				"text": "Kaffee, ein kurzes Gespräch, eine Pause, die wirklich eine ist. Offen für alle, die kurz durchatmen wollen.",
 				"url": "/de/about/cafe/",
 				"image": "/images/icons/cafe.png"
 			}
 		],
 		"carousel_items": [
 			{
-				"image": "/images/pages/home/working-at-desk.jpeg",
+				"image": "/images/pages/home/work-flexibly.jpg",
 				"title": "Flexibel arbeiten",
 				"description": "Im juggleHUB arbeitet jede*r so, wie es zur eigenen Lebenssituation passt – ruhig und fokussiert oder im Austausch mit anderen, mit Kind oder ohne. Wir schaffen die Freiräume, die Menschen brauchen, um wirklich gut arbeiten zu können."
 			},
 			{
-				"image": "/images/pages/home/childcare.jpeg",
+				"image": "/images/pages/home/kids-welcome.jpg",
 				"title": "Kinder willkommen",
 				"description": "Im juggleHUB müssen Eltern nicht wählen zwischen Arbeiten und Dasein für ihre Kinder. Beides geht – an einem Ort, im gleichen Haus, ohne große Umwege."
 			},
 			{
-				"image": "/images/pages/home/workspace.jpeg",
+				"image": "/images/pages/home/room-for-more.jpg",
 				"title": "Raum für mehr",
 				"description": "Ob Workshop, Teammeeting oder Kiez-Event – unsere Räume und Außenflächen lassen sich flexibel bespielen. Ein Ort, der nicht nur für Arbeit da ist, sondern für alles, was Menschen zusammenbringt."
 			}
 		],
 		"testimonials_title": "Testimonials",
-		"testimonials_description": "Alle finden uns toll",
+		"testimonials_description": "Stimmen aus dem juggleHUB",
 		"testimonials": [
 			{ "text": "Einer meiner absoluten Lieblings-Coworking-Spaces. Komfortabel, gut ausgestattet, preiswert und mit hilfsbereitem Personal.", "name": "z fang" },
 			{ "text": "Tolle Atmosphäre und superfreundliches Personal! Meine Frau und ich nutzen das Kita-Angebot gelegentlich und es ist fantastisch – das Kita-Team ist einfach klasse.", "name": "Adam Burnard" },
@@ -65,7 +65,7 @@
 	},
 	"en": {
 		"hero_headline": "Space for Work. Room for Life.",
-		"hero_subtext": "JuggleHUB is your flexible coworking space in Berlin – with integrated childcare, inspiring events and a vibrant community.",
+		"hero_subtext": "juggleHUB brings coworking, events, childcare and community together in one place.",
 		"hero_cta_label": "Discover now",
 		"hero_cta_url": "/en/coworking",
 		"welcome_title": "A place that connects work and everyday life.",
@@ -73,54 +73,54 @@
 		"feature_cards": [
 			{
 				"title": "Coworking",
-				"text": "Flexible desks, dedicated offices and meeting rooms – all equipped with high-speed WiFi and unlimited coffee.",
+				"text": "Flex desk, dedicated desk or your own office – choose what suits you best.",
 				"url": "/en/coworking/",
 				"image": "/images/icons/coworking.png"
 			},
 			{
 				"title": "Event Space",
-				"text": "Our multifunctional event space is ideal for workshops, presentations, networking events and private celebrations.",
+				"text": "Space to meet, exchange ideas and create together. For workshops, talks or anything that brings people together.",
 				"url": "/en/event-space/",
 				"image": "/images/icons/room.png"
 			},
 			{
 				"title": "Flexible Childcare",
-				"text": "Just bring your kids along! Our certified caregivers lovingly look after your children while you work with focus.",
+				"text": "Just bring your children along. Our caregivers are here for you – so you can relax and focus fully on your work.",
 				"url": "/en/flexible-childcare/",
 				"image": "/images/icons/childcare.png"
 			},
 			{
 				"title": "Virtual Office",
-				"text": "Professional business address, postal service and phone system – everything your company needs without being physically present.",
+				"text": "A professional business address and mail service — everything your business needs, without being on site every day.",
 				"url": "/en/virtual-office/",
 				"image": "/images/icons/virtual-office.png"
 			},
 			{
 				"title": "Café",
-				"text": "Enjoy fresh coffee, homemade snacks and a relaxed atmosphere – the perfect spot for informal meetings or a creative break.",
+				"text": "Coffee, a quick chat, a break that really feels like one. Open to anyone who wants to take a breather.",
 				"url": "/en/about/cafe/",
 				"image": "/images/icons/cafe.png"
 			}
 		],
 		"carousel_items": [
 			{
-				"image": "/images/pages/home/working-at-desk.jpeg",
+				"image": "/images/pages/home/work-flexibly.jpg",
 				"title": "Work flexibly",
 				"description": "At juggleHUB, everyone works the way that fits their life – quiet and focused, or in exchange with others, with or without a child. We create the freedom people need to do truly good work."
 			},
 			{
-				"image": "/images/pages/home/childcare.jpeg",
+				"image": "/images/pages/home/kids-welcome.jpg",
 				"title": "Kids welcome",
 				"description": "At juggleHUB, parents don't have to choose between working and being there for their children. Both are possible – in one place, under the same roof, without detours."
 			},
 			{
-				"image": "/images/pages/home/workspace.jpeg",
+				"image": "/images/pages/home/room-for-more.jpg",
 				"title": "Room for more",
 				"description": "Whether it's a workshop, team meeting or neighbourhood event – our rooms and outdoor spaces can be used flexibly. A place that's not just for work, but for everything that brings people together."
 			}
 		],
 		"testimonials_title": "Testimonials",
-		"testimonials_description": "Everyone loves us",
+		"testimonials_description": "Voices from juggleHUB",
 		"testimonials": [
 			{ "text": "One of my absolute favorite coworking spaces. Comfortable, well-equipped, affordable, and with helpful staff.", "name": "z fang" },
 			{ "text": "Great atmosphere and super friendly staff! My wife and I occasionally use the childcare service and it's fantastic – the childcare team is just brilliant.", "name": "Adam Burnard" },

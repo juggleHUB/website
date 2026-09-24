@@ -1,14 +1,14 @@
 {
   "de": {
     "headline": "Dein Arbeitsplatz in Berlin Prenzlauer Berg.",
-    "intro": "Der juggleHUB ist ein Coworking Space für alle, die flexibel arbeiten wollen – ohne auf Struktur, Gemeinschaft und einen guten Arbeitsplatz verzichten zu müssen. Bei uns arbeiten Menschen aus den unterschiedlichsten Bereichen – von Design und Tech über Coaching bis hin zu Finance. Was sie verbindet, ist der Wunsch nach einem Ort, der funktioniert – und der sich gut anfühlt.\n\nNeben konzentriertem Arbeiten entsteht hier ganz selbstverständlich Austausch und Verbindung: zwischen Menschen, die unterschiedliche Wege gehen, aber am gleichen Ort arbeiten. Mit oder ohne Kind, in Teilzeit oder Vollzeit – der juggleHUB passt zu deinem Leben, nicht umgekehrt.",
+    "intro": "Arbeiten, wie es zu dir passt – mit allem, was du brauchst.\n\nBei uns arbeiten Menschen aus den unterschiedlichsten Bereichen – von Design und Tech über Coaching bis hin zu Finance. Was sie verbindet, ist der Wunsch nach einem Ort, der funktioniert – und der sich gut anfühlt. Neben konzentriertem Arbeiten entsteht hier ganz selbstverständlich Austausch und Verbindung: zwischen Menschen, die unterschiedliche Wege gehen, aber am gleichen Ort arbeiten. Mit oder ohne Kind, in Teilzeit oder Vollzeit – der juggleHUB passt zu deinem Leben, nicht umgekehrt.",
     "hero_cta_label": "Jetzt buchen",
     "hero_cta_url": "/de/about/contact/",
     "welcome_title": "Space for Work. Room for Life.",
     "welcome_text": "Bei uns findest du alles, was du brauchst – für konzentriertes Arbeiten und einen Alltag, der funktioniert.",
     "cards": [
       { "title": "Arbeiten", "items": ["Flex & Fix Desks", "Meeting- & Eventräume", "Drucker", "Schnelles WLAN"] },
-      { "title": "Alltag", "items": ["Filterkaffee & Tee", "Café im Haus", "Begrünter Innenhof", "Community Events & Lunch"] },
+      { "title": "Alltag", "items": ["Filterkaffee & Tee", "Café im Haus", "Begrünter Innenhof", "Community Events"] },
       { "title": "Kinderbetreuung", "items": ["Flexibel buchbar", "Kurzfristig verfügbar", "Liebevoll begleitet", "Direkt im Haus"] },
       { "title": "Membership", "items": ["24/7 Zugang möglich", "Flexible Tarife", "Private Offices", "Halbtages- & Tagespässe"] }
     ],
@@ -17,8 +17,7 @@
       "title": "Coworking Preise",
       "notes": [
         "Alle Preise zzgl. MwSt. · Monatlich kündbar, keine Mindestlaufzeit.",
-        "Es gelten unsere AGB.",
-        "Studierende zahlen weniger. Sprich uns gerne an."
+        "Es gelten unsere AGB."
       ],
       "cards": [
         {
@@ -64,14 +63,14 @@
   },
   "en": {
     "headline": "Your workspace in Berlin Prenzlauer Berg.",
-    "intro": "juggleHUB is a coworking space for anyone who wants to work flexibly – without giving up structure, community and a good workspace. People from all kinds of fields work here – from design and tech to coaching and finance. What connects them is the wish for a place that works – and feels good.\n\nAlongside focused work, exchange and connection happen here quite naturally: between people who take different paths but work in the same place. With or without a child, part-time or full-time – juggleHUB fits your life, not the other way around.",
+    "intro": "Work the way that suits you – with everything you need.\n\nPeople from all kinds of fields work here – from design and tech to coaching and finance. What connects them is the wish for a place that works – and feels good. Alongside focused work, exchange and connection happen here quite naturally: between people who take different paths but work in the same place. With or without a child, part-time or full-time – juggleHUB fits your life, not the other way around.",
     "hero_cta_label": "Book now",
     "hero_cta_url": "/en/about/contact/",
     "welcome_title": "Space for Work. Room for Life.",
     "welcome_text": "With us you'll find everything you need – for focused work and an everyday life that works.",
     "cards": [
       { "title": "Work", "items": ["Flex & fixed desks", "Meeting & event rooms", "Printer", "Fast WiFi"] },
-      { "title": "Everyday Life", "items": ["Filter coffee & tea", "Café on site", "Green courtyard", "Community events & lunch"] },
+      { "title": "Everyday Life", "items": ["Filter coffee & tea", "Café on site", "Green courtyard", "Community Events"] },
       { "title": "Childcare", "items": ["Flexibly bookable", "Available at short notice", "Caring support", "Right on site"] },
       { "title": "Membership", "items": ["24/7 access available", "Flexible plans", "Private offices", "Half-day & day passes"] }
     ],
@@ -80,8 +79,7 @@
       "title": "Coworking Prices",
       "notes": [
         "All prices excl. VAT. · Cancel monthly, no minimum term.",
-        "Our terms and conditions apply.",
-        "Students pay less. Please talk to us for further details."
+        "Our terms and conditions apply."
       ],
       "cards": [
         {

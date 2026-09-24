@@ -1,0 +1,37 @@
+---
+interface HighlightItem {
+  image: string;
+  title: string;
+  description: string;
+}
+
+interface Props {
+  items: HighlightItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<section class="pb-20">
+  <div class="max-w-7xl mx-auto px-8 sm:px-14 lg:px-20">
+    <div class="grid gap-6 md:grid-cols-3">
+      {items.map((item, index) => (
+        <article class="flex flex-col overflow-hidden rounded-2xl bg-white border border-gray-100 shadow-lg">
+          <img
+            src={item.image}
+            alt={item.title}
+            width="800"
+            height="800"
+            loading="lazy"
+            decoding="async"
+            class={`w-full aspect-square object-cover ${index === 0 ? 'object-[40%_center]' : ''}`}
+          />
+          <div class="flex-1 px-6 py-6">
+            <h3 class="text-2xl font-black mb-2">{item.title}</h3>
+            <p class="text-gray-600 leading-relaxed">{item.description}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

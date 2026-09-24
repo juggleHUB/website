@@ -15,6 +15,45 @@ interface Props {
 }
 
 const { cards, desktopCols = 5, showIcon = true, paddingTop = 'pt-20' } = Astro.props;
+
+// Material Symbols icon per bullet item, keyed by exact item text (DE + EN).
+const itemIcons: Record<string, string> = {
+  // Arbeiten / Work
+  'Flex & Fix Desks': 'desk',
+  'Flex & fixed desks': 'desk',
+  'Meeting- & Eventräume': 'meeting_room',
+  'Meeting & event rooms': 'meeting_room',
+  'Drucker': 'print',
+  'Printer': 'print',
+  'Schnelles WLAN': 'wifi',
+  'Fast WiFi': 'wifi',
+  // Alltag / Everyday Life
+  'Filterkaffee & Tee': 'coffee',
+  'Filter coffee & tea': 'coffee',
+  'Café im Haus': 'storefront',
+  'Café on site': 'storefront',
+  'Begrünter Innenhof': 'yard',
+  'Green courtyard': 'yard',
+  'Community Events': 'celebration',
+  // Kinderbetreuung / Childcare
+  'Flexibel buchbar': 'event_available',
+  'Flexibly bookable': 'event_available',
+  'Kurzfristig verfügbar': 'bolt',
+  'Available at short notice': 'bolt',
+  'Liebevoll begleitet': 'favorite',
+  'Caring support': 'favorite',
+  'Direkt im Haus': 'home',
+  'Right on site': 'home',
+  // Membership
+  '24/7 Zugang möglich': 'schedule',
+  '24/7 access available': 'schedule',
+  'Flexible Tarife': 'payments',
+  'Flexible plans': 'payments',
+  'Private Offices': 'door_front',
+  'Private offices': 'door_front',
+  'Halbtages- & Tagespässe': 'confirmation_number',
+  'Half-day & day passes': 'confirmation_number',
+};
 ---
 
 <section class={`relative pb-20 ${paddingTop}`}>
@@ -47,7 +86,11 @@ const { cards, desktopCols = 5, showIcon = true, paddingTop = 'pt-20' } = Astro.
               <ul class="flex flex-col gap-2">
                 {card.items.map((item) => (
                   <li class="text-gray-600 text-sm leading-relaxed flex items-start gap-2">
-                    <span class="text-brand-teal font-bold mt-0.5">·</span>
+                    {itemIcons[item] ? (
+                      <span class="material-symbols-outlined text-brand-teal text-[18px] leading-none mt-0.5">{itemIcons[item]}</span>
+                    ) : (
+                      <span class="text-brand-teal font-bold mt-0.5">·</span>
+                    )}
                     <span>{item}</span>
                   </li>
                 ))}

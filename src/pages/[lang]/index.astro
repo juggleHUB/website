@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import Carousel from '../../components/Carousel.astro';
+import HomeHighlightCards from '../../components/HomeHighlightCards.astro';
 import FeatureCards from '../../components/FeatureCards.astro';
 import Testimonials from '../../components/Testimonials.astro';
 import ContactForm from '../../components/ContactForm.astro';
@@ -90,21 +90,23 @@ const t = {
     <img
       src="/woosh/yellow-baby-heart-vertical.svg"
       aria-hidden="true"
-      class="absolute inset-0 w-full h-full pointer-events-none select-none"
+      class="absolute inset-0 z-0 w-full h-full pointer-events-none select-none"
       style="object-fit: cover; opacity: 0.5;"
     />
 
-  <div class="pt-16">
-    <Carousel items={carousel_items} />
+  <div class="relative z-10 pt-16">
+    <HomeHighlightCards items={carousel_items} />
   </div>
 
-  <section class="relative max-w-4xl mx-auto px-8 sm:px-14 lg:px-20 pt-0 pb-20">
+  <section class="relative z-10 max-w-4xl mx-auto px-8 sm:px-14 lg:px-20 pt-0 pb-20">
     <h2 class="text-4xl font-black mb-6">{welcome_title}</h2>
     <p class="text-lg text-gray-600 leading-relaxed whitespace-pre-line">{welcome_text}</p>
     <a href={`/${lang}/about/`} class="inline-flex items-center mt-6 text-brand-dark font-semibold underline underline-offset-4 hover:text-gray-600 transition-colors">{t.about}</a>
   </section>
 
-  <FeatureCards cards={feature_cards} desktopCols={5} paddingTop="pt-0" />
+  <div class="relative z-10">
+    <FeatureCards cards={feature_cards} desktopCols={5} paddingTop="pt-0" />
+  </div>
   </div>
 
   <section class="pt-20 pb-20">

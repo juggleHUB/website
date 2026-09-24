@@ -20,7 +20,9 @@ const introRest = introRestParts.join('\n\n');
   <!-- MOBILE hero -->
   <section class="navbreak:hidden bg-[#E6F5F3]">
     <div class="px-6 pt-28 pb-20">
-      <div class="w-16 h-16 rounded-xl bg-gray-200 mb-5"></div>
+      <div class="w-16 h-16 mb-5 rounded-xl overflow-hidden">
+        <img src="/images/icons/coworking.png" alt="" width="64" height="64" loading="eager" decoding="async" class="w-full h-full object-cover" />
+      </div>
       <h1 class="text-3xl font-black tracking-tight mb-4 leading-tight text-brand-dark">{headline}</h1>
       <p class="text-base text-brand-dark/70 mb-7 leading-relaxed">{heroIntro}</p>
       {hero_cta_label && hero_cta_url && (
@@ -31,7 +33,7 @@ const introRest = introRestParts.join('\n\n');
     </div>
     <div class="relative h-64 md:h-96 -mt-[62px]">
       <img
-        src="https://picsum.photos/seed/coworking-hero/1600/700"
+        src="/images/pages/coworking/coworking-hero.jpg"
         alt="JuggleHUB coworking space"
         width="1600"
         height="700"
@@ -51,7 +53,7 @@ const introRest = introRestParts.join('\n\n');
   <section class="hidden navbreak:block relative overflow-hidden max-h-[760px]">
     <img src="/woosh/hero-coworking.svg" aria-hidden="true" class="w-full opacity-0 pointer-events-none select-none" />
     <img
-      src="https://picsum.photos/seed/coworking-hero/1600/700"
+      src="/images/pages/coworking/coworking-hero.jpg"
       alt="JuggleHUB coworking space"
       width="1600"
       height="700"
@@ -67,9 +69,11 @@ const introRest = introRestParts.join('\n\n');
     />
     <div class="absolute inset-0 z-10 flex items-center">
       <div class="w-[40%] flex justify-end pr-10 lg:pr-16">
-        <div class="w-full max-w-sm pt-16">
-          <div class="w-20 h-20 rounded-xl bg-gray-200 mb-6"></div>
-          <h1 class="text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-tight text-brand-dark">{headline}</h1>
+        <div class="w-full max-w-sm pt-20 pb-10">
+          <div class="w-20 h-20 mb-6 rounded-xl overflow-hidden">
+            <img src="/images/icons/coworking.png" alt="" width="80" height="80" loading="eager" decoding="async" class="w-full h-full object-cover" />
+          </div>
+          <h1 class="text-4xl lg:text-5xl font-black tracking-tight mb-6 leading-tight text-brand-dark">{headline}</h1>
           <p class="text-lg lg:text-xl text-brand-dark/70 mb-10 leading-relaxed">{heroIntro}</p>
           {hero_cta_label && hero_cta_url && (
             <a href={hero_cta_url} class="inline-flex items-center bg-brand-teal text-white font-bold text-lg px-8 py-4 rounded-full hover:opacity-90 transition-colors shadow-lg">
@@ -95,8 +99,20 @@ const introRest = introRestParts.join('\n\n');
       </section>
     )}
 
+    <figure class="relative max-w-4xl mx-auto px-8 sm:px-14 lg:px-20 pt-12">
+      <img
+        src="/images/pages/coworking/community-lunch.jpg"
+        alt={lang === 'de' ? 'Gemeinsames Mittagessen im juggleHUB' : 'Community lunch at juggleHUB'}
+        width="1800"
+        height="1104"
+        loading="lazy"
+        decoding="async"
+        class="w-full h-auto rounded-2xl"
+      />
+    </figure>
+
     {(welcome_title || welcome_text) && (
-      <section class="relative max-w-4xl mx-auto px-8 sm:px-14 lg:px-20 py-20">
+      <section class="relative max-w-4xl mx-auto px-8 sm:px-14 lg:px-20 pt-20 pb-8">
         {welcome_title && <h2 class="text-4xl font-black mb-6">{welcome_title}</h2>}
         {welcome_text && <p class="text-lg text-gray-600 leading-relaxed">{welcome_text}</p>}
       </section>
@@ -105,6 +121,18 @@ const introRest = introRestParts.join('\n\n');
     {cards && cards.length > 0 && <FeatureCards cards={cards} desktopCols={4} showIcon={false} paddingTop="pt-0" />}
 
     {pricing && <Pricing title={pricing.title} description={pricing.description} notes={pricing.notes} cards={pricing.cards} />}
+
+    <figure class="relative max-w-4xl mx-auto px-8 sm:px-14 lg:px-20 pb-20">
+      <img
+        src="/images/pages/coworking/workspace-by-window.jpg"
+        alt={lang === 'de' ? 'Arbeitsplatz am Fenster im juggleHUB' : 'Workspace by the window at juggleHUB'}
+        width="1800"
+        height="1350"
+        loading="lazy"
+        decoding="async"
+        class="w-full h-auto rounded-2xl"
+      />
+    </figure>
   </div>
 
 </Layout>
