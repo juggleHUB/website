@@ -10,7 +10,7 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params as { lang: 'de' | 'en' };
 const content = await getEntry('coworking', 'index');
-const { headline, intro, hero_cta_label, hero_cta_url, welcome_title, welcome_text, cards, pricing } = content.data[lang];
+const { headline, hero_image, icon_image, community_image, workspace_image, intro, hero_cta_label, hero_cta_url, welcome_title, welcome_text, cards, pricing } = content.data[lang];
 
 const [heroIntro, ...introRestParts] = intro.split('\n\n');
 const introRest = introRestParts.join('\n\n');
@@ -28,7 +28,7 @@ const introRest = introRestParts.join('\n\n');
   <section class="navbreak:hidden bg-[#E6F5F3]">
     <div class="px-6 pt-28 pb-20">
       <div class="w-16 h-16 mb-5 rounded-xl overflow-hidden">
-        <img src="/images/icons/coworking.png" alt="" width="64" height="64" loading="eager" decoding="async" class="w-full h-full object-cover" />
+        <img src={icon_image} alt="" width="64" height="64" loading="eager" decoding="async" class="w-full h-full object-cover" />
       </div>
       <h1 class="text-3xl font-black tracking-tight mb-4 leading-tight text-brand-dark">{headline}</h1>
       <p class="text-base text-brand-dark/70 mb-7 leading-relaxed">{heroIntro}</p>
@@ -40,7 +40,7 @@ const introRest = introRestParts.join('\n\n');
     </div>
     <div class="relative h-64 md:h-96 -mt-[62px]">
       <img
-        src="/images/pages/coworking/coworking-hero.jpg"
+        src={hero_image}
         alt="JuggleHUB coworking space"
         width="1600"
         height="700"
@@ -60,7 +60,7 @@ const introRest = introRestParts.join('\n\n');
   <section class="hidden navbreak:block relative overflow-hidden max-h-[760px]">
     <img src="/woosh/hero-coworking.svg" aria-hidden="true" class="w-full opacity-0 pointer-events-none select-none" />
     <img
-      src="/images/pages/coworking/coworking-hero.jpg"
+      src={hero_image}
       alt="JuggleHUB coworking space"
       width="1600"
       height="700"
@@ -78,7 +78,7 @@ const introRest = introRestParts.join('\n\n');
       <div class="w-[40%] flex justify-end pr-10 lg:pr-16">
         <div class="w-full max-w-sm pt-20 pb-10">
           <div class="w-20 h-20 mb-6 rounded-xl overflow-hidden">
-            <img src="/images/icons/coworking.png" alt="" width="80" height="80" loading="eager" decoding="async" class="w-full h-full object-cover" />
+            <img src={icon_image} alt="" width="80" height="80" loading="eager" decoding="async" class="w-full h-full object-cover" />
           </div>
           <h1 class="text-4xl lg:text-5xl font-black tracking-tight mb-6 leading-tight text-brand-dark">{headline}</h1>
           <p class="text-lg lg:text-xl text-brand-dark/70 mb-10 leading-relaxed">{heroIntro}</p>
@@ -100,7 +100,7 @@ const introRest = introRestParts.join('\n\n');
 
     <figure class="relative max-w-4xl mx-auto px-8 sm:px-14 lg:px-20 pt-12">
       <img
-        src="/images/pages/coworking/community-lunch.jpg"
+        src={community_image}
         alt={lang === 'de' ? 'Gemeinsames Mittagessen im juggleHUB' : 'Community lunch at juggleHUB'}
         width="1800"
         height="1104"
@@ -123,7 +123,7 @@ const introRest = introRestParts.join('\n\n');
 
     <figure class="relative max-w-4xl mx-auto px-8 sm:px-14 lg:px-20 pb-20">
       <img
-        src="/images/pages/coworking/workspace-by-window.jpg"
+        src={workspace_image}
         alt={lang === 'de' ? 'Arbeitsplatz am Fenster im juggleHUB' : 'Workspace by the window at juggleHUB'}
         width="1800"
         height="1350"

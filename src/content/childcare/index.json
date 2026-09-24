@@ -1,6 +1,8 @@
 {
   "de": {
     "headline": "Flexible Kinderbetreuung",
+    "hero_image": "/images/pages/childcare/childcare-hero.jpg",
+    "icon_image": "/images/icons/childcare.png",
     "intro": "Arbeiten und Elternsein – beides, ohne Abstriche.",
     "hero_cta_label": "Jetzt anfragen",
     "hero_cta_url": "/de/about/contact/",
@@ -72,6 +74,8 @@
   },
   "en": {
     "headline": "Flexible Childcare",
+    "hero_image": "/images/pages/childcare/childcare-hero.jpg",
+    "icon_image": "/images/icons/childcare.png",
     "intro": "Work and parenthood – both without compromise.",
     "hero_cta_label": "Get in touch",
     "hero_cta_url": "/en/about/contact/",

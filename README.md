@@ -1,12 +1,12 @@
 # JuggleHUB Website
 
-Astro static site for JuggleHUB — a coworking space with integrated childcare in Berlin. Content managed via Sveltia CMS.
+Astro static site for JuggleHUB — a coworking space with integrated childcare in Berlin. Content is managed through Pages CMS.
 
 ## Stack
 
 - **Astro 4** — static site generator
 - **Tailwind CSS** — styling
-- **Sveltia CMS** — git-based CMS at `/admin`
+- **Pages CMS** — hosted Git-based editor, configured in `.pages.yml`
 - **marked** — markdown rendering for content pages
 
 ## Project structure
@@ -50,14 +50,13 @@ src/
     Header.astro
     Footer.astro
 public/
-  admin/
-    index.html      # Sveltia CMS entry point
-    config.yml      # CMS configuration
+  images/           # Images uploaded or selected through Pages CMS
+.pages.yml          # Pages CMS configuration
 ```
 
 ## i18n
 
-All content files use Sveltia CMS's **single_file** i18n structure — both locales in one JSON with `de` and `en` as top-level keys:
+All content files store both locales in one JSON file, with `de` and `en` as top-level keys:
 
 ```json
 {
@@ -106,14 +105,23 @@ legacy plans can have monthly limits or overage charges.
 
 ## CMS
 
-Visit `/admin` in the browser. Currently using `test-repo` backend (no auth, local only). To connect to a real repo, update `backend` in `public/admin/config.yml`:
+The editor is hosted at [app.pagescms.org](https://app.pagescms.org/), not at `/admin`.
+Its `.pages.yml` configuration exposes all 15 content files as editable pages,
+with German and English sections. It also maps the media library to
+`public/images`, saving public URLs as `/images/...`.
 
-```yaml
-backend:
-  name: github
-  repo: your-org/jugglehub-website
-  branch: main
-```
+To activate it, the repository owner must sign in to Pages CMS with GitHub and
+install the Pages CMS GitHub App for **this repository only**. An editor with
+GitHub repository write access can then sign in to Pages CMS; alternatively,
+the owner can invite an editor by email within Pages CMS without granting
+GitHub repository access. Changes are committed to GitHub, triggering the
+normal Netlify build.
+
+Editors can upload images in the media library and select them in page image
+fields (hero photos, team portraits, room photos, cards, and icons). Images
+used by both languages have separate `de` and `en` fields; update both if the
+same image should appear on both versions. Decorative `/woosh/` SVG assets and
+the site logo are design assets, not CMS image fields.
 
 ## Brand
 

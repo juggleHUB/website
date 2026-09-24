@@ -1,0 +1,928 @@
+# Pages CMS — edits these Git-tracked JSON files and uploads images to public/images.
+# German and English live in the same file; edit both locale sections as needed.
+media:
+  input: public/images
+  output: /images
+  categories:
+  - image
+  rename: safe
+settings:
+  content:
+    merge: true
+components:
+  home_locale:
+    type: object
+    fields:
+    - name: hero_headline
+      label: Hero Headline
+      type: string
+    - name: hero_image
+      label: Hero Image
+      type: image
+      options:
+        path: public/images/pages/home
+    - name: hero_subtext
+      label: Hero Subtext
+      type: text
+    - name: hero_cta_label
+      label: Hero CTA Label
+      type: string
+    - name: hero_cta_url
+      label: Hero CTA URL
+      type: string
+    - name: welcome_title
+      label: Welcome Title
+      type: string
+    - name: welcome_text
+      label: Welcome Text
+      type: text
+    - name: feature_cards
+      label: Feature Cards
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{title}'
+      fields:
+      - name: title
+        label: Title
+        type: string
+      - name: text
+        label: Text
+        type: text
+      - name: url
+        label: URL
+        type: string
+      - name: image
+        label: Image
+        type: image
+        options:
+          path: public/images/icons
+    - name: carousel_items
+      label: Carousel Items
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{title}'
+      fields:
+      - name: image
+        label: Image
+        type: image
+        options:
+          path: public/images/pages/home
+      - name: title
+        label: Title
+        type: string
+      - name: description
+        label: Description
+        type: text
+    - name: testimonials_title
+      label: Testimonials Title
+      type: string
+    - name: testimonials_description
+      label: Testimonials Description
+      type: string
+    - name: testimonials
+      label: Testimonials
+      type: object
+      list:
+        min: 3
+        max: 3
+        collapsible:
+          collapsed: true
+          summary: '{name}'
+      fields:
+      - name: text
+        label: Text
+        type: text
+      - name: name
+        label: Name
+        type: string
+  about_locale:
+    type: object
+    fields:
+    - name: headline
+      label: Headline
+      type: string
+    - name: intro_text
+      label: Intro Text
+      type: text
+  ourstory_locale:
+    type: object
+    fields:
+    - name: headline
+      label: Headline
+      type: string
+    - name: body
+      label: Body
+      type: rich-text
+      options:
+        format: markdown
+  faq_locale:
+    type: object
+    fields:
+    - name: headline
+      label: Headline
+      type: string
+    - name: categories
+      label: Categories
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{title}'
+      fields:
+      - name: icon
+        label: Icon
+        type: string
+      - name: title
+        label: Title
+        type: string
+      - name: items
+        label: Items
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{question}'
+        fields:
+        - name: question
+          label: Question
+          type: string
+        - name: answer
+          label: Answer
+          type: text
+  contact_locale:
+    type: object
+    fields:
+    - name: headline
+      label: Headline
+      type: string
+    - name: location_title
+      label: Location Title
+      type: string
+    - name: name
+      label: Name
+      type: string
+    - name: address
+      label: Address
+      type: string
+    - name: tram
+      label: Tram
+      type: string
+    - name: hours
+      label: Hours
+      type: string
+    - name: hours_note
+      label: Hours Note
+      type: string
+    - name: email_general
+      label: Email General
+      type: string
+    - name: email_childcare
+      label: Email Childcare
+      type: string
+    - name: email_space
+      label: Email Space
+      type: string
+    - name: phone
+      label: Phone
+      type: string
+  press_locale:
+    type: object
+    fields:
+    - name: headline
+      label: Headline
+      type: string
+    - name: press_releases
+      label: Press Releases
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{title}'
+      fields:
+      - name: title
+        label: Title
+        type: string
+      - name: button_text
+        label: Button Text
+        type: string
+      - name: url
+        label: URL
+        type: text
+  team_locale:
+    type: object
+    fields:
+    - name: headline
+      label: Headline
+      type: string
+    - name: members
+      label: Members
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{name}'
+      fields:
+      - name: name
+        label: Name
+        type: string
+      - name: role
+        label: Role
+        type: string
+      - name: bio
+        label: Bio
+        type: text
+      - name: image
+        label: Image
+        type: image
+        options:
+          path: public/images/team
+  coworking_locale:
+    type: object
+    fields:
+    - name: headline
+      label: Headline
+      type: string
+    - name: hero_image
+      label: Hero Image
+      type: image
+      options:
+        path: public/images/pages/coworking
+    - name: icon_image
+      label: Icon Image
+      type: image
+      options:
+        path: public/images/icons
+    - name: community_image
+      label: Community Image
+      type: image
+      options:
+        path: public/images/pages/coworking
+    - name: workspace_image
+      label: Workspace Image
+      type: image
+      options:
+        path: public/images/pages/coworking
+    - name: intro
+      label: Intro
+      type: text
+    - name: hero_cta_label
+      label: Hero CTA Label
+      type: string
+    - name: hero_cta_url
+      label: Hero CTA URL
+      type: string
+    - name: welcome_title
+      label: Welcome Title
+      type: string
+    - name: welcome_text
+      label: Welcome Text
+      type: text
+    - name: cards
+      label: Cards
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{title}'
+      fields:
+      - name: title
+        label: Title
+        type: string
+      - name: text
+        label: Text
+        type: text
+      - name: items
+        label: Items
+        type: string
+        list: true
+      - name: url
+        label: URL
+        type: string
+      - name: image
+        label: Image
+        type: image
+        options:
+          path: public/images/pages/coworking
+    - name: features
+      label: Features
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{title}'
+      fields:
+      - name: title
+        label: Title
+        type: string
+      - name: text
+        label: Text
+        type: text
+      - name: image
+        label: Image
+        type: image
+        options:
+          path: public/images/pages/coworking
+    - name: pricing
+      label: Pricing
+      type: object
+      fields:
+      - name: title
+        label: Title
+        type: string
+      - name: description
+        label: Description
+        type: text
+      - name: notes
+        label: Notes
+        type: string
+        list: true
+      - name: cards
+        label: Cards
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{title}'
+        fields:
+        - name: title
+          label: Title
+          type: string
+        - name: price
+          label: Price
+          type: number
+        - name: currency
+          label: Currency
+          type: string
+        - name: period
+          label: Period
+          type: string
+        - name: vat_note
+          label: VAT Note
+          type: string
+        - name: features
+          label: Features
+          type: string
+          list: true
+  eventspace_locale:
+    type: object
+    fields:
+    - name: headline
+      label: Headline
+      type: string
+    - name: hero_image
+      label: Hero Image
+      type: image
+      options:
+        path: public/images/pages/event-space
+    - name: icon_image
+      label: Icon Image
+      type: image
+      options:
+        path: public/images/icons
+    - name: intro
+      label: Intro
+      type: text
+    - name: hero_cta_label
+      label: Hero CTA Label
+      type: string
+    - name: hero_cta_url
+      label: Hero CTA URL
+      type: string
+    - name: welcome_title
+      label: Welcome Title
+      type: string
+    - name: welcome_text
+      label: Welcome Text
+      type: text
+    - name: pricing
+      label: Pricing
+      type: object
+      fields:
+      - name: title
+        label: Title
+        type: string
+      - name: cta_label
+        label: CTA Label
+        type: string
+      - name: cta_url
+        label: CTA URL
+        type: string
+      - name: notes
+        label: Notes
+        type: string
+        list: true
+      - name: cards
+        label: Cards
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{title}'
+        fields:
+        - name: title
+          label: Title
+          type: string
+        - name: price
+          label: Price
+          type: number
+        - name: period
+          label: Period
+          type: string
+        - name: features
+          label: Features
+          type: string
+          list: true
+    - name: rooms
+      label: Rooms
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{title}'
+      fields:
+      - name: title
+        label: Title
+        type: string
+      - name: description
+        label: Description
+        type: text
+      - name: images
+        label: Images
+        type: image
+        list: true
+        options:
+          path: public/images/rooms
+  childcare_locale:
+    type: object
+    fields:
+    - name: headline
+      label: Headline
+      type: string
+    - name: hero_image
+      label: Hero Image
+      type: image
+      options:
+        path: public/images/pages/childcare
+    - name: icon_image
+      label: Icon Image
+      type: image
+      options:
+        path: public/images/icons
+    - name: intro
+      label: Intro
+      type: text
+    - name: hero_cta_label
+      label: Hero CTA Label
+      type: string
+    - name: hero_cta_url
+      label: Hero CTA URL
+      type: string
+    - name: welcome_title
+      label: Welcome Title
+      type: string
+    - name: welcome_text
+      label: Welcome Text
+      type: text
+    - name: carousel_title
+      label: Carousel Title
+      type: string
+    - name: carousel_items
+      label: Carousel Items
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{title}'
+      fields:
+      - name: image
+        label: Image
+        type: image
+        options:
+          path: public/images/pages/childcare
+      - name: title
+        label: Title
+        type: string
+      - name: description
+        label: Description
+        type: text
+    - name: testimonials_title
+      label: Testimonials Title
+      type: string
+    - name: testimonials_description
+      label: Testimonials Description
+      type: string
+    - name: testimonials
+      label: Testimonials
+      type: object
+      list:
+        min: 3
+        max: 3
+        collapsible:
+          collapsed: true
+          summary: '{name}'
+      fields:
+      - name: text
+        label: Text
+        type: text
+      - name: name
+        label: Name
+        type: string
+    - name: pricing
+      label: Pricing
+      type: object
+      fields:
+      - name: title
+        label: Title
+        type: string
+      - name: notes
+        label: Notes
+        type: string
+        list: true
+      - name: cards
+        label: Cards
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{title}'
+        fields:
+        - name: title
+          label: Title
+          type: string
+        - name: price
+          label: Price
+          type: number
+        - name: period
+          label: Period
+          type: string
+        - name: vat_note
+          label: VAT Note
+          type: string
+        - name: features
+          label: Features
+          type: string
+          list: true
+  virtualoffice_locale:
+    type: object
+    fields:
+    - name: headline
+      label: Headline
+      type: string
+    - name: hero_image
+      label: Hero Image
+      type: image
+      options:
+        path: public/images/pages/virtual-office
+    - name: icon_image
+      label: Icon Image
+      type: image
+      options:
+        path: public/images/icons
+    - name: detail_image
+      label: Detail Image
+      type: image
+      options:
+        path: public/images/pages/virtual-office
+    - name: intro
+      label: Intro
+      type: text
+    - name: pricing
+      label: Pricing
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{title}'
+      fields:
+      - name: title
+        label: Title
+        type: string
+      - name: from
+        label: From
+        type: string
+      - name: sub
+        label: Sub
+        type: string
+      - name: items
+        label: Items
+        type: string
+        list: true
+      - name: extras
+        label: Extras
+        type: string
+        list: true
+    - name: form_title
+      label: Form Title
+      type: string
+    - name: form_name
+      label: Form Name
+      type: string
+    - name: form_email
+      label: Form Email
+      type: string
+    - name: form_company
+      label: Form Company
+      type: string
+    - name: form_package
+      label: Form Package
+      type: string
+    - name: form_package_options
+      label: Form Package Options
+      type: string
+      list: true
+    - name: form_message
+      label: Form Message
+      type: string
+    - name: form_submit
+      label: Form Submit
+      type: string
+  cafe_locale:
+    type: object
+    fields:
+    - name: headline
+      label: Headline
+      type: string
+    - name: hero_image
+      label: Hero Image
+      type: image
+      options:
+        path: public/images/pages/cafe
+    - name: intro
+      label: Intro
+      type: text
+    - name: hero_cta_label
+      label: Hero CTA Label
+      type: string
+    - name: hero_cta_url
+      label: Hero CTA URL
+      type: string
+    - name: sections
+      label: Sections
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{title}'
+      fields:
+      - name: title
+        label: Title
+        type: string
+      - name: text
+        label: Text
+        type: text
+  pages_locale:
+    type: object
+    fields:
+    - name: title
+      label: Title
+      type: string
+    - name: body
+      label: Body
+      type: rich-text
+      options:
+        format: markdown
+content:
+- name: home
+  label: Homepage
+  type: file
+  path: src/content/home/index.json
+  format: json
+  operations:
+    create: false
+    rename: false
+    delete: false
+  fields:
+  - name: de
+    label: Deutsch
+    component: home_locale
+  - name: en
+    label: English
+    component: home_locale
+- name: about
+  label: About
+  type: file
+  path: src/content/about/index.json
+  format: json
+  operations:
+    create: false
+    rename: false
+    delete: false
+  fields:
+  - name: de
+    label: Deutsch
+    component: about_locale
+  - name: en
+    label: English
+    component: about_locale
+- name: ourstory
+  label: Our Story
+  type: file
+  path: src/content/ourstory/index.json
+  format: json
+  operations:
+    create: false
+    rename: false
+    delete: false
+  fields:
+  - name: de
+    label: Deutsch
+    component: ourstory_locale
+  - name: en
+    label: English
+    component: ourstory_locale
+- name: faq
+  label: FAQ
+  type: file
+  path: src/content/faq/index.json
+  format: json
+  operations:
+    create: false
+    rename: false
+    delete: false
+  fields:
+  - name: de
+    label: Deutsch
+    component: faq_locale
+  - name: en
+    label: English
+    component: faq_locale
+- name: contact
+  label: Contact
+  type: file
+  path: src/content/contact/index.json
+  format: json
+  operations:
+    create: false
+    rename: false
+    delete: false
+  fields:
+  - name: de
+    label: Deutsch
+    component: contact_locale
+  - name: en
+    label: English
+    component: contact_locale
+- name: press
+  label: Press
+  type: file
+  path: src/content/press/index.json
+  format: json
+  operations:
+    create: false
+    rename: false
+    delete: false
+  fields:
+  - name: de
+    label: Deutsch
+    component: press_locale
+  - name: en
+    label: English
+    component: press_locale
+- name: team
+  label: Team
+  type: file
+  path: src/content/team/index.json
+  format: json
+  operations:
+    create: false
+    rename: false
+    delete: false
+  fields:
+  - name: de
+    label: Deutsch
+    component: team_locale
+  - name: en
+    label: English
+    component: team_locale
+- name: coworking
+  label: Coworking
+  type: file
+  path: src/content/coworking/index.json
+  format: json
+  operations:
+    create: false
+    rename: false
+    delete: false
+  fields:
+  - name: de
+    label: Deutsch
+    component: coworking_locale
+  - name: en
+    label: English
+    component: coworking_locale
+- name: eventspace
+  label: Event Space
+  type: file
+  path: src/content/eventspace/index.json
+  format: json
+  operations:
+    create: false
+    rename: false
+    delete: false
+  fields:
+  - name: de
+    label: Deutsch
+    component: eventspace_locale
+  - name: en
+    label: English
+    component: eventspace_locale
+- name: childcare
+  label: Flexible Childcare
+  type: file
+  path: src/content/childcare/index.json
+  format: json
+  operations:
+    create: false
+    rename: false
+    delete: false
+  fields:
+  - name: de
+    label: Deutsch
+    component: childcare_locale
+  - name: en
+    label: English
+    component: childcare_locale
+- name: virtualoffice
+  label: Virtual Office
+  type: file
+  path: src/content/virtualoffice/index.json
+  format: json
+  operations:
+    create: false
+    rename: false
+    delete: false
+  fields:
+  - name: de
+    label: Deutsch
+    component: virtualoffice_locale
+  - name: en
+    label: English
+    component: virtualoffice_locale
+- name: cafe
+  label: Café
+  type: file
+  path: src/content/cafe/index.json
+  format: json
+  operations:
+    create: false
+    rename: false
+    delete: false
+  fields:
+  - name: de
+    label: Deutsch
+    component: cafe_locale
+  - name: en
+    label: English
+    component: cafe_locale
+- name: pages_agb
+  label: 'Legal Pages: AGB'
+  type: file
+  path: src/content/pages/agb.json
+  format: json
+  operations:
+    create: false
+    rename: false
+    delete: false
+  fields:
+  - name: de
+    label: Deutsch
+    component: pages_locale
+  - name: en
+    label: English
+    component: pages_locale
+- name: pages_datenschutz
+  label: 'Legal Pages: DATENSCHUTZ'
+  type: file
+  path: src/content/pages/datenschutz.json
+  format: json
+  operations:
+    create: false
+    rename: false
+    delete: false
+  fields:
+  - name: de
+    label: Deutsch
+    component: pages_locale
+  - name: en
+    label: English
+    component: pages_locale
+- name: pages_impressum
+  label: 'Legal Pages: IMPRESSUM'
+  type: file
+  path: src/content/pages/impressum.json
+  format: json
+  operations:
+    create: false
+    rename: false
+    delete: false
+  fields:
+  - name: de
+    label: Deutsch
+    component: pages_locale
+  - name: en
+    label: English
+    component: pages_locale

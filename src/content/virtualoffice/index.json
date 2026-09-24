@@ -1,6 +1,9 @@
 {
   "de": {
     "headline": "Eine Berliner Adresse – Ohne eigenes Büro.",
+    "hero_image": "/images/pages/virtual-office/virtual-office-hero.jpg",
+    "icon_image": "/images/icons/virtual-office.png",
+    "detail_image": "/images/pages/virtual-office/workspace-detail.jpg",
     "intro": "Geschäftsadresse, Postservice und ein Ort zum Arbeiten – wenn ihr ihn braucht.\n\nIdeal für Freelancer, Gründer:innen und Unternehmen, die professionell auftreten wollen, ohne ein eigenes Büro zu mieten. Und wer doch mal vor Ort arbeiten möchte – unsere Coworking-Plätze und Meetingräume stehen jederzeit offen.",
     "pricing": [
       {
@@ -45,6 +48,9 @@
   },
   "en": {
     "headline": "A Berlin address – without an office of your own.",
+    "hero_image": "/images/pages/virtual-office/virtual-office-hero.jpg",
+    "icon_image": "/images/icons/virtual-office.png",
+    "detail_image": "/images/pages/virtual-office/workspace-detail.jpg",
     "intro": "A business address, mail service and a place to work – when you need it.\n\nIdeal for freelancers, founders and companies who want to appear professional without renting their own office. And if you'd like to work on site every now and then – our coworking spaces and meeting rooms are open to you anytime.",
     "pricing": [
       {

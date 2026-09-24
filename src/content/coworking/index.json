@@ -1,6 +1,10 @@
 {
   "de": {
     "headline": "Dein Arbeitsplatz in Berlin Prenzlauer Berg.",
+    "hero_image": "/images/pages/coworking/coworking-hero.jpg",
+    "icon_image": "/images/icons/coworking.png",
+    "community_image": "/images/pages/coworking/community-lunch.jpg",
+    "workspace_image": "/images/pages/coworking/workspace-by-window.jpg",
     "intro": "Arbeiten, wie es zu dir passt – mit allem, was du brauchst.\n\nBei uns arbeiten Menschen aus den unterschiedlichsten Bereichen – von Design und Tech über Coaching bis hin zu Finance. Was sie verbindet, ist der Wunsch nach einem Ort, der funktioniert – und der sich gut anfühlt. Neben konzentriertem Arbeiten entsteht hier ganz selbstverständlich Austausch und Verbindung: zwischen Menschen, die unterschiedliche Wege gehen, aber am gleichen Ort arbeiten. Mit oder ohne Kind, in Teilzeit oder Vollzeit – der juggleHUB passt zu deinem Leben, nicht umgekehrt.",
     "hero_cta_label": "Jetzt buchen",
     "hero_cta_url": "/de/about/contact/",
@@ -63,6 +67,10 @@
   },
   "en": {
     "headline": "Your workspace in Berlin Prenzlauer Berg.",
+    "hero_image": "/images/pages/coworking/coworking-hero.jpg",
+    "icon_image": "/images/icons/coworking.png",
+    "community_image": "/images/pages/coworking/community-lunch.jpg",
+    "workspace_image": "/images/pages/coworking/workspace-by-window.jpg",
     "intro": "Work the way that suits you – with everything you need.\n\nPeople from all kinds of fields work here – from design and tech to coaching and finance. What connects them is the wish for a place that works – and feels good. Alongside focused work, exchange and connection happen here quite naturally: between people who take different paths but work in the same place. With or without a child, part-time or full-time – juggleHUB fits your life, not the other way around.",
     "hero_cta_label": "Book now",
     "hero_cta_url": "/en/about/contact/",

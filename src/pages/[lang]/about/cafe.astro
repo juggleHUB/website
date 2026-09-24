@@ -8,7 +8,7 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params as { lang: 'de' | 'en' };
 const content = await getEntry('cafe', 'index');
-const { headline, intro, hero_cta_label, hero_cta_url, sections } = content.data[lang];
+const { headline, hero_image, intro, hero_cta_label, hero_cta_url, sections } = content.data[lang];
 const description = lang === 'de'
   ? 'The Daily – das Café im juggleHUB. Frischer Kaffee von Coffee Circle, hausgemachte Snacks und nachmittags unser Spielcafé für Kinder und Eltern.'
   : 'The Daily – the café at juggleHUB. Fresh coffee from Coffee Circle, homemade snacks and our afternoon Spielcafé for children and parents.';
@@ -21,7 +21,7 @@ const description = lang === 'de'
 
     <div class="rounded-2xl overflow-hidden mb-12 aspect-[16/9]">
       <img
-        src="/images/pages/cafe/the-daily.jpg"
+        src={hero_image}
         alt="The Daily – Café im juggleHUB"
         width="1600"
         height="1200"

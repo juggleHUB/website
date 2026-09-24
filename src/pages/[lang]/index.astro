@@ -12,7 +12,7 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params as { lang: 'de' | 'en' };
 const content = await getEntry('home', 'index');
-const { hero_headline, hero_subtext, hero_cta_label, hero_cta_url, welcome_title, welcome_text, feature_cards, carousel_items, testimonials_title, testimonials_description, testimonials } = content.data[lang];
+const { hero_headline, hero_image, hero_subtext, hero_cta_label, hero_cta_url, welcome_title, welcome_text, feature_cards, carousel_items, testimonials_title, testimonials_description, testimonials } = content.data[lang];
 
 const t = {
   de: { about: 'Mehr über uns →' },
@@ -41,7 +41,7 @@ const t = {
     <!-- Image with woosh on top — image pulled up so woosh overlaps visible photo -->
     <div class="relative aspect-square md:aspect-[4/3] -mt-[62px] bg-[#FFFDD7]">
       <img
-        src="/images/pages/home/multiple-people-working.jpeg"
+        src={hero_image}
         alt="JuggleHUB workspace"
         width="652"
         height="663"
@@ -63,7 +63,7 @@ const t = {
     <img src="/woosh/hero-home.svg" aria-hidden="true" class="w-full opacity-0 pointer-events-none select-none" />
     <!-- Fill the image area up to the woosh edge -->
     <img
-      src="/images/pages/home/multiple-people-working.jpeg"
+      src={hero_image}
       alt="JuggleHUB workspace"
       width="652"
       height="663"

@@ -17,6 +17,7 @@ export const collections = {
     type: 'data',
     schema: i18n(z.object({
       hero_headline: z.string(),
+      hero_image: z.string(),
       hero_subtext: z.string(),
       hero_cta_label: z.string(),
       hero_cta_url: z.string(),
@@ -95,6 +96,10 @@ export const collections = {
     type: 'data',
     schema: i18n(z.object({
       headline: z.string(),
+      hero_image: z.string(),
+      icon_image: z.string(),
+      community_image: z.string(),
+      workspace_image: z.string(),
       intro: z.string(),
       hero_cta_label: z.string().optional(),
       hero_cta_url: z.string().optional(),
@@ -123,6 +128,8 @@ export const collections = {
     type: 'data',
     schema: i18n(z.object({
       headline: z.string(),
+      hero_image: z.string(),
+      icon_image: z.string(),
       intro: z.string(),
       hero_cta_label: z.string().optional(),
       hero_cta_url: z.string().optional(),
@@ -152,6 +159,8 @@ export const collections = {
     type: 'data',
     schema: i18n(z.object({
       headline: z.string(),
+      hero_image: z.string(),
+      icon_image: z.string(),
       intro: z.string(),
       hero_cta_label: z.string().optional(),
       hero_cta_url: z.string().optional(),
@@ -180,6 +189,9 @@ export const collections = {
     type: 'data',
     schema: i18n(z.object({
       headline: z.string(),
+      hero_image: z.string(),
+      icon_image: z.string(),
+      detail_image: z.string(),
       intro: z.string(),
       hero_cta_label: z.string().optional(),
       hero_cta_url: z.string().optional(),
@@ -205,6 +217,7 @@ export const collections = {
     type: 'data',
     schema: i18n(z.object({
       headline: z.string(),
+      hero_image: z.string(),
       intro: z.string(),
       hero_cta_label: z.string().optional(),
       hero_cta_url: z.string().optional(),

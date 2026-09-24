@@ -9,7 +9,7 @@ export function getStaticPaths() {
 const { lang } = Astro.params as { lang: 'de' | 'en' };
 const content = await getEntry('virtualoffice', 'index');
 const {
-  headline, intro, hero_cta_label, hero_cta_url,
+  headline, hero_image, icon_image, detail_image, intro, hero_cta_label, hero_cta_url,
   pricing,
   form_title, form_name, form_email, form_company,
   form_package, form_package_options, form_message, form_submit,
@@ -31,7 +31,7 @@ const introRest = introRestParts.join('\n\n');
   <section class="navbreak:hidden bg-[#E6F5F3]">
     <div class="px-6 pt-28 pb-20">
       <div class="w-16 h-16 rounded-xl overflow-hidden mb-5">
-        <img src="/images/icons/virtual-office.png" alt="" width="64" height="64" loading="eager" decoding="async" class="w-full h-full object-cover" />
+        <img src={icon_image} alt="" width="64" height="64" loading="eager" decoding="async" class="w-full h-full object-cover" />
       </div>
       <h1 class="text-3xl font-black tracking-tight mb-4 leading-tight text-brand-dark">{headline}</h1>
       <p class="text-base text-brand-dark/70 mb-7 leading-relaxed">{heroIntro}</p>
@@ -43,7 +43,7 @@ const introRest = introRestParts.join('\n\n');
     </div>
     <div class="relative h-64 md:h-96 -mt-[62px]">
       <img
-        src="/images/pages/virtual-office/virtual-office-hero.jpg"
+        src={hero_image}
         alt="JuggleHUB virtual office"
         width="1800"
         height="1350"
@@ -63,7 +63,7 @@ const introRest = introRestParts.join('\n\n');
   <section class="hidden navbreak:block relative overflow-hidden max-h-[760px]">
     <img src="/woosh/hero-office.svg" aria-hidden="true" class="w-full opacity-0 pointer-events-none select-none" />
     <img
-      src="/images/pages/virtual-office/virtual-office-hero.jpg"
+      src={hero_image}
       alt="JuggleHUB virtual office"
       width="1800"
       height="1350"
@@ -81,7 +81,7 @@ const introRest = introRestParts.join('\n\n');
       <div class="w-[40%] flex justify-end pr-10 lg:pr-16">
         <div class="w-full max-w-sm pt-16">
           <div class="w-20 h-20 rounded-xl overflow-hidden mb-6">
-            <img src="/images/icons/virtual-office.png" alt="" width="80" height="80" loading="eager" decoding="async" class="w-full h-full object-cover" />
+            <img src={icon_image} alt="" width="80" height="80" loading="eager" decoding="async" class="w-full h-full object-cover" />
           </div>
           <h1 class="text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-tight text-brand-dark">{headline}</h1>
           <p class="text-lg lg:text-xl text-brand-dark/70 mb-10 leading-relaxed">{heroIntro}</p>
@@ -198,7 +198,7 @@ const introRest = introRestParts.join('\n\n');
 
   <figure class="max-w-4xl mx-auto px-8 sm:px-14 lg:px-20 pb-20">
     <img
-      src="/images/pages/virtual-office/workspace-detail.jpg"
+      src={detail_image}
       alt={lang === 'de' ? 'Arbeiten am Laptop im juggleHUB' : 'Working on a laptop at juggleHUB'}
       width="1800"
       height="1012"
