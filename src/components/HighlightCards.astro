@@ -7,9 +7,10 @@ interface HighlightItem {
 
 interface Props {
   items: HighlightItem[];
+  firstImagePosition?: string;
 }
 
-const { items } = Astro.props;
+const { items, firstImagePosition } = Astro.props;
 ---
 
 <section class="pb-20">
@@ -24,7 +25,8 @@ const { items } = Astro.props;
             height="800"
             loading="lazy"
             decoding="async"
-            class={`w-full aspect-square object-cover ${index === 0 ? 'object-[40%_center]' : ''}`}
+            class="w-full aspect-square object-cover"
+            style={index === 0 && firstImagePosition ? `object-position: ${firstImagePosition}` : undefined}
           />
           <div class="flex-1 px-6 py-6">
             <h3 class="text-2xl font-black mb-2">{item.title}</h3>

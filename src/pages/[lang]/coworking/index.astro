@@ -17,6 +17,13 @@ const introRest = introRestParts.join('\n\n');
 ---
 
 <Layout title={headline} description={intro} lang={lang} currentPath={`/${lang}/coworking/`} headerPad={false}>
+  <div class="relative overflow-hidden">
+    <div
+      aria-hidden="true"
+      class="absolute inset-0 pointer-events-none select-none"
+      style="background-image: url('/woosh/blue-baby-heart-vertical.svg'); background-repeat: repeat-y; background-position: center top; background-size: min(100%, 640px) auto; opacity: 0.5;"
+    ></div>
+    <div class="relative">
   <!-- MOBILE hero -->
   <section class="navbreak:hidden bg-[#E6F5F3]">
     <div class="px-6 pt-28 pb-20">
@@ -85,14 +92,6 @@ const introRest = introRestParts.join('\n\n');
     </div>
   </section>
 
-  <div class="relative overflow-hidden">
-    <img
-      src="/woosh/blue-baby-heart-vertical.svg"
-      aria-hidden="true"
-      class="absolute inset-0 w-full h-full pointer-events-none select-none -z-10"
-      style="object-fit: cover; opacity: 0.5;"
-    />
-
     {introRest && (
       <section class="relative max-w-4xl mx-auto px-8 sm:px-14 lg:px-20 pt-16">
         <p class="text-lg text-gray-600 leading-relaxed whitespace-pre-line">{introRest}</p>
@@ -133,6 +132,7 @@ const introRest = introRestParts.join('\n\n');
         class="w-full h-auto rounded-2xl"
       />
     </figure>
+    </div>
   </div>
 
 </Layout>

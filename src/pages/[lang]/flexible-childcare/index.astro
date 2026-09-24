@@ -1,6 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import Carousel from '../../../components/Carousel.astro';
+import HighlightCards from '../../../components/HighlightCards.astro';
 import Pricing from '../../../components/Pricing.astro';
 import Testimonials from '../../../components/Testimonials.astro';
 import { getEntry } from 'astro:content';
@@ -15,10 +15,19 @@ const { headline, intro, hero_cta_label, hero_cta_url, welcome_title, welcome_te
 ---
 
 <Layout title={headline} description={intro} lang={lang} currentPath={`/${lang}/flexible-childcare/`} headerPad={false}>
+  <div class="relative overflow-hidden">
+    <div
+      aria-hidden="true"
+      class="absolute inset-0 pointer-events-none select-none"
+      style="background-image: url('/woosh/coral-baby-heart-vertical.svg'); background-repeat: repeat-y; background-position: center top; background-size: min(100%, 640px) auto; opacity: 0.5;"
+    ></div>
+    <div class="relative">
   <!-- MOBILE hero -->
   <section class="navbreak:hidden bg-[#FFE9E1]">
     <div class="px-6 pt-28 pb-20">
-      <div class="w-16 h-16 rounded-xl bg-gray-200 mb-5"></div>
+      <div class="w-16 h-16 rounded-xl overflow-hidden mb-5">
+        <img src="/images/icons/childcare.png" alt="" width="64" height="64" loading="eager" decoding="async" class="w-full h-full object-cover" />
+      </div>
       <h1 class="text-3xl font-black tracking-tight mb-4 leading-tight text-brand-dark">{headline}</h1>
       <p class="text-base text-brand-dark/70 mb-7 leading-relaxed">{intro}</p>
       {hero_cta_label && hero_cta_url && (
@@ -29,12 +38,12 @@ const { headline, intro, hero_cta_label, hero_cta_url, welcome_title, welcome_te
     </div>
     <div class="relative h-64 md:h-96 -mt-[62px]">
       <img
-        src="https://picsum.photos/seed/childcare-hero/1600/700"
+        src="/images/pages/childcare/childcare-hero.jpg"
         alt="JuggleHUB childcare"
-        width="1600"
-        height="700"
+        width="3027"
+        height="1785"
         fetchpriority="high"
-        class="absolute inset-0 w-full h-full object-cover"
+        class="absolute inset-0 w-full h-full object-cover object-top"
       />
       <img
         src="/woosh/hero-childcare-mob.svg"
@@ -49,12 +58,12 @@ const { headline, intro, hero_cta_label, hero_cta_url, welcome_title, welcome_te
   <section class="hidden navbreak:block relative overflow-hidden max-h-[760px]">
     <img src="/woosh/hero-childcare.svg" aria-hidden="true" class="w-full opacity-0 pointer-events-none select-none" />
     <img
-      src="https://picsum.photos/seed/childcare-hero/1600/700"
+      src="/images/pages/childcare/childcare-hero.jpg"
       alt="JuggleHUB childcare"
-      width="1600"
-      height="700"
+      width="3027"
+      height="1785"
       fetchpriority="high"
-      class="absolute inset-0 w-full h-full object-cover"
+      class="absolute inset-0 w-full h-full object-cover object-top"
     />
     <div class="absolute inset-y-0 left-0 w-[40%] bg-[#FFE9E1]"></div>
     <img
@@ -66,7 +75,9 @@ const { headline, intro, hero_cta_label, hero_cta_url, welcome_title, welcome_te
     <div class="absolute inset-0 z-10 flex items-center">
       <div class="w-[40%] flex justify-end pr-10 lg:pr-16">
         <div class="w-full max-w-sm pt-16">
-          <div class="w-20 h-20 rounded-xl bg-gray-200 mb-6"></div>
+          <div class="w-20 h-20 rounded-xl overflow-hidden mb-6">
+            <img src="/images/icons/childcare.png" alt="" width="80" height="80" loading="eager" decoding="async" class="w-full h-full object-cover" />
+          </div>
           <h1 class="text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-tight text-brand-dark">{headline}</h1>
           <p class="text-lg lg:text-xl text-brand-dark/70 mb-10 leading-relaxed">{intro}</p>
           {hero_cta_label && hero_cta_url && (
@@ -78,14 +89,6 @@ const { headline, intro, hero_cta_label, hero_cta_url, welcome_title, welcome_te
       </div>
     </div>
   </section>
-
-  <div class="relative overflow-hidden">
-    <img
-      src="/woosh/coral-baby-heart-vertical.svg"
-      aria-hidden="true"
-      class="absolute inset-0 w-full h-full pointer-events-none select-none -z-10"
-      style="object-fit: cover; opacity: 0.5;"
-    />
 
     {(welcome_title || welcome_text) && (
       <section class="relative max-w-4xl mx-auto px-8 sm:px-14 lg:px-20 py-20">
@@ -99,7 +102,15 @@ const { headline, intro, hero_cta_label, hero_cta_url, welcome_title, welcome_te
     )}
 
     {carousel_items && carousel_items.length > 0 && (
-      <Carousel items={carousel_items} />
+      <HighlightCards items={carousel_items} />
+    )}
+
+    {testimonials && (
+      <Testimonials
+        title={testimonials_title ?? ''}
+        description={testimonials_description ?? ''}
+        testimonials={testimonials}
+      />
     )}
 
     {pricing && (
@@ -112,13 +123,6 @@ const { headline, intro, hero_cta_label, hero_cta_url, welcome_title, welcome_te
         lastSpan={true}
       />
     )}
+    </div>
   </div>
-
-  {testimonials && (
-    <Testimonials
-      title={testimonials_title ?? ''}
-      description={testimonials_description ?? ''}
-      testimonials={testimonials}
-    />
-  )}
 </Layout>

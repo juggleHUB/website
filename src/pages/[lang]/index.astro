@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import HomeHighlightCards from '../../components/HomeHighlightCards.astro';
+import HighlightCards from '../../components/HighlightCards.astro';
 import FeatureCards from '../../components/FeatureCards.astro';
 import Testimonials from '../../components/Testimonials.astro';
 import ContactForm from '../../components/ContactForm.astro';
@@ -21,6 +21,13 @@ const t = {
 ---
 
 <Layout title={hero_headline} description={hero_subtext} lang={lang} currentPath={`/${lang}/`} headerPad={false}>
+  <div class="relative overflow-hidden">
+    <div
+      aria-hidden="true"
+      class="absolute inset-0 pointer-events-none select-none"
+      style="background-image: url('/woosh/yellow-baby-heart-vertical.svg'); background-repeat: repeat-y; background-position: center top; background-size: min(100%, 640px) auto; opacity: 0.5;"
+    ></div>
+    <div class="relative">
   <!-- MOBILE hero -->
   <section class="navbreak:hidden bg-[#FFFDD7]">
     <!-- Text -->
@@ -32,12 +39,12 @@ const t = {
       </a>
     </div>
     <!-- Image with woosh on top — image pulled up so woosh overlaps visible photo -->
-    <div class="relative h-64 md:h-96 -mt-[62px]">
+    <div class="relative aspect-square md:aspect-[4/3] -mt-[62px] bg-[#FFFDD7]">
       <img
         src="/images/pages/home/multiple-people-working.jpeg"
         alt="JuggleHUB workspace"
-        width="1600"
-        height="700"
+        width="652"
+        height="663"
         fetchpriority="high"
         class="absolute inset-0 w-full h-full object-cover"
       />
@@ -54,14 +61,14 @@ const t = {
   <section class="hidden navbreak:block relative overflow-hidden max-h-[760px]">
     <!-- Invisible height sizer -->
     <img src="/woosh/hero-home.svg" aria-hidden="true" class="w-full opacity-0 pointer-events-none select-none" />
-    <!-- Photo — full background -->
+    <!-- Fill the image area up to the woosh edge -->
     <img
       src="/images/pages/home/multiple-people-working.jpeg"
       alt="JuggleHUB workspace"
-      width="1600"
-      height="700"
+      width="652"
+      height="663"
       fetchpriority="high"
-      class="absolute inset-0 w-full h-full object-cover"
+      class="absolute inset-y-0 right-0 w-[60%] h-full object-cover object-top"
     />
     <!-- Solid left panel -->
     <div class="absolute inset-y-0 left-0 w-[40%] bg-[#FFFDD7]"></div>
@@ -86,16 +93,8 @@ const t = {
     </div>
   </section>
 
-  <div class="relative overflow-hidden">
-    <img
-      src="/woosh/yellow-baby-heart-vertical.svg"
-      aria-hidden="true"
-      class="absolute inset-0 z-0 w-full h-full pointer-events-none select-none"
-      style="object-fit: cover; opacity: 0.5;"
-    />
-
   <div class="relative z-10 pt-16">
-    <HomeHighlightCards items={carousel_items} />
+    <HighlightCards items={carousel_items} firstImagePosition="40% center" />
   </div>
 
   <section class="relative z-10 max-w-4xl mx-auto px-8 sm:px-14 lg:px-20 pt-0 pb-20">
@@ -106,7 +105,6 @@ const t = {
 
   <div class="relative z-10">
     <FeatureCards cards={feature_cards} desktopCols={5} paddingTop="pt-0" />
-  </div>
   </div>
 
   <section class="pt-20 pb-20">
@@ -133,4 +131,6 @@ const t = {
   />
 
   <ContactForm lang={lang} />
+    </div>
+  </div>
 </Layout>

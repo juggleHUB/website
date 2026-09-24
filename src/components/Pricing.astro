@@ -16,9 +16,10 @@ interface Props {
   headerColor?: string;
   accentColor?: string;
   lastSpan?: boolean;
+  desktopCols?: 3 | 4;
 }
 
-const { title, description, notes, cards, headerColor = '#C8E9E5', accentColor, lastSpan } = Astro.props;
+const { title, description, notes, cards, headerColor = '#C8E9E5', accentColor, lastSpan, desktopCols = 3 } = Astro.props;
 ---
 
 <section class="pt-4 pb-20 px-8 sm:px-14 lg:px-20 max-w-7xl mx-auto">
@@ -36,7 +37,7 @@ const { title, description, notes, cards, headerColor = '#C8E9E5', accentColor, 
     </div>
   )}
 
-  <div class="pricing-grid gap-px bg-gray-200 border border-gray-200 rounded-2xl overflow-hidden">
+  <div class="pricing-grid gap-px bg-gray-200 border border-gray-200 rounded-2xl overflow-hidden" style={`--pricing-desktop-cols: ${desktopCols}`}>
     {cards.map((card, i) => (
       <div class:list={['bg-white flex flex-col', lastSpan && i === cards.length - 1 && 'last-span']}>
         <div class="px-6 py-4 text-center" style={`background-color: ${headerColor};`}>
@@ -75,7 +76,7 @@ const { title, description, notes, cards, headerColor = '#C8E9E5', accentColor, 
   }
   @media (min-width: 1100px) {
     .pricing-grid {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(var(--pricing-desktop-cols), minmax(0, 1fr));
     }
     .last-span {
       grid-column: auto;

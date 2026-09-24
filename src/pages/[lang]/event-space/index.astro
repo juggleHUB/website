@@ -18,10 +18,19 @@ const introRest = introRestParts.join('\n\n');
 ---
 
 <Layout title={headline} description={intro} lang={lang} currentPath={`/${lang}/event-space/`} headerPad={false}>
+  <div class="relative overflow-hidden">
+    <div
+      aria-hidden="true"
+      class="absolute inset-0 pointer-events-none select-none"
+      style="background-image: url('/woosh/yellow-baby-heart-vertical.svg'); background-repeat: repeat-y; background-position: center top; background-size: min(100%, 640px) auto; opacity: 0.5;"
+    ></div>
+    <div class="relative">
   <!-- MOBILE hero -->
   <section class="navbreak:hidden bg-[#FFFDD7]">
     <div class="px-6 pt-28 pb-20">
-      <div class="w-16 h-16 rounded-xl bg-gray-200 mb-5"></div>
+      <div class="w-16 h-16 rounded-xl overflow-hidden mb-5">
+        <img src="/images/icons/room.png" alt="" width="64" height="64" loading="eager" decoding="async" class="w-full h-full object-cover" />
+      </div>
       <h1 class="text-3xl font-black tracking-tight mb-4 leading-tight text-brand-dark">{headline}</h1>
       <p class="text-base text-brand-dark/70 mb-7 leading-relaxed">{heroIntro}</p>
       {hero_cta_label && hero_cta_url && (
@@ -32,7 +41,7 @@ const introRest = introRestParts.join('\n\n');
     </div>
     <div class="relative h-64 md:h-96 -mt-[62px]">
       <img
-        src="https://picsum.photos/seed/event-hero/1600/700"
+        src="/images/pages/event-space/event-hero.jpg"
         alt="JuggleHUB event space"
         width="1600"
         height="700"
@@ -52,7 +61,7 @@ const introRest = introRestParts.join('\n\n');
   <section class="hidden navbreak:block relative overflow-hidden max-h-[760px]">
     <img src="/woosh/hero-home.svg" aria-hidden="true" class="w-full opacity-0 pointer-events-none select-none" />
     <img
-      src="https://picsum.photos/seed/event-hero/1600/700"
+      src="/images/pages/event-space/event-hero.jpg"
       alt="JuggleHUB event space"
       width="1600"
       height="700"
@@ -69,7 +78,9 @@ const introRest = introRestParts.join('\n\n');
     <div class="absolute inset-0 z-10 flex items-center">
       <div class="w-[40%] flex justify-end pr-10 lg:pr-16">
         <div class="w-full max-w-sm pt-16">
-          <div class="w-20 h-20 rounded-xl bg-gray-200 mb-6"></div>
+          <div class="w-20 h-20 rounded-xl overflow-hidden mb-6">
+            <img src="/images/icons/room.png" alt="" width="80" height="80" loading="eager" decoding="async" class="w-full h-full object-cover" />
+          </div>
           <h1 class="text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-tight text-brand-dark">{headline}</h1>
           <p class="text-lg lg:text-xl text-brand-dark/70 mb-10 leading-relaxed">{heroIntro}</p>
           {hero_cta_label && hero_cta_url && (
@@ -81,14 +92,6 @@ const introRest = introRestParts.join('\n\n');
       </div>
     </div>
   </section>
-
-  <div class="relative overflow-hidden">
-    <img
-      src="/woosh/yellow-baby-heart-vertical.svg"
-      aria-hidden="true"
-      class="absolute inset-0 w-full h-full pointer-events-none select-none -z-10"
-      style="object-fit: cover; opacity: 0.5;"
-    />
 
     {introRest && (
       <section class="relative max-w-4xl mx-auto px-8 sm:px-14 lg:px-20 pt-16">
@@ -104,17 +107,15 @@ const introRest = introRestParts.join('\n\n');
     )}
 
     {rooms && rooms.length > 0 && <RoomCarousel rooms={rooms} />}
-  </div>
-
   {pricing && (
-    <div class="bg-[#FFFDD7] pt-8">
+    <div class="pt-8">
       <Pricing
         title={pricing.title}
         notes={pricing.notes}
         cards={pricing.cards}
         headerColor="#F0E68C"
         accentColor="#C8A800"
-        lastSpan={true}
+        desktopCols={4}
       />
     </div>
   )}
@@ -133,7 +134,7 @@ const introRest = introRestParts.join('\n\n');
     ]}
   />
 
-  <section class="py-20 bg-white">
+  <section class="py-20">
     <div class="max-w-3xl mx-auto px-8 sm:px-14 lg:px-20">
       <h2 class="text-4xl font-black mb-10">{lang === 'de' ? 'Schreib uns' : 'Get in touch'}</h2>
 
@@ -186,4 +187,6 @@ const introRest = introRestParts.join('\n\n');
       </form>
     </div>
   </section>
+    </div>
+  </div>
 </Layout>

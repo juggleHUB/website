@@ -1,7 +1,7 @@
 {
   "de": {
     "headline": "Flexible Kinderbetreuung",
-    "intro": "Unsere Kinderbetreuung ist das Herzstück von JuggleHUB. Bring deine Kinder einfach mit und arbeite im Wissen, dass sie in besten Händen sind – direkt nebenan, sicher und gut betreut.",
+    "intro": "Arbeiten und Elternsein – beides, ohne Abstriche.",
     "hero_cta_label": "Jetzt anfragen",
     "hero_cta_url": "/de/about/contact/",
     "welcome_title": "Arbeiten mit Kind – ganz einfach.",
@@ -9,17 +9,17 @@
     "carousel_title": "Was euch erwartet",
     "carousel_items": [
       {
-        "image": "https://picsum.photos/seed/kids-play/800/500",
+        "image": "/images/pages/childcare/flexible-booking.jpg",
         "title": "Flexibel buchen",
         "description": "Ob Einzelstunde oder Paket – die Kinderbetreuung im juggleHUB passt sich eurer Tagesplanung an. Kurzfristig, unkompliziert und ohne lange Vorlaufzeit."
       },
       {
-        "image": "https://picsum.photos/seed/kids-read/800/500",
+        "image": "/images/pages/childcare/right-next-door.jpg",
         "title": "Direkt dabei",
         "description": "Eure Kinder sind nebenan – der Coworking Bereich und der Betreuungsraum sind nur wenige Meter voneinander entfernt. Diese räumliche Verbindung gibt Eltern die Ruhe zum Arbeiten und Kindern die Sicherheit, die sie brauchen."
       },
       {
-        "image": "https://picsum.photos/seed/kids-move/800/500",
+        "image": "/images/pages/childcare/caring-support.jpg",
         "title": "Liebevoll begleitet",
         "description": "Erfahrene Betreuerinnen begleiten eure Kinder auf Deutsch und Englisch – in kleinen Gruppen, mit echter Aufmerksamkeit für jedes Kind."
       }
@@ -43,9 +43,7 @@
     "pricing": {
       "title": "Kinderbetreuung Preise",
       "notes": [
-        "Alle Preise zzgl. 19% MwSt.",
-        "Mindestbuchungsdauer: 2 Stunden. Buchung muss 36 Stunden vor Betreuung erfolgen.",
-        "10 € für jedes Geschwisterkind."
+        "Bitte lest vor der Buchung unsere AGBs für die Betreuung und Stornierungsrichtlinien."
       ],
       "cards": [
         {
@@ -74,7 +72,7 @@
   },
   "en": {
     "headline": "Flexible Childcare",
-    "intro": "Our childcare is the heart of JuggleHUB. Simply bring your children along and work knowing they are in the best hands – right next door, safe and well cared for.",
+    "intro": "Work and parenthood – both without compromise.",
     "hero_cta_label": "Get in touch",
     "hero_cta_url": "/en/about/contact/",
     "welcome_title": "Working with a child – made simple.",
@@ -82,17 +80,17 @@
     "carousel_title": "What to expect",
     "carousel_items": [
       {
-        "image": "https://picsum.photos/seed/kids-play/800/500",
+        "image": "/images/pages/childcare/flexible-booking.jpg",
         "title": "Book flexibly",
         "description": "Whether a single hour or a package – childcare at juggleHUB adapts to your day. Short notice, uncomplicated, no long lead time."
       },
       {
-        "image": "https://picsum.photos/seed/kids-read/800/500",
+        "image": "/images/pages/childcare/right-next-door.jpg",
         "title": "Right next door",
         "description": "Your children are right next door – the coworking area and childcare room are just a few metres apart. This closeness gives parents peace of mind to work and children the security they need."
       },
       {
-        "image": "https://picsum.photos/seed/kids-move/800/500",
+        "image": "/images/pages/childcare/caring-support.jpg",
         "title": "Cared for with love",
         "description": "Experienced carers support your children in German and English – in small groups, with real attention for every child."
       }
@@ -116,9 +114,7 @@
     "pricing": {
       "title": "Childcare Pricing",
       "notes": [
-        "All prices excl. 19% VAT.",
-        "Minimum booking: 2 hours. Must be booked at least 36 hours in advance.",
-        "€10 for each sibling."
+        "Please read our childcare terms and conditions and cancellation policy before booking."
       ],
       "cards": [
         {
