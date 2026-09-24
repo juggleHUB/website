@@ -82,6 +82,28 @@ npm run build
 npm run preview
 ```
 
+## Contact forms on Netlify
+
+The homepage, event-space, and virtual-office forms use Netlify Forms. They are
+rendered as static HTML with separate form names (`contact`, `event-space`, and
+`virtual-office`), and submissions include a `source` field for the page and
+language. No email credentials or paid email API are needed in the site.
+
+To deliver submissions to an inbox:
+
+1. In the Netlify site dashboard, go to **Forms** and enable form detection.
+2. Deploy the site. Confirm the three form names appear in **Forms**.
+3. Under **Forms → Submission notifications**, add an **Email notification** for
+   all forms and enter the desired inbox address.
+4. Submit a test message on the live site from each form and verify both the
+   inbox notification and the verified submission in Netlify.
+
+Netlify handles submissions only after deployment; forms will not deliver email
+from `astro dev` or `astro preview`. The forms include a honeypot field for basic
+spam protection. Check your Netlify account's plan before relying on current
+pricing: credit-based plans have free, unlimited form submissions, whereas
+legacy plans can have monthly limits or overage charges.
+
 ## CMS
 
 Visit `/admin` in the browser. Currently using `test-repo` backend (no auth, local only). To connect to a real repo, update `backend` in `public/admin/config.yml`:

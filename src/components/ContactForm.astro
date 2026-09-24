@@ -29,7 +29,11 @@ const t = {
   <div class="max-w-3xl mx-auto px-8 sm:px-14 lg:px-20">
     <h2 class="text-4xl font-black mb-10">{t.title}</h2>
 
-    <form class="flex flex-col gap-6">
+    <form name="contact" method="POST" netlify netlify-honeypot="bot-field" class="flex flex-col gap-6">
+      <input type="hidden" name="source" value={`homepage-${lang}`} />
+      <div class="hidden" aria-hidden="true">
+        <label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+      </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="flex flex-col gap-2">
           <label for="contact-name" class="text-sm font-semibold text-brand-dark">{t.name}</label>
@@ -38,6 +42,7 @@ const t = {
             type="text"
             name="name"
             autocomplete="name"
+            required
             class="rounded-xl border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal focus:border-brand-teal transition"
           />
         </div>
@@ -48,6 +53,7 @@ const t = {
             type="email"
             name="email"
             autocomplete="email"
+            required
             class="rounded-xl border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal focus:border-brand-teal transition"
           />
         </div>
@@ -69,6 +75,7 @@ const t = {
           id="contact-message"
           name="message"
           rows="5"
+          required
           class="rounded-xl border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal focus:border-brand-teal transition resize-none"
         ></textarea>
       </div>
