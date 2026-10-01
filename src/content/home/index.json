@@ -1,7 +1,7 @@
 {
 	"de": {
 		"hero_headline": "Space for Work. Room for Life.",
-		"hero_image": "/images/pages/home/multiple-people-working.jpeg",
+		"hero_image": "/images/pages/home/home-hero-coworking.jpg",
 		"hero_subtext": "Der juggleHUB verbindet Coworking, Events, Kinderbetreuung und Community an einem Ort.",
 		"hero_cta_label": "Jetzt entdecken",
 		"hero_cta_url": "/de/coworking",
@@ -66,7 +66,7 @@
 	},
 	"en": {
 		"hero_headline": "Space for Work. Room for Life.",
-		"hero_image": "/images/pages/home/multiple-people-working.jpeg",
+		"hero_image": "/images/pages/home/home-hero-coworking.jpg",
 		"hero_subtext": "juggleHUB brings coworking, events, childcare and community together in one place.",
 		"hero_cta_label": "Discover now",
 		"hero_cta_url": "/en/coworking",

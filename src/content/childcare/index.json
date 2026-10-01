@@ -31,15 +31,18 @@
     "testimonials": [
       {
         "text": "Wir kamen für 8 Wochen Elternzeit nach Berlin und haben im juggleHUB alles gefunden, was wir brauchten – einen großartigen Ort zum Arbeiten und eine Community, die uns sofort willkommen geheißen hat.",
-        "name": "Danielle, New York"
+        "name": "Danielle, New York",
+        "image": "/images/pages/childcare/testimonials/Danielle.jpg"
       },
       {
         "text": "Ich kann mich auf meine Arbeit konzentrieren und weiß mein Kind nur ein paar Schritte entfernt in guten Händen. Wenn doch mal was ist, sind die Wege kurz. So überbrücken wir die Zeit vor der Kita!",
-        "name": "Anne, Berlin"
+        "name": "Anne, Berlin",
+        "image": "/images/pages/childcare/testimonials/Anne.jpg"
       },
       {
         "text": "juggleHUB war unser Anlaufpunkt, bevor unsere Tochter in die Kita kam. Damals gab es uns genau die Flexibilität, die wir brauchten – ein Ort zum Arbeiten, während sie nur ein paar Schritte entfernt in guten Händen war. Heute komme ich immer noch als Mitglied ins juggleHUB und genieße die Community anderer arbeitender Eltern.",
-        "name": "R.M.B, Berlin"
+        "name": "R.M.B, Berlin",
+        "image": "/images/pages/childcare/testimonials/RMB.jpg"
       }
     ],
     "pricing": {
@@ -104,15 +107,18 @@
     "testimonials": [
       {
         "text": "We came to Berlin for 8 weeks during parental leave and found everything we needed at juggleHUB – a great space to work and a community that made us feel welcome right away.",
-        "name": "Danielle, New York"
+        "name": "Danielle, New York",
+        "image": "/images/pages/childcare/testimonials/Danielle.jpg"
       },
       {
         "text": "I can focus on my work knowing my child is in good hands just a few steps away. If something does come up, the distance is short. This is how we're bridging the time before kita starts!",
-        "name": "Anne, Berlin"
+        "name": "Anne, Berlin",
+        "image": "/images/pages/childcare/testimonials/Anne.jpg"
       },
       {
         "text": "juggleHUB was our go-to before our daughter started kita. Back then, it gave us the flexibility we needed – a place to work while she was in good hands, just a few steps away. Today I'm still coming to juggleHUB as a member, and enjoying the community of other working parents.",
-        "name": "R.M.B, Berlin"
+        "name": "R.M.B, Berlin",
+        "image": "/images/pages/childcare/testimonials/RMB.jpg"
       }
     ],
     "pricing": {

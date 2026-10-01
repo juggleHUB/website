@@ -8,42 +8,82 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params as { lang: 'de' | 'en' };
 const content = await getEntry('cafe', 'index');
-const { headline, hero_image, intro, hero_cta_label, hero_cta_url, sections } = content.data[lang];
+const { headline, hero_image, icon_image, hero_text, intro, hero_cta_label, hero_cta_url, sections, footer_image, footer_image_alt } = content.data[lang];
 const description = lang === 'de'
   ? 'The Daily – das Café im juggleHUB. Frischer Kaffee von Coffee Circle, hausgemachte Snacks und nachmittags unser Spielcafé für Kinder und Eltern.'
   : 'The Daily – the café at juggleHUB. Fresh coffee from Coffee Circle, homemade snacks and our afternoon Spielcafé for children and parents.';
+const heroAlt = lang === 'de' ? 'Kaffeezubereitung im The Daily Café' : 'Coffee being prepared at The Daily Café';
 ---
 
-<Layout title={headline} description={description} lang={lang} currentPath={`/${lang}/about/cafe/`}>
-  <div class="max-w-3xl mx-auto px-8 sm:px-14 lg:px-20 py-20">
-    <h1 class="text-4xl lg:text-5xl font-black mb-6">{headline}</h1>
-    <p class="text-xl text-gray-600 leading-relaxed mb-10">{intro}</p>
-
-    <div class="rounded-2xl overflow-hidden mb-12 aspect-[16/9]">
-      <img
-        src={hero_image}
-        alt="The Daily – Café im juggleHUB"
-        width="1600"
-        height="1200"
-        loading="lazy"
-        decoding="async"
-        class="w-full h-full object-cover"
-      />
-    </div>
-
-    <div class="space-y-6">
-      {sections.map((section: { title: string; text: string }) => (
-        <div class="bg-white rounded-2xl border border-gray-100 p-8">
-          <h2 class="text-2xl font-black mb-4">{section.title}</h2>
-          <p class="text-gray-600 leading-relaxed whitespace-pre-line">{section.text}</p>
+<Layout title={headline} description={description} lang={lang} currentPath={`/${lang}/about/cafe/`} headerPad={false}>
+  <div class="relative overflow-hidden">
+    <div
+      aria-hidden="true"
+      class="absolute inset-0 pointer-events-none select-none"
+      style="background-image: url('/woosh/coral-baby-heart-vertical.svg'); background-repeat: repeat-y; background-position: center top; background-size: min(100%, 640px) auto; opacity: 0.5;"
+    ></div>
+    <div class="relative">
+      <!-- MOBILE hero -->
+      <section class="navbreak:hidden bg-[#FFE9E1]">
+        <div class="px-6 pt-28 pb-20">
+          <h1 class="w-36 h-36 mb-6">
+            <img src={icon_image} alt={headline} width="144" height="137" loading="eager" decoding="async" class="w-full h-full object-contain" />
+          </h1>
+          <p class="text-base text-brand-dark/70 mb-7 leading-relaxed">{hero_text}</p>
+          {hero_cta_label && hero_cta_url && (
+            <a href={hero_cta_url} class="inline-flex items-center bg-brand-coral text-white font-bold text-base px-6 py-3 rounded-full hover:opacity-90 transition-colors shadow-md">
+              {hero_cta_label}
+            </a>
+          )}
         </div>
-      ))}
-    </div>
+        <div class="relative h-64 md:h-96 -mt-[62px]">
+          <img src={hero_image} alt={heroAlt} width="2400" height="1350" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover" />
+          <img src="/woosh/hero-cafe-gentle-mob.svg" alt="" aria-hidden="true" class="absolute top-0 left-0 w-full z-10 pointer-events-none select-none" />
+        </div>
+      </section>
 
-    {hero_cta_label && hero_cta_url && (
-      <a href={hero_cta_url} class="inline-flex items-center mt-10 bg-brand-teal text-white font-bold text-base px-6 py-3 rounded-full hover:opacity-90 transition-colors shadow-md">
-        {hero_cta_label}
-      </a>
-    )}
+      <!-- DESKTOP hero -->
+      <section class="hidden navbreak:block relative overflow-hidden max-h-[760px]">
+        <img src="/woosh/hero-childcare.svg" aria-hidden="true" class="w-full opacity-0 pointer-events-none select-none" />
+        <img src={hero_image} alt={heroAlt} width="2400" height="1350" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover" />
+        <div class="absolute inset-y-0 left-0 w-[40%] bg-[#FFE9E1]"></div>
+        <img src="/woosh/hero-cafe-gentle.svg" alt="" aria-hidden="true" class="absolute top-0 left-[40%] h-full w-auto pointer-events-none select-none" />
+        <div class="absolute inset-0 z-10 flex items-center">
+          <div class="w-[40%] flex justify-end pr-10 lg:pr-16">
+            <div class="w-full max-w-sm pt-16">
+              <h1 class="w-44 h-44 mb-6">
+                <img src={icon_image} alt={headline} width="176" height="168" loading="eager" decoding="async" class="w-full h-full object-contain" />
+              </h1>
+              <p class="text-lg lg:text-xl text-brand-dark/70 mb-10 leading-relaxed">{hero_text}</p>
+              {hero_cta_label && hero_cta_url && (
+                <a href={hero_cta_url} class="inline-flex items-center bg-brand-coral text-white font-bold text-lg px-8 py-4 rounded-full hover:opacity-90 transition-colors shadow-lg">
+                  {hero_cta_label}
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="relative max-w-3xl mx-auto px-8 sm:px-14 lg:px-20 pt-16">
+        <p class="text-xl text-gray-600 leading-relaxed mb-8">{intro}</p>
+        <div class="space-y-8">
+          {sections.map((section) => (
+            <section>
+              {section.image && (
+                <img src={section.image} alt={section.image_alt ?? ''} loading="lazy" decoding="async" class="w-full h-auto rounded-2xl mb-8" />
+              )}
+              <h2 class="text-2xl font-black mb-4">{section.title}</h2>
+              <p class="text-gray-600 leading-relaxed whitespace-pre-line">{section.text}</p>
+            </section>
+          ))}
+        </div>
+      </div>
+      {footer_image && (
+        <figure class="relative max-w-3xl mx-auto px-8 sm:px-14 lg:px-20 pt-8 pb-20">
+          <img src={footer_image} alt={footer_image_alt ?? ''} width="1600" height="1200" loading="lazy" decoding="async" class="w-full h-auto rounded-2xl" />
+        </figure>
+      )}
+    </div>
   </div>
 </Layout>

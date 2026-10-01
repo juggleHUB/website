@@ -3,28 +3,16 @@
     "headline": "Unser Team",
     "members": [
       { "name": "Silvia Steude", "role": "Co-Gründerin", "bio": "", "image": "/images/team/silvia.jpg" },
-      { "name": "Simone", "role": "Empfang", "bio": "", "image": "/images/team/simone.jpg" },
-      { "name": "Ana Paula", "role": "Empfang", "bio": "", "image": "/images/team/ana-paula.jpeg" },
-      { "name": "Ana", "role": "Empfang", "bio": "", "image": "/images/team/ana.jpeg" },
-      { "name": "Carmen", "role": "Kinderbetreuung", "bio": "", "image": "/images/team/carmen.jpeg" },
-      { "name": "Andreia", "role": "Kinderbetreuung", "bio": "", "image": "/images/team/andreia.jpeg" },
-      { "name": "Ariadne", "role": "Kinderbetreuung", "bio": "", "image": "/images/team/ariadne.jpeg" },
       { "name": "Martinha", "role": "Kinderbetreuung", "bio": "", "image": "/images/team/martinha.jpeg" },
-      { "name": "Andreia C.", "role": "Kinderbetreuung", "bio": "", "image": "/images/team/andreia-c.jpeg" }
+      { "name": "Andreia", "role": "Kinderbetreuung", "bio": "", "image": "/images/team/andreia.jpeg" }
     ]
   },
   "en": {
     "headline": "Our Team",
     "members": [
       { "name": "Silvia Steude", "role": "Co-Founder", "bio": "", "image": "/images/team/silvia.jpg" },
-      { "name": "Simone", "role": "Front Desk", "bio": "", "image": "/images/team/simone.jpg" },
-      { "name": "Ana Paula", "role": "Front Desk", "bio": "", "image": "/images/team/ana-paula.jpeg" },
-      { "name": "Ana", "role": "Front Desk", "bio": "", "image": "/images/team/ana.jpeg" },
-      { "name": "Carmen", "role": "Childcare", "bio": "", "image": "/images/team/carmen.jpeg" },
-      { "name": "Andreia", "role": "Childcare", "bio": "", "image": "/images/team/andreia.jpeg" },
-      { "name": "Ariadne", "role": "Childcare", "bio": "", "image": "/images/team/ariadne.jpeg" },
       { "name": "Martinha", "role": "Childcare", "bio": "", "image": "/images/team/martinha.jpeg" },
-      { "name": "Andreia C.", "role": "Childcare", "bio": "", "image": "/images/team/andreia-c.jpeg" }
+      { "name": "Andreia", "role": "Childcare", "bio": "", "image": "/images/team/andreia.jpeg" }
     ]
   }
 }

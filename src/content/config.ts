@@ -8,7 +8,7 @@ function i18n<T extends z.ZodTypeAny>(schema: T) {
 
 const featureCard = z.object({ title: z.string(), text: z.string(), url: z.string(), image: z.string().optional() });
 const carouselItem = z.object({ image: z.string(), title: z.string(), description: z.string() });
-const testimonial = z.object({ text: z.string(), name: z.string() });
+const testimonial = z.object({ text: z.string(), name: z.string(), image: z.string().optional() });
 const featureItem = z.object({ title: z.string(), text: z.string(), image: z.string().optional() });
 const teamMember = z.object({ name: z.string(), role: z.string(), bio: z.string(), image: z.string().optional() });
 
@@ -117,6 +117,7 @@ export const collections = {
           price: z.number(),
           currency: z.string().optional(),
           period: z.string().optional(),
+          price_note: z.string().optional(),
           vat_note: z.string().optional(),
           features: z.array(z.string()),
         })),
@@ -218,13 +219,19 @@ export const collections = {
     schema: i18n(z.object({
       headline: z.string(),
       hero_image: z.string(),
+      icon_image: z.string(),
+      hero_text: z.string(),
       intro: z.string(),
       hero_cta_label: z.string().optional(),
       hero_cta_url: z.string().optional(),
       sections: z.array(z.object({
         title: z.string(),
         text: z.string(),
+        image: z.string().optional(),
+        image_alt: z.string().optional(),
       })),
+      footer_image: z.string().optional(),
+      footer_image_alt: z.string().optional(),
     })),
   }),
 

@@ -1,9 +1,9 @@
 {
   "de": {
     "headline": "Dein Arbeitsplatz in Berlin Prenzlauer Berg.",
-    "hero_image": "/images/pages/coworking/coworking-hero.jpg",
+    "hero_image": "/images/pages/coworking/coworking-hero-workspace.jpg",
     "icon_image": "/images/icons/coworking.png",
-    "community_image": "/images/pages/coworking/community-lunch.jpg",
+    "community_image": "/images/pages/coworking/community-lunch-new.jpg",
     "workspace_image": "/images/pages/coworking/workspace-by-window.jpg",
     "intro": "Arbeiten, wie es zu dir passt – mit allem, was du brauchst.\n\nBei uns arbeiten Menschen aus den unterschiedlichsten Bereichen – von Design und Tech über Coaching bis hin zu Finance. Was sie verbindet, ist der Wunsch nach einem Ort, der funktioniert – und der sich gut anfühlt. Neben konzentriertem Arbeiten entsteht hier ganz selbstverständlich Austausch und Verbindung: zwischen Menschen, die unterschiedliche Wege gehen, aber am gleichen Ort arbeiten. Mit oder ohne Kind, in Teilzeit oder Vollzeit – der juggleHUB passt zu deinem Leben, nicht umgekehrt.",
     "hero_cta_label": "Jetzt buchen",
@@ -60,16 +60,17 @@
           "title": "My Desk",
           "price": 299,
           "period": "pro Monat",
-          "features": ["fester eigener Schreibtisch", "24/7 Zugang per App", "inkl. 8h Meetingraumnutzung", "40% auf Raumbuchungen", "Schließfach – je nach Verfügbarkeit"]
+          "price_note": "je nach Verfügbarkeit",
+          "features": ["fester eigener Schreibtisch", "24/7 Zugang per App", "inkl. 8h Meetingraumnutzung", "40% auf Raumbuchungen", "Schließfach"]
         }
       ]
     }
   },
   "en": {
     "headline": "Your workspace in Berlin Prenzlauer Berg.",
-    "hero_image": "/images/pages/coworking/coworking-hero.jpg",
+    "hero_image": "/images/pages/coworking/coworking-hero-workspace.jpg",
     "icon_image": "/images/icons/coworking.png",
-    "community_image": "/images/pages/coworking/community-lunch.jpg",
+    "community_image": "/images/pages/coworking/community-lunch-new.jpg",
     "workspace_image": "/images/pages/coworking/workspace-by-window.jpg",
     "intro": "Work the way that suits you – with everything you need.\n\nPeople from all kinds of fields work here – from design and tech to coaching and finance. What connects them is the wish for a place that works – and feels good. Alongside focused work, exchange and connection happen here quite naturally: between people who take different paths but work in the same place. With or without a child, part-time or full-time – juggleHUB fits your life, not the other way around.",
     "hero_cta_label": "Book now",
@@ -126,7 +127,8 @@
           "title": "My Desk",
           "price": 299,
           "period": "per month",
-          "features": ["your own fixed desk", "24/7 access via app", "incl. 8h of meeting room usage", "40% off room bookings", "Locker – subject to availability"]
+          "price_note": "subject to availability",
+          "features": ["your own fixed desk", "24/7 access via app", "incl. 8h of meeting room usage", "40% off room bookings", "Locker"]
         }
       ]
     }

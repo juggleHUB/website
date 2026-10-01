@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import Pricing from '../../../components/Pricing.astro';
 import { getEntry } from 'astro:content';
 
 export function getStaticPaths() {
@@ -51,7 +52,7 @@ const introRest = introRestParts.join('\n\n');
         class="absolute inset-0 w-full h-full object-cover object-right"
       />
       <img
-        src="/woosh/hero-coworking-mob.svg"
+        src="/woosh/hero-office-gentle-mob.svg"
         alt=""
         aria-hidden="true"
         class="absolute top-0 left-0 w-full z-10 pointer-events-none select-none"
@@ -72,7 +73,7 @@ const introRest = introRestParts.join('\n\n');
     />
     <div class="absolute inset-y-0 left-0 w-[40%] bg-[#E6F5F3]"></div>
     <img
-      src="/woosh/hero-office.svg"
+      src="/woosh/hero-office-gentle.svg"
       alt=""
       aria-hidden="true"
       class="absolute top-0 left-[40%] h-full w-auto pointer-events-none select-none"
@@ -101,30 +102,20 @@ const introRest = introRestParts.join('\n\n');
     </section>
   )}
 
-  <!-- Pricing grid -->
-  <section class="max-w-5xl mx-auto px-8 sm:px-14 lg:px-20 py-20">
-    <div class="grid md:grid-cols-2 gap-6">
-      {pricing.map((tier: { title: string; from: string; sub: string; items: string[]; extras: string[] }) => (
-        <div class="bg-[#F5F0E8] rounded-2xl p-8 flex flex-col">
-          <h2 class="text-xs font-bold tracking-widest uppercase text-brand-dark/60 mb-6">{tier.title}</h2>
-          <p class="text-4xl font-black text-brand-dark mb-1">
-            <span class="text-xl font-semibold align-super mr-0.5">€</span>{tier.from}
-          </p>
-          <p class="text-sm text-brand-dark/60 mb-8">{tier.sub}</p>
-          <ul class="flex flex-col gap-3 mb-8 flex-1">
-            {tier.items.map((item: string) => (
-              <li class="text-sm text-brand-dark/80 leading-snug border-b border-brand-dark/10 pb-3 last:border-0">{item}</li>
-            ))}
-          </ul>
-          <ul class="flex flex-col gap-2 mt-auto pt-6 border-t border-brand-dark/10">
-            {tier.extras.map((extra: string) => (
-              <li class="text-sm text-brand-dark/60 text-center">{extra}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
-  </section>
+  <div class="pt-16">
+    <Pricing
+      title={lang === 'de' ? 'Preise & Pakete' : 'Pricing & packages'}
+      accentColor="#007374"
+      desktopCols={2}
+      cards={pricing.map((tier) => ({
+        title: tier.title,
+        price: Number(tier.from.match(/\d+/)?.[0]),
+        price_prefix: tier.from.replace(/\d+/, '').trim(),
+        period: tier.sub,
+        features: [...tier.items, ...tier.extras],
+      }))}
+    />
+  </div>
 
   <!-- Contact form -->
   <section class="py-20">

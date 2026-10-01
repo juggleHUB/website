@@ -2,6 +2,7 @@
 interface Testimonial {
   text: string;
   name: string;
+  image?: string;
 }
 
 interface Props {
@@ -22,6 +23,17 @@ const { title, description, testimonials } = Astro.props;
     <div class="grid md:grid-cols-3 gap-10">
       {testimonials.map((t) => (
         <div class="flex flex-col items-center text-center">
+          {t.image && (
+            <img
+              src={t.image}
+              alt={t.name.split(',')[0]}
+              width="96"
+              height="96"
+              loading="lazy"
+              decoding="async"
+              class="w-24 h-24 rounded-full object-cover mb-6"
+            />
+          )}
           <p class="text-gray-700 text-base leading-relaxed mb-4">"{t.text}"</p>
           <div class="flex gap-1 mb-2">
             {[...Array(5)].map(() => (

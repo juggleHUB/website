@@ -2,8 +2,10 @@
 interface PricingCard {
   title: string;
   price: number;
+  price_prefix?: string;
   currency?: string;
   period?: string;
+  price_note?: string;
   vat_note?: string;
   features: string[];
 }
@@ -16,7 +18,7 @@ interface Props {
   headerColor?: string;
   accentColor?: string;
   lastSpan?: boolean;
-  desktopCols?: 3 | 4;
+  desktopCols?: 2 | 3 | 4;
 }
 
 const { title, description, notes, cards, headerColor = '#C8E9E5', accentColor, lastSpan, desktopCols = 3 } = Astro.props;
@@ -45,10 +47,12 @@ const { title, description, notes, cards, headerColor = '#C8E9E5', accentColor, 
         </div>
         <div class="px-6 py-6 text-center border-b border-gray-100">
           <div class="flex items-end justify-center gap-1">
+            {card.price_prefix && <span class="text-sm text-gray-500 mb-1 mr-1">{card.price_prefix}</span>}
             <span class="text-5xl font-black text-brand-dark leading-none">{card.price}</span>
             <span class="text-xl font-semibold text-brand-dark mb-1">{card.currency ?? '€'}</span>
           </div>
           {card.period && <p class="text-sm text-gray-400 mt-1">{card.period}</p>}
+          {card.price_note && <p class="text-sm text-gray-400">{card.price_note}</p>}
           {card.vat_note && <p class="text-sm text-gray-400">{card.vat_note}</p>}
         </div>
         <div class="flex flex-col divide-y divide-gray-100">

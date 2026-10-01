@@ -651,6 +651,14 @@ components:
       type: image
       options:
         path: public/images/pages/cafe
+    - name: icon_image
+      label: Icon Image
+      type: image
+      options:
+        path: public/images
+    - name: hero_text
+      label: Hero Text
+      type: text
     - name: intro
       label: Intro
       type: text
@@ -674,6 +682,22 @@ components:
       - name: text
         label: Text
         type: text
+      - name: image
+        label: Image
+        type: image
+        options:
+          path: public/images/pages/cafe
+      - name: image_alt
+        label: Image Alt Text
+        type: string
+    - name: footer_image
+      label: Image Above Footer
+      type: image
+      options:
+        path: public/images/pages/childcare
+    - name: footer_image_alt
+      label: Footer Image Alt Text
+      type: string
   pages_locale:
     type: object
     fields:

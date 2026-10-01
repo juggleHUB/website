@@ -10,7 +10,7 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params as { lang: 'de' | 'en' };
 const content = await getEntry('coworking', 'index');
-const { headline, hero_image, icon_image, community_image, workspace_image, intro, hero_cta_label, hero_cta_url, welcome_title, welcome_text, cards, pricing } = content.data[lang];
+const { headline, hero_image, icon_image, community_image, intro, hero_cta_label, hero_cta_url, welcome_title, welcome_text, cards, pricing } = content.data[lang];
 
 const [heroIntro, ...introRestParts] = intro.split('\n\n');
 const introRest = introRestParts.join('\n\n');
@@ -42,13 +42,13 @@ const introRest = introRestParts.join('\n\n');
       <img
         src={hero_image}
         alt="JuggleHUB coworking space"
-        width="1600"
-        height="700"
+        width="940"
+        height="1085"
         fetchpriority="high"
         class="absolute inset-0 w-full h-full object-cover"
       />
       <img
-        src="/woosh/hero-coworking-mob.svg"
+        src="/woosh/hero-coworking-gentle-mob.svg"
         alt=""
         aria-hidden="true"
         class="absolute top-0 left-0 w-full z-10 pointer-events-none select-none"
@@ -62,14 +62,14 @@ const introRest = introRestParts.join('\n\n');
     <img
       src={hero_image}
       alt="JuggleHUB coworking space"
-      width="1600"
-      height="700"
+      width="940"
+      height="1085"
       fetchpriority="high"
       class="absolute inset-0 w-full h-full object-cover"
     />
     <div class="absolute inset-y-0 left-0 w-[40%] bg-[#E6F5F3]"></div>
     <img
-      src="/woosh/hero-coworking.svg"
+      src="/woosh/hero-coworking-gentle.svg"
       alt=""
       aria-hidden="true"
       class="absolute top-0 left-[40%] h-full w-auto pointer-events-none select-none"
@@ -102,8 +102,8 @@ const introRest = introRestParts.join('\n\n');
       <img
         src={community_image}
         alt={lang === 'de' ? 'Gemeinsames Mittagessen im juggleHUB' : 'Community lunch at juggleHUB'}
-        width="1800"
-        height="1104"
+        width="2000"
+        height="1125"
         loading="lazy"
         decoding="async"
         class="w-full h-auto rounded-2xl"
@@ -121,17 +121,6 @@ const introRest = introRestParts.join('\n\n');
 
     {pricing && <Pricing title={pricing.title} description={pricing.description} notes={pricing.notes} cards={pricing.cards} />}
 
-    <figure class="relative max-w-4xl mx-auto px-8 sm:px-14 lg:px-20 pb-20">
-      <img
-        src={workspace_image}
-        alt={lang === 'de' ? 'Arbeitsplatz am Fenster im juggleHUB' : 'Workspace by the window at juggleHUB'}
-        width="1800"
-        height="1350"
-        loading="lazy"
-        decoding="async"
-        class="w-full h-auto rounded-2xl"
-      />
-    </figure>
     </div>
   </div>
 

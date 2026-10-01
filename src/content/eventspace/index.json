@@ -27,16 +27,16 @@
           "features": ["26m²", "inkl. Flipchart, Metaplanwand, Screen", "Tagesrate: 245€"]
         },
         {
-          "title": "Konferenzraum EG",
+          "title": "Konferenzraum",
           "price": 49,
           "period": "pro Std. + 19% MwSt.",
-          "features": ["40m²", "Tagesrate: 339€"]
+          "features": ["40m²", "Beamer bei Buchung zubuchbar", "Tagesrate: 339€"]
         },
         {
           "title": "Konferenzraum 1. OG",
           "price": 49,
           "period": "pro Std. + 19% MwSt.",
-          "features": ["38m²", "Tagesrate: 339€"]
+          "features": ["38m²", "Beamer inklusive", "Tagesrate: 339€"]
         }
       ]
     },
@@ -44,32 +44,22 @@
       {
         "title": "Der Meetingraum – 20 qm",
         "description": "Kann für Teambesprechungen oder Kundenmeetings genutzt werden, aber auch für Gruppenveranstaltungen oder Videokonferenzen mit bis zu 10 Personen am großen Tisch. Der Raum ist mit einem Flachbildschirm und einer Whiteboardwand ausgestattet.",
-        "images": ["/images/rooms/meeting-room-1.jpg"]
+        "images": ["/images/rooms/meeting-room-1.jpg", "/images/rooms/meeting-room-2.jpg", "/images/rooms/meeting-room-3.jpg"]
       },
       {
-        "title": "Neuer Event Space – 50 qm",
-        "description": "Dieser Raum steht ab September 2025 für Veranstaltungen zur Verfügung. (Das Bild ist ein Beispielbild aus unserem ersten Standort.)",
-        "images": ["/images/rooms/event-space-1.jpg"]
+        "title": "Der Workshopraum – 26 qm",
+        "description": "Ein heller Raum für Workshops, Teambesprechungen und gemeinsame Ideen. Auf 26 qm findet ihr eine angenehme Umgebung für konzentriertes Arbeiten, Austausch und kreative Sessions.",
+        "images": ["/images/rooms/workshop-room-1.jpg", "/images/rooms/workshop-room-2.jpg"]
       },
       {
-        "title": "Der Konferenzraum – 40 qm",
-        "description": "Kann mit reiner Bestuhlung, Tischen und Stühlen oder als offener Raum genutzt werden, je nach Anforderungen. Geeignet für Veranstaltungen mit Frontalbestuhlung, für Gruppenseminare und Workshops mit bis zu 40 Teilnehmern (bis zu 20 Sitzplätze an Tischen). Kombination mit Meetingraum (20 qm) möglich. Mit Zugang zur Außenterrasse.",
-        "images": ["/images/rooms/conference-room-1.jpg"]
+        "title": "Der Konferenzraum im EG – 40 qm",
+        "description": "Ein vielseitiger Raum für Veranstaltungen mit ganz unterschiedlichen Formaten. Ob Vortrag in Theaterbestuhlung, gemeinsames Essen an Tafeln oder Schulung mit Tischen – die Einrichtung lässt sich passend zum Anlass gestalten. Ein Beamer kann bei der Buchung hinzugebucht werden.",
+        "images": ["/images/rooms/conference-room-ground-floor-1.jpg", "/images/rooms/conference-room-ground-floor-2.jpg", "/images/rooms/conference-room-ground-floor-3.jpg"]
       },
       {
-        "title": "Neuer Event Space – 50 qm",
-        "description": "Dieser Raum steht ab September 2025 für Veranstaltungen zur Verfügung. (Das Bild ist ein Beispielbild aus unserem ersten Standort.)",
-        "images": ["/images/rooms/event-space-1.jpg"]
-      },
-      {
-        "title": "Der Meetingraum – 20 qm",
-        "description": "Kann für Teambesprechungen oder Kundenmeetings genutzt werden, aber auch für Gruppenveranstaltungen oder Videokonferenzen mit bis zu 10 Personen am großen Tisch. Der Raum ist mit einem Flachbildschirm und einer Whiteboardwand ausgestattet.",
-        "images": ["/images/rooms/meeting-room-1.jpg"]
-      },
-      {
-        "title": "Der Konferenzraum – 40 qm",
-        "description": "Kann mit reiner Bestuhlung, Tischen und Stühlen oder als offener Raum genutzt werden, je nach Anforderungen. Geeignet für Veranstaltungen mit Frontalbestuhlung, für Gruppenseminare und Workshops mit bis zu 40 Teilnehmern (bis zu 20 Sitzplätze an Tischen). Kombination mit Meetingraum (20 qm) möglich. Mit Zugang zur Außenterrasse.",
-        "images": ["/images/rooms/conference-room-1.jpg"]
+        "title": "Der Konferenzraum im 1. OG – 38 qm",
+        "description": "Der feste, großzügige Tisch bietet einen angenehmen Rahmen für Besprechungen, Workshops und gemeinsame Planung. Hier könnt ihr in einer ruhigen Atmosphäre zusammenkommen und euch auf eure Inhalte konzentrieren. Ein Beamer ist inklusive.",
+        "images": ["/images/rooms/conference-room-first-floor-1.jpg", "/images/rooms/conference-room-first-floor-2.jpg"]
       }
     ]
   },
@@ -101,16 +91,16 @@
           "features": ["26 sq.m.", "incl. flipchart, pinboard, screen", "Day rate: €245"]
         },
         {
-          "title": "Conference Room Ground Floor",
+          "title": "Conference Room",
           "price": 49,
           "period": "per hour + 19% VAT",
-          "features": ["40 sq.m.", "Day rate: €339"]
+          "features": ["40 sq.m.", "Projector available when booking", "Day rate: €339"]
         },
         {
           "title": "Conference Room 1st Floor",
           "price": 49,
           "period": "per hour + 19% VAT",
-          "features": ["38 sq.m.", "Day rate: €339"]
+          "features": ["38 sq.m.", "Projector included", "Day rate: €339"]
         }
       ]
     },
@@ -118,32 +108,22 @@
       {
         "title": "The meeting room – 20 sq.m.",
         "description": "Can be used for team meetings or client meetings but also for group sessions or video conferences with up to 10 people seated on the large table. The room is furnished with a flatscreen and a whiteboard wall.",
-        "images": ["/images/rooms/meeting-room-1.jpg"]
+        "images": ["/images/rooms/meeting-room-1.jpg", "/images/rooms/meeting-room-2.jpg", "/images/rooms/meeting-room-3.jpg"]
       },
       {
-        "title": "New Event Space – 50 sq.m.",
-        "description": "This room will be available for events starting September 2025. (The image is an example image from our first space.)",
-        "images": ["/images/rooms/event-space-1.jpg"]
+        "title": "The workshop room – 26 sq.m.",
+        "description": "A bright, welcoming space for workshops, team meetings and fresh ideas. With 26 sq.m. to work with, it offers a comfortable setting for focused work, conversation and creative sessions.",
+        "images": ["/images/rooms/workshop-room-1.jpg", "/images/rooms/workshop-room-2.jpg"]
       },
       {
-        "title": "The conference room – 40 sq.m.",
-        "description": "Can be used with just seating, tables and chairs or as an open space, depending on your requirements. It is suitable for events with frontal seating, for group seminars and workshops with up to 40 participants (up to 20 seated at tables). Connection with meeting room (20 sqm) possible. With access to the courtyard terrace.",
-        "images": ["/images/rooms/conference-room-1.jpg"]
+        "title": "The conference room, ground floor – 40 sq.m.",
+        "description": "A versatile setting for gatherings of all kinds. Arrange it theater-style for presentations, banquet-style for shared meals, or classroom-style for teaching and workshops. A projector can be added when booking.",
+        "images": ["/images/rooms/conference-room-ground-floor-1.jpg", "/images/rooms/conference-room-ground-floor-2.jpg", "/images/rooms/conference-room-ground-floor-3.jpg"]
       },
       {
-        "title": "New Event Space – 50 sq.m.",
-        "description": "This room will be available for events starting September 2025. (The image is an example image from our first space.)",
-        "images": ["/images/rooms/event-space-1.jpg"]
-      },
-      {
-        "title": "The meeting room – 20 sq.m.",
-        "description": "Can be used for team meetings or client meetings but also for group sessions or video conferences with up to 10 people seated on the large table. The room is furnished with a flatscreen and a whiteboard wall.",
-        "images": ["/images/rooms/meeting-room-1.jpg"]
-      },
-      {
-        "title": "The conference room – 40 sq.m.",
-        "description": "Can be used with just seating, tables and chairs or as an open space, depending on your requirements. It is suitable for events with frontal seating, for group seminars and workshops with up to 40 participants (up to 20 seated at tables). Connection with meeting room (20 sqm) possible. With access to the courtyard terrace.",
-        "images": ["/images/rooms/conference-room-1.jpg"]
+        "title": "The conference room, 1st floor – 38 sq.m.",
+        "description": "The large, fixed table makes this a comfortable space for meetings, workshops and planning sessions. Gather around it for focused discussion and collaborative work in a calm setting. A projector is included.",
+        "images": ["/images/rooms/conference-room-first-floor-1.jpg", "/images/rooms/conference-room-first-floor-2.jpg"]
       }
     ]
   }
