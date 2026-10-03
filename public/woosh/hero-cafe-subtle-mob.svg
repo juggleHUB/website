@@ -1,0 +1,9 @@
+<svg viewBox="0 0 1320 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Subtle cafe swoosh</title>
+  <path d="M-20 34 C190 34 245 78 440 78 C650 78 750 30 940 30 C1110 30 1190 57 1340 49 L1340 0 L-20 0 Z" fill="#FFE9E1"/>
+  <g stroke="#FFAC83" stroke-linecap="round">
+    <path d="M-20 20 C190 20 245 64 440 64 C650 64 750 16 940 16 C1110 16 1190 43 1340 35" stroke-width="7"/>
+    <path d="M-20 34 C190 34 245 78 440 78 C650 78 750 30 940 30 C1110 30 1190 57 1340 49" stroke-width="6"/>
+    <path d="M-20 48 C190 48 245 92 440 92 C650 92 750 44 940 44 C1110 44 1190 71 1340 63" stroke-width="7"/>
+  </g>
+</svg>

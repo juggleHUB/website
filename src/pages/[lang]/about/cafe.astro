@@ -25,7 +25,7 @@ const heroAlt = lang === 'de' ? 'Kaffeezubereitung im The Daily Café' : 'Coffee
     <div class="relative">
       <!-- MOBILE hero -->
       <section class="navbreak:hidden bg-[#FFE9E1]">
-        <div class="px-6 pt-28 pb-20">
+        <div class="px-6 pt-28 pb-8">
           <h1 class="w-36 h-36 mb-6">
             <img src={icon_image} alt={headline} width="144" height="137" loading="eager" decoding="async" class="w-full h-full object-contain" />
           </h1>
@@ -36,9 +36,9 @@ const heroAlt = lang === 'de' ? 'Kaffeezubereitung im The Daily Café' : 'Coffee
             </a>
           )}
         </div>
-        <div class="relative h-64 md:h-96 -mt-[62px]">
-          <img src={hero_image} alt={heroAlt} width="2400" height="1350" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover" />
-          <img src="/woosh/hero-cafe-gentle-mob.svg" alt="" aria-hidden="true" class="absolute top-0 left-0 w-full z-10 pointer-events-none select-none" />
+        <div class="relative">
+          <img src={hero_image} alt={heroAlt} width="2400" height="1350" fetchpriority="high" class="block w-full h-auto" />
+          <img src="/woosh/hero-cafe-subtle-mob.svg" alt="" aria-hidden="true" class="absolute top-0 left-0 w-full z-10 pointer-events-none select-none" />
         </div>
       </section>
 
