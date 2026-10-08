@@ -117,6 +117,13 @@ const introRest = introRestParts.join('\n\n');
         accentColor="#C8A800"
         desktopCols={4}
       />
+      {pricing.cta_label && pricing.cta_url && (
+        <div class="-mt-10 pb-20 px-8 text-center">
+          <a href={pricing.cta_url} class="inline-flex items-center bg-brand-teal text-white font-bold text-lg px-8 py-4 rounded-full hover:opacity-90 transition-opacity focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-teal">
+            {pricing.cta_label}
+          </a>
+        </div>
+      )}
     </div>
   )}
 
