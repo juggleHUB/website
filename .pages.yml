@@ -360,6 +360,9 @@ components:
         - name: period
           label: Period
           type: string
+        - name: price_note
+          label: Price Note
+          type: string
         - name: vat_note
           label: VAT Note
           type: string
@@ -531,6 +534,11 @@ components:
       - name: name
         label: Name
         type: string
+      - name: image
+        label: Photo
+        type: image
+        options:
+          path: public/images/pages/childcare/testimonials
     - name: pricing
       label: Pricing
       type: object
